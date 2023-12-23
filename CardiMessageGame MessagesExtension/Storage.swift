@@ -149,11 +149,11 @@ class AppStorage: ObservableObject {
     
     func selectionDescription(_ input: Int) -> String {
         if input == 1 {
-            return "Rock"
+            return "Fire"
         } else if input == 2 {
-            return "Paper"
+            return "Water"
         } else if input == 3 {
-            return "Scissors"
+            return "Ice"
         } else {
             return "ERROR"
         }

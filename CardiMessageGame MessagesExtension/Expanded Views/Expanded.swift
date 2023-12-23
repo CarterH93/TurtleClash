@@ -108,14 +108,14 @@ struct Expanded: View {
                     
                     
                     HStack {
-                        Button("🪨") {
+                        Button("🔥") {
                             storage.selectChoice(1)
                         }
-                        Button("📄") {
+                        Button("💧") {
                             storage.selectChoice(2)
                         }
                         
-                        Button("✂️") {
+                        Button("🧊") {
                             storage.selectChoice(3)
                         }
                     }
