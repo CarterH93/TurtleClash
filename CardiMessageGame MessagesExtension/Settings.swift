@@ -1,8 +1,25 @@
 //
 //  Settings.swift
-//  CardiMessageGame MessagesExtension
+//  IMessageGameTemplate MessagesExtension
 //
-//  Created by Carter Hawkins on 12/23/23.
+//  Created by Carter Hawkins on 5/23/23.
 //
 
-import Foundation
+
+import SwiftUI
+
+struct Settings: View {
+    
+    @EnvironmentObject var storage: AppStorage
+    var body: some View {
+        VStack {
+            Text("Settings!!!")
+            Button("dismiss") {
+                storage.settingsMenuActive = false
+                storage.goToCompactView = true
+            }
+        }
+    }
+}
+
+
