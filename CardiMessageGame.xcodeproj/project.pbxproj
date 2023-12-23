@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3F4E9F2B37A4C1004D9FBA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F4E9E2B37A4C1004D9FBA /* Card.swift */; };
 		BC5CA4E62B37981500D0D100 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E52B37981500D0D100 /* Settings.swift */; };
 		BC5CA4E82B37982900D0D100 /* FinalWrappedExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */; };
 		BC5CA4EA2B37983200D0D100 /* Expanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E92B37983200D0D100 /* Expanded.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC3F4E9E2B37A4C1004D9FBA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BC5CA4E52B37981500D0D100 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalWrappedExpandedView.swift; sourceTree = "<group>"; };
 		BC5CA4E92B37983200D0D100 /* Expanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expanded.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5CA4F32B37989000D0D100 /* Storage.swift */,
+				BC3F4E9E2B37A4C1004D9FBA /* Card.swift */,
 				BC5CA4F22B37987E00D0D100 /* Compact Views */,
 				BC8305722B378DC0008CCAC7 /* MessagesViewController.swift */,
 				BC8305742B378DC0008CCAC7 /* MainInterface.storyboard */,
@@ -268,6 +271,7 @@
 				BC8305842B378DF3008CCAC7 /* MSMessage+Extensions.swift in Sources */,
 				BC5CA4EF2B37986900D0D100 /* Compact.swift in Sources */,
 				BC5CA4F42B37989000D0D100 /* Storage.swift in Sources */,
+				BC3F4E9F2B37A4C1004D9FBA /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -402,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -423,6 +427,7 @@
 				INFOPLIST_FILE = "CardiMessageGame MessagesExtension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CardiMessageGame;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,6 +454,7 @@
 				INFOPLIST_FILE = "CardiMessageGame MessagesExtension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CardiMessageGame;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

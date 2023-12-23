@@ -224,3 +224,44 @@ class AppStorage: ObservableObject {
     }
     
 }
+
+
+//Card logic handling
+
+func cardCreator(number: Int, type: Int, color: Int) -> Card {
+    /*
+     numbers for type
+    1 = fire
+    2 = water
+    3 = ice
+     
+     numbers for color
+     1 = blue
+     2 = orange
+     3 = green
+    */
+    
+    var newType: type
+    var newColor: color
+    
+    switch type {
+    case 1:
+        newType = .fire
+    case 2:
+        newType = .water
+    default:
+        newType = .ice
+    }
+    
+    switch color {
+    case 1:
+        newColor = .blue
+    case 2:
+        newColor = .orange
+    default:
+        newColor = .green
+    }
+    
+    return Card(number: number, type: newType, color: newColor)
+    
+}
