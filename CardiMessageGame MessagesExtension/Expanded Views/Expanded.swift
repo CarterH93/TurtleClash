@@ -23,13 +23,15 @@ struct Expanded: View {
             VStack(spacing: 30) {
                 
                 ScrollView {
-                    Text("Player 1 past selection: \(storage.pastRoundselectionPlayer1)")
-                    Text("Player 2 past selection: \(storage.pastRoundselectionPlayer2)")
+                    
+                    //NEED TO CHANGE BELOW #Update#
+                    Text("Player 1 past selection: \(storage.pastRoundselectionPlayer1?.type.rawValue ?? "Nil")")
+                    Text("Player 2 past selection: \(storage.pastRoundselectionPlayer2?.type.rawValue ?? "Nil")")
                     Text("Past Round Result: \(storage.pastRoundResult)")
                     Text("temp Past Round Result: \(storage.tempPastRoundResult)")
                     Text("Past Round Result Side: \(storage.pastRoundResultSide)")
-                    Text("Player 1 selection: \(storage.player1Selection)")
-                    Text("Player 2 selection: \(storage.player2Selection)")
+                    Text("Player 1 selection: \(storage.player1Selection?.type.rawValue ?? "Nil")")
+                    Text("Player 2 selection: \(storage.player2Selection?.type.rawValue ?? "Nil")")
                     Text("Player 1 wins:        \(storage.winningSelectionsPlayer1.description)")
                     Text("Player 2 wins:        \(storage.winningSelectionsPlayer2.description)")
                     Text("Current Player Turn :    \(storage.currentPlayerTurn)")
@@ -63,21 +65,21 @@ struct Expanded: View {
                         Text("Past Round Result")
                     }
                     
-                    if storage.pastLocalPlayerSelection != 0 {
-                        Text("You chose \(storage.selectionDescription(storage.pastLocalPlayerSelection))")
+                    if storage.pastLocalPlayerSelection != nil {
+                        Text("You chose \(storage.pastLocalPlayerSelection?.type.rawValue ?? "Nil")")
                     }
                     
-                    if storage.pastRemotePlayerSelection != 0 {
-                        Text("Your opponent chose \(storage.selectionDescription(storage.pastRemotePlayerSelection))")
+                    if storage.pastRemotePlayerSelection != nil {
+                        Text("Your opponent chose \(storage.pastRemotePlayerSelection?.type.rawValue ?? "Nil")")
                     }
                     
                     //Displays current round results
                     if storage.pastRoundResult == 1 {
-                        Text("You won the round:  \(storage.selectionDescription(storage.pastLocalPlayerSelection)) beats \(storage.selectionDescription(storage.pastRemotePlayerSelection))")
+                        Text("You won the round:  \(storage.pastLocalPlayerSelection?.type.rawValue ?? "Nil") beats \(storage.pastRemotePlayerSelection?.type.rawValue ?? "Nil")")
                     } else if storage.pastRoundResult == 2 {
-                        Text("You lost the round:  \(storage.selectionDescription(storage.pastRemotePlayerSelection)) beats \(storage.selectionDescription(storage.pastLocalPlayerSelection))")
+                        Text("You lost the round:  \(storage.pastRemotePlayerSelection?.type.rawValue ?? "Nil") beats \(storage.pastLocalPlayerSelection?.type.rawValue ?? "Nil")")
                     } else if storage.pastRoundResult == 3 {
-                        Text("Tie!!! You both chose  \(storage.selectionDescription(storage.pastLocalPlayerSelection))")
+                        Text("Tie!!! You both chose  \(storage.pastLocalPlayerSelection?.type.rawValue ?? "Nil")")
                     }
                     
                     //Displays overall game results
@@ -98,25 +100,26 @@ struct Expanded: View {
                 
                 
                 VStack(spacing: 20) {
-                    if storage.localPlayerSelection == 0 {
+                    if storage.localPlayerSelection == nil {
                         Text("Select your choice")
                     } else {
-                        Text("You selected \(storage.selectionDescription(storage.localPlayerSelection))")
+                        Text("You selected \(storage.localPlayerSelection!.type.rawValue)")
                     }
                     
                     
                     
                     
                     HStack {
+                        //NEED TO CHANGE BELOW #Update#
                         Button("🔥") {
-                            storage.selectChoice(1)
+                            storage.selectChoice(Card(number: 1, type: .fire, color: .blue))
                         }
                         Button("💧") {
-                            storage.selectChoice(2)
+                            storage.selectChoice(Card(number: 1, type: .water, color: .blue))
                         }
                         
                         Button("🧊") {
-                            storage.selectChoice(3)
+                            storage.selectChoice(Card(number: 1, type: .ice, color: .blue))
                         }
                     }
                     

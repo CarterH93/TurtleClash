@@ -88,7 +88,7 @@ class AppStorage: ObservableObject {
     
     var goodToSend: Bool {
         if overallGameEndingResult == 0 {
-            if localPlayerSelection != 0 {
+            if localPlayerSelection != nil {
                 return true
             }
         }
@@ -112,9 +112,9 @@ class AppStorage: ObservableObject {
     
     
     //Game logic for rock paper scissors game
-    @Published var player1Selection = 0
-    @Published var player2Selection = 0
-    var localPlayerSelection: Int {
+    @Published var player1Selection: Card? = nil
+    @Published var player2Selection: Card? = nil
+    var localPlayerSelection: Card? {
         if currentPlayer == 1 {
             return player1Selection
         } else {
@@ -122,7 +122,7 @@ class AppStorage: ObservableObject {
         }
     }
     
-    var remotePlayerSelection: Int {
+    var remotePlayerSelection: Card? {
         if currentPlayer == 2 {
             return player1Selection
         } else {
@@ -131,7 +131,7 @@ class AppStorage: ObservableObject {
     }
     
     
-    var pastLocalPlayerSelection: Int {
+    var pastLocalPlayerSelection: Card? {
         if currentPlayer == 1 {
             return pastRoundselectionPlayer1
         } else {
@@ -139,14 +139,14 @@ class AppStorage: ObservableObject {
         }
     }
     
-    var pastRemotePlayerSelection: Int {
+    var pastRemotePlayerSelection: Card? {
         if currentPlayer == 2 {
             return pastRoundselectionPlayer1
         } else {
             return pastRoundselectionPlayer2
         }
     }
-    
+    /*
     func selectionDescription(_ input: Int) -> String {
         if input == 1 {
             return "Fire"
@@ -159,16 +159,81 @@ class AppStorage: ObservableObject {
         }
     }
     
-    
+    */
    
     
-    @Published var winningSelectionsPlayer1: [Int] = []
-    @Published var winningSelectionsPlayer2: [Int] = []
+    @Published var winningSelectionsPlayer1: [Card] = []
+    @Published var winningSelectionsPlayer2: [Card] = []
+    
+    
+    //Converting stuff inorder to send through iMessage Data Kit API
+    
+    var winningSelectionsPlayer1TypeConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in winningSelectionsPlayer1 {
+            hold.append(i.typeNum)
+        }
+        
+        return hold
+    }
+    
+    var winningSelectionsPlayer1ColorConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in winningSelectionsPlayer1 {
+            hold.append(i.colorNum)
+        }
+        
+        return hold
+    }
+    
+    var winningSelectionsPlayer1NumberConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in winningSelectionsPlayer1 {
+            hold.append(i.number)
+        }
+        
+        return hold
+    }
+    
+    var winningSelectionsPlayer2TypeConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in winningSelectionsPlayer2 {
+            hold.append(i.typeNum)
+        }
+        
+        return hold
+    }
+    
+    var winningSelectionsPlayer2ColorConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in winningSelectionsPlayer2 {
+            hold.append(i.colorNum)
+        }
+        
+        return hold
+    }
+    
+    var winningSelectionsPlayer2NumberConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in winningSelectionsPlayer2 {
+            hold.append(i.number)
+        }
+        
+        return hold
+    }
+    
+    
     @Published var name: String = ""
     
     
-    @Published var pastRoundselectionPlayer1 = 0
-    @Published var pastRoundselectionPlayer2 = 0
+    @Published var pastRoundselectionPlayer1: Card? = nil
+    @Published var pastRoundselectionPlayer2: Card? = nil
     
     
     var pastRoundResult: Int {
@@ -215,7 +280,7 @@ class AppStorage: ObservableObject {
     }
     
     //Assigns player choice to correct player variable
-    func selectChoice(_ choice: Int) {
+    func selectChoice(_ choice: Card) {
         if currentPlayer == 1 {
             player1Selection = choice
         } else if currentPlayer == 2 {

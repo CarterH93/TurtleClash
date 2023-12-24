@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum type {
+enum type: String {
     case fire
     case water
     case ice
 }
 
-enum color {
+enum color: String {
     case blue
     case orange
     case green
@@ -23,7 +23,6 @@ struct Card {
     var number: Int
     var type: type
     var color: color
-    
     
     var typeNum: Int {
         switch type {
