@@ -112,14 +112,14 @@ struct Expanded: View {
                     HStack {
                         //NEED TO CHANGE BELOW #Update#
                         Button("🔥") {
-                            storage.selectChoice(Card(number: 1, type: .fire, color: .blue))
+                            storage.selectChoice(Card(number: 1, type: .fire, color: .blue, animation: 1))
                         }
                         Button("💧") {
-                            storage.selectChoice(Card(number: 1, type: .water, color: .blue))
+                            storage.selectChoice(Card(number: 1, type: .water, color: .blue, animation: 1))
                         }
                         
                         Button("🧊") {
-                            storage.selectChoice(Card(number: 1, type: .ice, color: .blue))
+                            storage.selectChoice(Card(number: 1, type: .ice, color: .blue, animation: 1))
                         }
                     }
                     

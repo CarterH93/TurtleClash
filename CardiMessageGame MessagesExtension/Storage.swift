@@ -198,6 +198,16 @@ class AppStorage: ObservableObject {
         return hold
     }
     
+    var winningSelectionsPlayer1AnimationConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in winningSelectionsPlayer1 {
+            hold.append(i.animation)
+        }
+        
+        return hold
+    }
+    
     var winningSelectionsPlayer2TypeConvertedToNum: [Int] {
         var hold: [Int] = []
         
@@ -223,6 +233,16 @@ class AppStorage: ObservableObject {
         
         for i in winningSelectionsPlayer2 {
             hold.append(i.number)
+        }
+        
+        return hold
+    }
+    
+    var winningSelectionsPlayer2AnimationConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in winningSelectionsPlayer2 {
+            hold.append(i.animation)
         }
         
         return hold
@@ -293,7 +313,7 @@ class AppStorage: ObservableObject {
 
 //Card logic handling
 
-func cardCreator(number: Int, type: Int, color: Int) -> Card {
+func cardCreator(number: Int, type: Int, color: Int, animation: Int) -> Card {
     /*
      numbers for type
     1 = fire
@@ -327,6 +347,6 @@ func cardCreator(number: Int, type: Int, color: Int) -> Card {
         newColor = .green
     }
     
-    return Card(number: number, type: newType, color: newColor)
+    return Card(number: number, type: newType, color: newColor, animation: animation)
     
 }

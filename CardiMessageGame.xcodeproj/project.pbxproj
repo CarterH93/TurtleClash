@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0A1F672B38C6CD00CA7AB8 /* Message Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F662B38C6CD00CA7AB8 /* Message Reader.swift */; };
+		BC0A1F692B38C6D700CA7AB8 /* Message Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */; };
 		BC3F4E9F2B37A4C1004D9FBA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F4E9E2B37A4C1004D9FBA /* Card.swift */; };
 		BC5CA4E62B37981500D0D100 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E52B37981500D0D100 /* Settings.swift */; };
 		BC5CA4E82B37982900D0D100 /* FinalWrappedExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC0A1F662B38C6CD00CA7AB8 /* Message Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Reader.swift"; sourceTree = "<group>"; };
+		BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Creator.swift"; sourceTree = "<group>"; };
 		BC3F4E9E2B37A4C1004D9FBA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BC5CA4E52B37981500D0D100 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalWrappedExpandedView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC0A1F6A2B38C6DF00CA7AB8 /* MessagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC8305722B378DC0008CCAC7 /* MessagesViewController.swift */,
+				BC0A1F662B38C6CD00CA7AB8 /* Message Reader.swift */,
+				BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */,
+			);
+			path = MessagesViewController;
+			sourceTree = "<group>";
+		};
 		BC5CA4ED2B37985100D0D100 /* Expanded Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +156,7 @@
 				BC5CA4F32B37989000D0D100 /* Storage.swift */,
 				BC3F4E9E2B37A4C1004D9FBA /* Card.swift */,
 				BC5CA4F22B37987E00D0D100 /* Compact Views */,
-				BC8305722B378DC0008CCAC7 /* MessagesViewController.swift */,
+				BC0A1F6A2B38C6DF00CA7AB8 /* MessagesViewController */,
 				BC8305742B378DC0008CCAC7 /* MainInterface.storyboard */,
 				BC8305772B378DC0008CCAC7 /* Assets.xcassets */,
 				BC5CA4E52B37981500D0D100 /* Settings.swift */,
@@ -264,12 +278,14 @@
 				BC8305862B378E01008CCAC7 /* MSMessageDataDSL.swift in Sources */,
 				BC5CA4E82B37982900D0D100 /* FinalWrappedExpandedView.swift in Sources */,
 				BC5CA4EA2B37983200D0D100 /* Expanded.swift in Sources */,
+				BC0A1F672B38C6CD00CA7AB8 /* Message Reader.swift in Sources */,
 				BC8305732B378DC0008CCAC7 /* MessagesViewController.swift in Sources */,
 				BC5CA4F12B37987300D0D100 /* WrappedCompact.swift in Sources */,
 				BC5CA4EC2B37984100D0D100 /* Wrapped Expanded.swift in Sources */,
 				BC5CA4E62B37981500D0D100 /* Settings.swift in Sources */,
 				BC8305842B378DF3008CCAC7 /* MSMessage+Extensions.swift in Sources */,
 				BC5CA4EF2B37986900D0D100 /* Compact.swift in Sources */,
+				BC0A1F692B38C6D700CA7AB8 /* Message Creator.swift in Sources */,
 				BC5CA4F42B37989000D0D100 /* Storage.swift in Sources */,
 				BC3F4E9F2B37A4C1004D9FBA /* Card.swift in Sources */,
 			);

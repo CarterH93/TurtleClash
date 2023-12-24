@@ -23,6 +23,7 @@ struct Card {
     var number: Int
     var type: type
     var color: color
+    var animation: Int
     
     var typeNum: Int {
         switch type {
