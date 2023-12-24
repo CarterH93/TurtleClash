@@ -15,6 +15,11 @@ struct Expanded: View {
     
     @State private var size = 1.0
     @EnvironmentObject var storage: AppStorage
+    
+    @State private var type: type = .fire
+    @State private var color: color = .blue
+    @State private var number = 1
+    @State private var animation = 1
    
     var body: some View {
         ZStack {
@@ -24,16 +29,16 @@ struct Expanded: View {
                 
                 ScrollView {
                     
-                    //NEED TO CHANGE BELOW #Update#
-                    Text("Player 1 past selection: \(storage.pastRoundselectionPlayer1?.type.rawValue ?? "Nil")")
-                    Text("Player 2 past selection: \(storage.pastRoundselectionPlayer2?.type.rawValue ?? "Nil")")
+                     
+                    Text("Player 1 past selection: \(storage.pastRoundselectionPlayer1?.description ?? "Nil")")
+                    Text("Player 2 past selection: \(storage.pastRoundselectionPlayer2?.description ?? "Nil")")
                     Text("Past Round Result: \(storage.pastRoundResult)")
                     Text("temp Past Round Result: \(storage.tempPastRoundResult)")
                     Text("Past Round Result Side: \(storage.pastRoundResultSide)")
-                    Text("Player 1 selection: \(storage.player1Selection?.type.rawValue ?? "Nil")")
-                    Text("Player 2 selection: \(storage.player2Selection?.type.rawValue ?? "Nil")")
-                    Text("Player 1 wins:        \(storage.winningSelectionsPlayer1.description)")
-                    Text("Player 2 wins:        \(storage.winningSelectionsPlayer2.description)")
+                    Text("Player 1 selection: \(storage.player1Selection?.description ?? "Nil")")
+                    Text("Player 2 selection: \(storage.player2Selection?.description ?? "Nil")")
+                    Text("Player 1 wins:        \(storage.winningSelectionsPlayer1.count)")
+                    Text("Player 2 wins:        \(storage.winningSelectionsPlayer2.count)")
                     Text("Current Player Turn :    \(storage.currentPlayerTurn)")
                     Text("Is it local player turn?  \(storage.localPlayerCurrentTurnTrue.description)")
                     Text("Participants")
@@ -66,20 +71,20 @@ struct Expanded: View {
                     }
                     
                     if storage.pastLocalPlayerSelection != nil {
-                        Text("You chose \(storage.pastLocalPlayerSelection?.type.rawValue ?? "Nil")")
+                        Text("You chose \(storage.pastLocalPlayerSelection?.description ?? "Nil")")
                     }
                     
                     if storage.pastRemotePlayerSelection != nil {
-                        Text("Your opponent chose \(storage.pastRemotePlayerSelection?.type.rawValue ?? "Nil")")
+                        Text("Your opponent chose \(storage.pastRemotePlayerSelection?.description ?? "Nil")")
                     }
                     
                     //Displays current round results
                     if storage.pastRoundResult == 1 {
-                        Text("You won the round:  \(storage.pastLocalPlayerSelection?.type.rawValue ?? "Nil") beats \(storage.pastRemotePlayerSelection?.type.rawValue ?? "Nil")")
+                        Text("You won the round:  \(storage.pastLocalPlayerSelection?.description ?? "Nil") beats \(storage.pastRemotePlayerSelection?.description ?? "Nil")")
                     } else if storage.pastRoundResult == 2 {
-                        Text("You lost the round:  \(storage.pastRemotePlayerSelection?.type.rawValue ?? "Nil") beats \(storage.pastLocalPlayerSelection?.type.rawValue ?? "Nil")")
+                        Text("You lost the round:  \(storage.pastRemotePlayerSelection?.description ?? "Nil") beats \(storage.pastLocalPlayerSelection?.description ?? "Nil")")
                     } else if storage.pastRoundResult == 3 {
-                        Text("Tie!!! You both chose  \(storage.pastLocalPlayerSelection?.type.rawValue ?? "Nil")")
+                        Text("Tie!!! You both chose  \(storage.pastLocalPlayerSelection?.description ?? "Nil")")
                     }
                     
                     //Displays overall game results
@@ -103,24 +108,48 @@ struct Expanded: View {
                     if storage.localPlayerSelection == nil {
                         Text("Select your choice")
                     } else {
-                        Text("You selected \(storage.localPlayerSelection!.type.rawValue)")
+                        Text("You selected \(storage.localPlayerSelection!.description)")
                     }
                     
                     
-                    
+                    //Type selector
                     
                     HStack {
-                        //NEED TO CHANGE BELOW #Update#
+                         
                         Button("🔥") {
-                            storage.selectChoice(Card(number: 1, type: .fire, color: .blue, animation: 1))
+                            type = .fire
                         }
                         Button("💧") {
-                            storage.selectChoice(Card(number: 1, type: .water, color: .blue, animation: 1))
+                            type = .water
                         }
                         
                         Button("🧊") {
-                            storage.selectChoice(Card(number: 1, type: .ice, color: .blue, animation: 1))
+                            type = .ice
                         }
+                    }
+                    
+                    HStack {
+                         
+                        Button("🔵") {
+                            color = .blue
+                        }
+                        Button("🟠") {
+                            color = .orange
+                        }
+                        
+                        Button("🟢") {
+                            color = .green
+                        }
+                    }
+                    
+                    
+                    Stepper("Number: \(number)", value: $number, in: 1...12)
+                    
+                    
+                    Stepper("Animation: \(animation)", value: $animation, in: 1...12)
+                    
+                    Button("Create card") {
+                        storage.selectChoice(Card(number: number, type: type, color: color, animation: animation))
                     }
                     
                 }

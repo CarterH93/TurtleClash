@@ -46,4 +46,8 @@ struct Card {
             return 3
         }
     }
+    
+    var description: String {
+        return "number: \(String(number))  |  type: \(type.rawValue)  |  color: \(color.rawValue)  |  animation: \(String(animation))"
+    }
 }

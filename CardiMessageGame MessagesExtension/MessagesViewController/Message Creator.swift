@@ -65,7 +65,7 @@ extension MessagesViewController {
             message.md.set(value: 2, forKey: "currentPlayerTurn")
         }
         
-        //NEED TO CHANGE BELOW #Update#
+         
         
         if let player1Selection = storage.player1Selection {
             message.md.set(value: player1Selection.number, forKey: "player1SelectionNumber")

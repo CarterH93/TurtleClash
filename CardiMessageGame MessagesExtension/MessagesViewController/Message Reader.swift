@@ -25,7 +25,7 @@ extension MessagesViewController {
         
         //READS DATA
         
-        //NEED TO CHANGE BELOW #Update#
+         
         
         if let InputNumber = message.md.integer(forKey: "pastRoundselectionPlayer1Number") {
             // do sth with Int
@@ -45,7 +45,7 @@ extension MessagesViewController {
                 }
             }
         }
-        //NEED TO CHANGE BELOW #Update#
+         
         
         if let InputNumber = message.md.integer(forKey: "pastRoundselectionPlayer2Number") {
             // do sth with Int
@@ -109,7 +109,7 @@ extension MessagesViewController {
             
         }
         
-        //NEED TO CHANGE BELOW #Update#
+         
         
         if let Numbers = message.md.values(forKey: "winningSelectionsPlayer1Number") {
             var listOfReadableNumbers: [Int] = []
@@ -155,7 +155,7 @@ extension MessagesViewController {
             }
         }
         
-        //NEED TO CHANGE BELOW #Update#
+         
         
         if let Numbers = message.md.values(forKey: "winningSelectionsPlayer2Number") {
             var listOfReadableNumbers: [Int] = []
@@ -202,7 +202,7 @@ extension MessagesViewController {
             }
         }
         
-        //NEED TO CHANGE BELOW #Update#
+         
         
         if let InputNumber = message.md.integer(forKey: "player1SelectionNumber") {
             // do sth with Int
@@ -223,7 +223,7 @@ extension MessagesViewController {
         }
         
         
-        //NEED TO CHANGE BELOW #Update#
+         
         
         if let InputNumber = message.md.integer(forKey: "player2SelectionNumber") {
             // do sth with Int
