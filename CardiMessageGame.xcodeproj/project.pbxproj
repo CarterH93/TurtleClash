@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC0A1F672B38C6CD00CA7AB8 /* Message Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F662B38C6CD00CA7AB8 /* Message Reader.swift */; };
 		BC0A1F692B38C6D700CA7AB8 /* Message Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */; };
+		BC0A1F6C2B39F93A00CA7AB8 /* Round and game win logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F6B2B39F93A00CA7AB8 /* Round and game win logic.swift */; };
 		BC3F4E9F2B37A4C1004D9FBA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F4E9E2B37A4C1004D9FBA /* Card.swift */; };
 		BC5CA4E62B37981500D0D100 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E52B37981500D0D100 /* Settings.swift */; };
 		BC5CA4E82B37982900D0D100 /* FinalWrappedExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		BC0A1F662B38C6CD00CA7AB8 /* Message Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Reader.swift"; sourceTree = "<group>"; };
 		BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Creator.swift"; sourceTree = "<group>"; };
+		BC0A1F6B2B39F93A00CA7AB8 /* Round and game win logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round and game win logic.swift"; sourceTree = "<group>"; };
 		BC3F4E9E2B37A4C1004D9FBA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BC5CA4E52B37981500D0D100 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalWrappedExpandedView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8305722B378DC0008CCAC7 /* MessagesViewController.swift */,
+				BC0A1F6B2B39F93A00CA7AB8 /* Round and game win logic.swift */,
 				BC0A1F662B38C6CD00CA7AB8 /* Message Reader.swift */,
 				BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */,
 			);
@@ -278,6 +281,7 @@
 				BC8305862B378E01008CCAC7 /* MSMessageDataDSL.swift in Sources */,
 				BC5CA4E82B37982900D0D100 /* FinalWrappedExpandedView.swift in Sources */,
 				BC5CA4EA2B37983200D0D100 /* Expanded.swift in Sources */,
+				BC0A1F6C2B39F93A00CA7AB8 /* Round and game win logic.swift in Sources */,
 				BC0A1F672B38C6CD00CA7AB8 /* Message Reader.swift in Sources */,
 				BC8305732B378DC0008CCAC7 /* MessagesViewController.swift in Sources */,
 				BC5CA4F12B37987300D0D100 /* WrappedCompact.swift in Sources */,
