@@ -25,8 +25,16 @@ extension MessagesViewController {
                 
                 //Set Current Round Result to display for user
                 if localPlayerSelection.typeNum == 1 && remotePlayerSelection.typeNum == 1 {
-                    storage.tempPastRoundResult = 3
-                    storage.pastRoundResultSide = storage.currentPlayer
+                    
+                    //Note it is impossible for a card to have both the same type and number.
+                    if localPlayerSelection.number > remotePlayerSelection.number {
+                        storage.tempPastRoundResult = 1
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else {
+                        storage.tempPastRoundResult = 2
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    }
+                    
                 } else if localPlayerSelection.typeNum == 1 && remotePlayerSelection.typeNum == 2 {
                     storage.tempPastRoundResult = 2
                     storage.pastRoundResultSide = storage.currentPlayer
@@ -37,8 +45,14 @@ extension MessagesViewController {
                     storage.tempPastRoundResult = 1
                     storage.pastRoundResultSide = storage.currentPlayer
                 } else if localPlayerSelection.typeNum == 2 && remotePlayerSelection.typeNum == 2 {
-                    storage.tempPastRoundResult = 3
-                    storage.pastRoundResultSide = storage.currentPlayer
+                    //Note it is impossible for a card to have both the same type and number.
+                    if localPlayerSelection.number > remotePlayerSelection.number {
+                        storage.tempPastRoundResult = 1
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else {
+                        storage.tempPastRoundResult = 2
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    }
                 } else if localPlayerSelection.typeNum == 2 && remotePlayerSelection.typeNum == 3 {
                     storage.tempPastRoundResult = 2
                     storage.pastRoundResultSide = storage.currentPlayer
@@ -49,8 +63,14 @@ extension MessagesViewController {
                     storage.tempPastRoundResult = 1
                     storage.pastRoundResultSide = storage.currentPlayer
                 } else if localPlayerSelection.typeNum == 3 && remotePlayerSelection.typeNum == 3 {
-                    storage.tempPastRoundResult = 3
-                    storage.pastRoundResultSide = storage.currentPlayer
+                    //Note it is impossible for a card to have both the same type and number.
+                    if localPlayerSelection.number > remotePlayerSelection.number {
+                        storage.tempPastRoundResult = 1
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else {
+                        storage.tempPastRoundResult = 2
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    }
                 }
                 
                 
