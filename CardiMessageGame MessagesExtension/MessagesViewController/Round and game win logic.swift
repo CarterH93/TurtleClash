@@ -110,7 +110,522 @@ extension MessagesViewController {
     
     func checkForWin() {
         
-       
+       //First checking if there are three different colors of the same type
+        
+    //Checking local player first
+        
+        if storage.localPlayerWinningCardsDisplay[.fire]?.count == 3 {
+            //WIN
+            if storage.currentPlayer == 1 {
+                storage.overallGameEndingResult = 1
+            } else {
+                storage.overallGameEndingResult = 2
+            }
+            
+            storage.localPlayerWinningCardsAnimated[.fire] = storage.localPlayerWinningCardsDisplay[.fire]
+            
+            
+        } else if storage.localPlayerWinningCardsDisplay[.water]?.count == 3 {
+            //WIN
+            if storage.currentPlayer == 1 {
+                storage.overallGameEndingResult = 1
+            } else {
+                storage.overallGameEndingResult = 2
+            }
+            
+            storage.localPlayerWinningCardsAnimated[.water] = storage.localPlayerWinningCardsDisplay[.water]
+            
+        } else if storage.localPlayerWinningCardsDisplay[.ice]?.count == 3 {
+            //WIN
+            if storage.currentPlayer == 1 {
+                storage.overallGameEndingResult = 1
+            } else {
+                storage.overallGameEndingResult = 2
+            }
+            
+            storage.localPlayerWinningCardsAnimated[.ice] = storage.localPlayerWinningCardsDisplay[.ice]
+            
+        }
+        
+        //checking remote player
+        
+        if storage.remotePlayerWinningCardsDisplay[.fire]?.count == 3 {
+            //WIN
+            if storage.currentPlayer == 2 {
+                storage.overallGameEndingResult = 1
+            } else {
+                storage.overallGameEndingResult = 2
+            }
+            
+            storage.remotePlayerWinningCardsAnimated[.fire] = storage.remotePlayerWinningCardsDisplay[.fire]
+            
+        } else if storage.remotePlayerWinningCardsDisplay[.water]?.count == 3 {
+            //WIN
+            if storage.currentPlayer == 2 {
+                storage.overallGameEndingResult = 1
+            } else {
+                storage.overallGameEndingResult = 2
+            }
+            
+            storage.remotePlayerWinningCardsAnimated[.water] = storage.remotePlayerWinningCardsDisplay[.water]
+            
+        } else if storage.remotePlayerWinningCardsDisplay[.ice]?.count == 3 {
+            //WIN
+            if storage.currentPlayer == 2 {
+                storage.overallGameEndingResult = 1
+            } else {
+                storage.overallGameEndingResult = 2
+            }
+            
+            storage.remotePlayerWinningCardsAnimated[.ice] = storage.remotePlayerWinningCardsDisplay[.ice]
+            
+            
+        }
+        
+        
+        //Checking if there are three different types that are each a unique color
+        
+        //This is for local player
+        
+        //Starting off with fire blue
+        
+        if let array = storage.localPlayerWinningCardsDisplay[.fire] {
+            if array.contains(.blue) {
+                //There is a blue fire
+                
+                var tempSet = Set<color>()
+                
+                if let array = storage.localPlayerWinningCardsDisplay[.water] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                if let array = storage.localPlayerWinningCardsDisplay[.ice] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                tempSet.remove(.blue)
+                
+                if tempSet.count >= 2 {
+                    //WIN
+                    if storage.currentPlayer == 1 {
+                        storage.overallGameEndingResult = 1
+                    } else {
+                        storage.overallGameEndingResult = 2
+                    }
+                    
+                    //Adding stuff to Animated
+                    var tempAnimatedHold: [
+                        type : [color]
+                    ] = [:]
+                    
+                    tempAnimatedHold[.fire] = [.blue]
+                    
+                    for color in tempSet {
+                        
+                        if let array = storage.localPlayerWinningCardsDisplay[.water] {
+                            
+                            if array.contains(color) {
+                                
+                                tempAnimatedHold[.water] = [color]
+                                
+                                var tempTempSet = tempSet
+                                tempTempSet.remove(color)
+                        
+                                tempAnimatedHold[.ice] = Array(tempTempSet)
+                                
+                            }
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    storage.localPlayerWinningCardsAnimated = tempAnimatedHold
+                    
+                    
+                    
+                }
+            
+            }
+        }
+        
+        
+        //Next is fire orange
+        
+        if let array = storage.localPlayerWinningCardsDisplay[.fire] {
+            if array.contains(.orange) {
+                //There is a orange fire
+                
+                var tempSet = Set<color>()
+                
+                if let array = storage.localPlayerWinningCardsDisplay[.water] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                if let array = storage.localPlayerWinningCardsDisplay[.ice] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                tempSet.remove(.orange)
+                
+                if tempSet.count >= 2 {
+                    //WIN
+                    if storage.currentPlayer == 1 {
+                        storage.overallGameEndingResult = 1
+                    } else {
+                        storage.overallGameEndingResult = 2
+                    }
+                    
+                    //Adding stuff to Animated
+                    var tempAnimatedHold: [
+                        type : [color]
+                    ] = [:]
+                    
+                    tempAnimatedHold[.fire] = [.orange]
+                    
+                    for color in tempSet {
+                        
+                        if let array = storage.localPlayerWinningCardsDisplay[.water] {
+                            
+                            if array.contains(color) {
+                                
+                                tempAnimatedHold[.water] = [color]
+                                
+                                var tempTempSet = tempSet
+                                tempTempSet.remove(color)
+                        
+                                tempAnimatedHold[.ice] = Array(tempTempSet)
+                                
+                            }
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    storage.localPlayerWinningCardsAnimated = tempAnimatedHold
+                    
+                }
+            
+            }
+        }
+        
+        
+        //Next is fire green
+        
+        if let array = storage.localPlayerWinningCardsDisplay[.fire] {
+            if array.contains(.green) {
+                //There is a green fire
+                
+                var tempSet = Set<color>()
+                
+                if let array = storage.localPlayerWinningCardsDisplay[.water] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                if let array = storage.localPlayerWinningCardsDisplay[.ice] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                tempSet.remove(.green)
+                
+                if tempSet.count >= 2 {
+                    //WIN
+                    if storage.currentPlayer == 1 {
+                        storage.overallGameEndingResult = 1
+                    } else {
+                        storage.overallGameEndingResult = 2
+                    }
+                    
+                    //Adding stuff to Animated
+                    var tempAnimatedHold: [
+                        type : [color]
+                    ] = [:]
+                    
+                    tempAnimatedHold[.fire] = [.green]
+                    
+                    for color in tempSet {
+                        
+                        if let array = storage.localPlayerWinningCardsDisplay[.water] {
+                            
+                            if array.contains(color) {
+                                
+                                tempAnimatedHold[.water] = [color]
+                                
+                                var tempTempSet = tempSet
+                                tempTempSet.remove(color)
+                        
+                                tempAnimatedHold[.ice] = Array(tempTempSet)
+                                
+                            }
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    storage.localPlayerWinningCardsAnimated = tempAnimatedHold
+                    
+                }
+            
+            }
+        }
+        
+        
+        
+        
+        //This is for remote player
+        
+        //Starting off with fire blue
+        
+        if let array = storage.remotePlayerWinningCardsDisplay[.fire] {
+            if array.contains(.blue) {
+                //There is a blue fire
+                
+                var tempSet = Set<color>()
+                
+                if let array = storage.remotePlayerWinningCardsDisplay[.water] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                if let array = storage.remotePlayerWinningCardsDisplay[.ice] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                tempSet.remove(.blue)
+                
+                if tempSet.count >= 2 {
+                    //WIN
+                    if storage.currentPlayer == 2 {
+                        storage.overallGameEndingResult = 1
+                    } else {
+                        storage.overallGameEndingResult = 2
+                    }
+                    
+                    //Adding stuff to Animated
+                    var tempAnimatedHold: [
+                        type : [color]
+                    ] = [:]
+                    
+                    tempAnimatedHold[.fire] = [.blue]
+                    
+                    for color in tempSet {
+                        
+                        if let array = storage.remotePlayerWinningCardsDisplay[.water] {
+                            
+                            if array.contains(color) {
+                                
+                                tempAnimatedHold[.water] = [color]
+                                
+                                var tempTempSet = tempSet
+                                tempTempSet.remove(color)
+                        
+                                tempAnimatedHold[.ice] = Array(tempTempSet)
+                                
+                            }
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    storage.remotePlayerWinningCardsAnimated = tempAnimatedHold
+                    
+                }
+            
+            }
+        }
+        
+        
+        //Next is fire orange
+        
+        if let array = storage.remotePlayerWinningCardsDisplay[.fire] {
+            if array.contains(.orange) {
+                //There is a orange fire
+                
+                var tempSet = Set<color>()
+                
+                if let array = storage.remotePlayerWinningCardsDisplay[.water] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                if let array = storage.remotePlayerWinningCardsDisplay[.ice] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                tempSet.remove(.orange)
+                
+                if tempSet.count >= 2 {
+                    //WIN
+                    if storage.currentPlayer == 2 {
+                        storage.overallGameEndingResult = 1
+                    } else {
+                        storage.overallGameEndingResult = 2
+                    }
+                    
+                    //Adding stuff to Animated
+                    var tempAnimatedHold: [
+                        type : [color]
+                    ] = [:]
+                    
+                    tempAnimatedHold[.fire] = [.orange]
+                    
+                    for color in tempSet {
+                        
+                        if let array = storage.remotePlayerWinningCardsDisplay[.water] {
+                            
+                            if array.contains(color) {
+                                
+                                tempAnimatedHold[.water] = [color]
+                                
+                                var tempTempSet = tempSet
+                                tempTempSet.remove(color)
+                        
+                                tempAnimatedHold[.ice] = Array(tempTempSet)
+                                
+                            }
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    storage.remotePlayerWinningCardsAnimated = tempAnimatedHold
+                    
+                }
+            
+            }
+        }
+        
+        
+        //Next is fire green
+        
+        if let array = storage.remotePlayerWinningCardsDisplay[.fire] {
+            if array.contains(.green) {
+                //There is a green fire
+                
+                var tempSet = Set<color>()
+                
+                if let array = storage.remotePlayerWinningCardsDisplay[.water] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                if let array = storage.remotePlayerWinningCardsDisplay[.ice] {
+                    
+                    for color in array {
+                        tempSet.insert(color)
+                    }
+                    
+                    
+                }
+                
+                tempSet.remove(.green)
+                
+                if tempSet.count >= 2 {
+                    //WIN
+                    if storage.currentPlayer == 2 {
+                        storage.overallGameEndingResult = 1
+                    } else {
+                        storage.overallGameEndingResult = 2
+                    }
+                    
+                    //Adding stuff to Animated
+                    var tempAnimatedHold: [
+                        type : [color]
+                    ] = [:]
+                    
+                    tempAnimatedHold[.fire] = [.green]
+                    
+                    for color in tempSet {
+                        
+                        if let array = storage.remotePlayerWinningCardsDisplay[.water] {
+                            
+                            if array.contains(color) {
+                                
+                                tempAnimatedHold[.water] = [color]
+                                
+                                var tempTempSet = tempSet
+                                tempTempSet.remove(color)
+                        
+                                tempAnimatedHold[.ice] = Array(tempTempSet)
+                                
+                            }
+                            
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    storage.remotePlayerWinningCardsAnimated = tempAnimatedHold
+                    
+                }
+            
+            }
+        }
+        
+        
+        
         
     }
     
