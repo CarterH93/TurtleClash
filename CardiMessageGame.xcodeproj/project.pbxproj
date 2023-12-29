@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC090F5A2B3D1DD100ABFC14 /* WinningStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC090F592B3D1DD100ABFC14 /* WinningStack.swift */; };
+		BC090F5C2B3D1DDB00ABFC14 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC090F5B2B3D1DDB00ABFC14 /* Help.swift */; };
+		BC090F5E2B3D1DE700ABFC14 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC090F5D2B3D1DE700ABFC14 /* CardView.swift */; };
+		BC090F602B3D1DF500ABFC14 /* EmptyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC090F5F2B3D1DF500ABFC14 /* EmptyCard.swift */; };
+		BC090F622B3D1E0200ABFC14 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC090F612B3D1E0200ABFC14 /* BackCardView.swift */; };
 		BC0A1F672B38C6CD00CA7AB8 /* Message Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F662B38C6CD00CA7AB8 /* Message Reader.swift */; };
 		BC0A1F692B38C6D700CA7AB8 /* Message Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */; };
 		BC0A1F6C2B39F93A00CA7AB8 /* Round and game win logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F6B2B39F93A00CA7AB8 /* Round and game win logic.swift */; };
@@ -26,6 +31,7 @@
 		BC8305782B378DC0008CCAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8305772B378DC0008CCAC7 /* Assets.xcassets */; };
 		BC8305842B378DF3008CCAC7 /* MSMessage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8305832B378DF3008CCAC7 /* MSMessage+Extensions.swift */; };
 		BC8305862B378E01008CCAC7 /* MSMessageDataDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8305852B378E01008CCAC7 /* MSMessageDataDSL.swift */; };
+		BCAA8D972B3D1D530058E729 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA8D962B3D1D530058E729 /* Gameplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC090F592B3D1DD100ABFC14 /* WinningStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningStack.swift; sourceTree = "<group>"; };
+		BC090F5B2B3D1DDB00ABFC14 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		BC090F5D2B3D1DE700ABFC14 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		BC090F5F2B3D1DF500ABFC14 /* EmptyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCard.swift; sourceTree = "<group>"; };
+		BC090F612B3D1E0200ABFC14 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		BC0A1F662B38C6CD00CA7AB8 /* Message Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Reader.swift"; sourceTree = "<group>"; };
 		BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Creator.swift"; sourceTree = "<group>"; };
 		BC0A1F6B2B39F93A00CA7AB8 /* Round and game win logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round and game win logic.swift"; sourceTree = "<group>"; };
@@ -74,6 +85,7 @@
 		BC8305792B378DC0008CCAC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC8305832B378DF3008CCAC7 /* MSMessage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSMessage+Extensions.swift"; sourceTree = "<group>"; };
 		BC8305852B378E01008CCAC7 /* MSMessageDataDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSMessageDataDSL.swift; sourceTree = "<group>"; };
+		BCAA8D962B3D1D530058E729 /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,7 @@
 		BC5CA4ED2B37985100D0D100 /* Expanded Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCAA8D982B3D1D590058E729 /* Gameplay */,
 				BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */,
 				BC5CA4EB2B37984100D0D100 /* Wrapped Expanded.swift */,
 				BC5CA4E92B37983200D0D100 /* Expanded.swift */,
@@ -177,6 +190,19 @@
 				BC8305832B378DF3008CCAC7 /* MSMessage+Extensions.swift */,
 			);
 			path = "Imessage Data Sender API";
+			sourceTree = "<group>";
+		};
+		BCAA8D982B3D1D590058E729 /* Gameplay */ = {
+			isa = PBXGroup;
+			children = (
+				BCAA8D962B3D1D530058E729 /* Gameplay.swift */,
+				BC090F592B3D1DD100ABFC14 /* WinningStack.swift */,
+				BC090F5B2B3D1DDB00ABFC14 /* Help.swift */,
+				BC090F5D2B3D1DE700ABFC14 /* CardView.swift */,
+				BC090F5F2B3D1DF500ABFC14 /* EmptyCard.swift */,
+				BC090F612B3D1E0200ABFC14 /* BackCardView.swift */,
+			);
+			path = Gameplay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +307,7 @@
 				BC8305862B378E01008CCAC7 /* MSMessageDataDSL.swift in Sources */,
 				BC5CA4E82B37982900D0D100 /* FinalWrappedExpandedView.swift in Sources */,
 				BC5CA4EA2B37983200D0D100 /* Expanded.swift in Sources */,
+				BC090F622B3D1E0200ABFC14 /* BackCardView.swift in Sources */,
 				BC0A1F6C2B39F93A00CA7AB8 /* Round and game win logic.swift in Sources */,
 				BC0A1F672B38C6CD00CA7AB8 /* Message Reader.swift in Sources */,
 				BC8305732B378DC0008CCAC7 /* MessagesViewController.swift in Sources */,
@@ -288,9 +315,14 @@
 				BC5CA4EC2B37984100D0D100 /* Wrapped Expanded.swift in Sources */,
 				BC5CA4E62B37981500D0D100 /* Settings.swift in Sources */,
 				BC8305842B378DF3008CCAC7 /* MSMessage+Extensions.swift in Sources */,
+				BC090F5E2B3D1DE700ABFC14 /* CardView.swift in Sources */,
 				BC5CA4EF2B37986900D0D100 /* Compact.swift in Sources */,
 				BC0A1F692B38C6D700CA7AB8 /* Message Creator.swift in Sources */,
 				BC5CA4F42B37989000D0D100 /* Storage.swift in Sources */,
+				BC090F5A2B3D1DD100ABFC14 /* WinningStack.swift in Sources */,
+				BCAA8D972B3D1D530058E729 /* Gameplay.swift in Sources */,
+				BC090F5C2B3D1DDB00ABFC14 /* Help.swift in Sources */,
+				BC090F602B3D1DF500ABFC14 /* EmptyCard.swift in Sources */,
 				BC3F4E9F2B37A4C1004D9FBA /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +479,7 @@
 				INFOPLIST_FILE = "CardiMessageGame MessagesExtension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CardiMessageGame;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,7 +506,7 @@
 				INFOPLIST_FILE = "CardiMessageGame MessagesExtension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CardiMessageGame;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,7 +534,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Carter.CardiMessageGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,7 +556,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Carter.CardiMessageGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";

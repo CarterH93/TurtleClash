@@ -13,15 +13,12 @@ struct Compact: View {
     @EnvironmentObject var storage: AppStorage
    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
-                GeometryReader { geo in
-                    Image("iMessageGameDimensions")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: geo.size.width, height: geo.size.height)
+                
+                    Color.orange
                         
-                }
+                
                 
                 
                 VStack(spacing: 20) {
@@ -56,6 +53,7 @@ struct Compact: View {
                 }
             }
         }
+        .navigationViewStyle(.stack)
         
         .onAppear {
             storage.settingsMenuActive = false

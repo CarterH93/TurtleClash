@@ -160,10 +160,110 @@ class AppStorage: ObservableObject {
     }
     
     */
+    
+    //[Card(number: 1, type: .fire, color: .orange, animation: 1),Card(number: 1, type: .fire, color: .blue, animation: 1), Card(number: 1, type: .fire, color: .green, animation: 1), Card(number: 1, type: .water, color: .orange, animation: 1), Card(number: 1, type: .water, color: .blue, animation: 1), Card(number: 1, type: .water, color: .green, animation: 1), Card(number: 1, type: .ice, color: .orange, animation: 1), Card(number: 1, type: .ice, color: .blue, animation: 1), Card(number: 1, type: .ice, color: .green, animation: 1)]
    
     
     @Published var winningSelectionsPlayer1: [Card] = []
     @Published var winningSelectionsPlayer2: [Card] = []
+    
+    
+    
+    
+    
+    
+    var localPlayerWinningSelections: [Card] {
+        if currentPlayer == 1 {
+            return winningSelectionsPlayer1
+        } else {
+            return winningSelectionsPlayer2
+        }
+    }
+    
+    var remotePlayerWinningSelections: [Card] {
+        if currentPlayer == 2 {
+            return winningSelectionsPlayer1
+        } else {
+            return winningSelectionsPlayer2
+        }
+    }
+    
+    
+    
+    var localPlayerWinningCardsDisplay: [
+        type : [color]
+    ] {
+        var tempHold: [type : [color]] = [:]
+        
+        let cards = localPlayerWinningSelections
+        
+        var fire = [color]()
+        var water = [color]()
+        var ice = [color]()
+        
+        for card in cards {
+            switch card.type {
+            case .fire:
+                if fire.contains(card.color) == false {
+                    fire.append(card.color)
+                }
+            case .water:
+                if water.contains(card.color) == false {
+                    water.append(card.color)
+                }
+            case .ice:
+                if ice.contains(card.color) == false {
+                    ice.append(card.color)
+                }
+            }
+        }
+        
+        tempHold[.fire] = fire
+        tempHold[.water] = water
+        tempHold[.ice] = ice
+        
+        return tempHold
+    }
+    
+    var remotePlayerWinningCardsDisplay: [
+        type : [color]
+    ] {
+        var tempHold: [type : [color]] = [:]
+        
+        let cards = remotePlayerWinningSelections
+        
+        var fire = [color]()
+        var water = [color]()
+        var ice = [color]()
+        
+        for card in cards {
+            switch card.type {
+            case .fire:
+                if fire.contains(card.color) == false {
+                    fire.append(card.color)
+                }
+            case .water:
+                if water.contains(card.color) == false {
+                    water.append(card.color)
+                }
+            case .ice:
+                if ice.contains(card.color) == false {
+                    ice.append(card.color)
+                }
+            }
+        }
+        
+        tempHold[.fire] = fire
+        tempHold[.water] = water
+        tempHold[.ice] = ice
+        
+        return tempHold
+    }
+    
+    
+    
+    
+    
     
     
     //Converting stuff inorder to send through iMessage Data Kit API
@@ -350,3 +450,5 @@ func cardCreator(number: Int, type: Int, color: Int, animation: Int) -> Card {
     return Card(number: number, type: newType, color: newColor, animation: animation)
     
 }
+
+

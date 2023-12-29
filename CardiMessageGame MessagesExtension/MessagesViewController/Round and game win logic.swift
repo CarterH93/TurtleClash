@@ -110,14 +110,21 @@ extension MessagesViewController {
     
     func checkForWin() {
         
-        if storage.winningSelectionsPlayer1.count == 3 {
-            storage.overallGameEndingResult = 1
-        } else if storage.winningSelectionsPlayer2.count == 3 {
-            storage.overallGameEndingResult = 2
-        }
+       
         
     }
     
     
+    
+//Make sure you send the overallGameEndingResult value based off of orginal player. (DONT USE LOCAL AND REMOTE)
+    
+    
+    /*
+     if storage.winningSelectionsPlayer1.count == 3 {
+         storage.overallGameEndingResult = 1
+     } else if storage.winningSelectionsPlayer2.count == 3 {
+         storage.overallGameEndingResult = 2
+     }
+     */
     
 }
