@@ -8,19 +8,19 @@
 import Foundation
 import SwiftUI
 
-enum type: String {
+enum type: String, CaseIterable {
     case fire
     case water
     case ice
 }
 
-enum color: String {
+enum color: String, CaseIterable {
     case blue
     case orange
     case green
 }
 
-struct Card {
+struct Card: Hashable {
     var number: Int
     var type: type
     var color: color

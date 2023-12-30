@@ -94,6 +94,16 @@ extension MessagesViewController {
         message.md.set(values: storage.winningSelectionsPlayer2ColorConvertedToNum, forKey: "winningSelectionsPlayer2Color")
         message.md.set(values: storage.winningSelectionsPlayer2AnimationConvertedToNum, forKey: "winningSelectionsPlayer2Animation")
         
+        message.md.set(values: storage.Player1CardsNumberConvertedToNum, forKey: "Player1CardsNumber")
+        message.md.set(values: storage.Player1CardsTypeConvertedToNum, forKey: "Player1CardsType")
+        message.md.set(values: storage.Player1CardsColorConvertedToNum, forKey: "Player1CardsColor")
+        message.md.set(values: storage.Player1CardsAnimationConvertedToNum, forKey: "Player1CardsAnimation")
+        message.md.set(values: storage.Player2CardsNumberConvertedToNum, forKey: "Player2CardsNumber")
+        message.md.set(values: storage.Player2CardsTypeConvertedToNum, forKey: "Player2CardsType")
+        message.md.set(values: storage.Player2CardsColorConvertedToNum, forKey: "Player2CardsColor")
+        message.md.set(values: storage.Player2CardsAnimationConvertedToNum, forKey: "Player2CardsAnimation")
+        
+        
         if let pastRoundselectionPlayer1 = storage.pastRoundselectionPlayer1 {
             message.md.set(value: pastRoundselectionPlayer1.number, forKey: "pastRoundselectionPlayer1Number")
             message.md.set(value: pastRoundselectionPlayer1.typeNum, forKey: "pastRoundselectionPlayer1Type")

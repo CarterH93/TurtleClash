@@ -204,6 +204,105 @@ extension MessagesViewController {
         
          
         
+        //DIVIDER
+        
+        
+        if let Numbers = message.md.values(forKey: "Player1CardsNumber") {
+            var listOfReadableNumbers: [Int] = []
+            for object in Numbers {
+                let i = object as! Int
+                listOfReadableNumbers.append(i)
+            }
+            
+            if let Types = message.md.values(forKey: "Player1CardsType") {
+                var listOfReadableTypes: [Int] = []
+                for object in Types {
+                    let i = object as! Int
+                    listOfReadableTypes.append(i)
+                }
+                
+                
+                if let Colors = message.md.values(forKey: "Player1CardsColor") {
+                    var listOfReadableColors: [Int] = []
+                    for object in Colors {
+                        let i = object as! Int
+                        listOfReadableColors.append(i)
+                    }
+                    
+                    if let Animations = message.md.values(forKey: "Player1CardsAnimation") {
+                        var listOfReadableAnimations: [Int] = []
+                        for object in Animations {
+                            let i = object as! Int
+                            listOfReadableAnimations.append(i)
+                        }
+                        
+                        
+                        var cardHolder: [Card] = []
+                        
+                        if listOfReadableNumbers.count > 0 {
+                            for count in 0...(listOfReadableNumbers.count - 1) {
+                                cardHolder.append(cardCreator(number: listOfReadableNumbers[count], type: listOfReadableTypes[count], color: listOfReadableColors[count], animation: listOfReadableAnimations[count]))
+                            }
+                            
+                        }
+                        self.storage.Player1Cards = cardHolder
+                    }
+                }
+            }
+        }
+        
+         
+        
+        if let Numbers = message.md.values(forKey: "Player2CardsNumber") {
+            var listOfReadableNumbers: [Int] = []
+            for object in Numbers {
+                let i = object as! Int
+                listOfReadableNumbers.append(i)
+            }
+            
+            if let Types = message.md.values(forKey: "Player2CardsType") {
+                var listOfReadableTypes: [Int] = []
+                for object in Types {
+                    let i = object as! Int
+                    listOfReadableTypes.append(i)
+                }
+                
+                
+                if let Colors = message.md.values(forKey: "Player2CardsColor") {
+                    var listOfReadableColors: [Int] = []
+                    for object in Colors {
+                        let i = object as! Int
+                        listOfReadableColors.append(i)
+                    }
+                    
+                    
+                    if let Animations = message.md.values(forKey: "Player2CardsAnimation") {
+                        var listOfReadableAnimations: [Int] = []
+                        for object in Animations {
+                            let i = object as! Int
+                            listOfReadableAnimations.append(i)
+                        }
+                        
+                        
+                        var cardHolder: [Card] = []
+                        
+                        if listOfReadableNumbers.count > 0 {
+                            for count in 0...(listOfReadableNumbers.count - 1) {
+                                cardHolder.append(cardCreator(number: listOfReadableNumbers[count], type: listOfReadableTypes[count], color: listOfReadableColors[count], animation: listOfReadableAnimations[count]))
+                            }
+                        }
+                        
+                        self.storage.Player2Cards = cardHolder
+                    }
+                }
+            }
+        }
+        
+        //DIVIDER
+        
+        
+        
+        
         if let InputNumber = message.md.integer(forKey: "player1SelectionNumber") {
             // do sth with Int
             

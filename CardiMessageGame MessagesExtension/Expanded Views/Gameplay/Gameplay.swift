@@ -61,19 +61,26 @@ func flipCard() {
     @State var opponentCardPosition = CGSize.zero
     @State var opponentCardSize: CGFloat = 1
     
-  @State private var cards = [Card(number: 1, type: .fire, color: .blue, animation: 1), Card(number: 3, type: .water, color: .green, animation: 1), Card(number: 2, type: .ice, color: .orange, animation: 1), Card(number: 9, type: .fire, color: .orange, animation: 1), Card(number: 6, type: .ice, color: .blue, animation: 1)]
+    
+    
     
     @State private var selectedCard: Card? = nil
     
     func deselectCards() {
         var hold: [Card] = []
-        for card in cards {
+        for card in storage.localPlayerCards {
             var temp = card
             temp.selected = false
             hold.append(temp)
         }
-        cards = hold
+        if storage.currentPlayer == 1 {
+            storage.Player1Cards = hold
+        } else {
+            storage.Player2Cards = hold
+        }
     }
+        
+    
     
     
     
@@ -224,6 +231,17 @@ func flipCard() {
                                                             withAnimation() {
                                                                 flipCard()
                                                                 storage.selectChoice(selectedCard)
+                                                                if storage.currentPlayer == 1 {
+                                                                    storage.Player1Cards.removeAll { value in
+                                                                        return value == selectedCard
+                                                                    }
+                                                                    storage.addNewCardToLocalPlayerCards()
+                                                                } else {
+                                                                    storage.Player2Cards.removeAll { value in
+                                                                        return value == selectedCard
+                                                                    }
+                                                                    storage.addNewCardToLocalPlayerCards()
+                                                                }
                                                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                                                                     storage.send.toggle()
                                                                 })
@@ -231,7 +249,19 @@ func flipCard() {
                                                         })
                                                     })
                                                 } else {
+                                                    
                                                     storage.selectChoice(selectedCard)
+                                                    if storage.currentPlayer == 1 {
+                                                        storage.Player1Cards.removeAll { value in
+                                                            return value == selectedCard
+                                                        }
+                                                        storage.addNewCardToLocalPlayerCards()
+                                                    } else {
+                                                        storage.Player2Cards.removeAll { value in
+                                                            return value == selectedCard
+                                                        }
+                                                        storage.addNewCardToLocalPlayerCards()
+                                                    }
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                                                         storage.send.toggle()
                                                     })
@@ -284,61 +314,91 @@ func flipCard() {
                         .padding([.leading, .trailing])
                         
                         HStack(spacing: 0) {
-                            CardView(card: cards[0])
+                            CardView(card: storage.localPlayerCards[0])
                                  .frame(width: cardWidth, height: cardHeight)
                                  .onTapGesture {
                                      withAnimation() {
                                          deselectCards()
-                                         cards[0].selected.toggle()
-                                         selectedCard = cards[0]
+                                         
+                                         if storage.currentPlayer == 1 {
+                                             storage.Player1Cards[0].selected.toggle()
+                                             selectedCard = storage.Player1Cards[0]
+                                         } else {
+                                             storage.Player2Cards[0].selected.toggle()
+                                             selectedCard = storage.Player2Cards[0]
+                                         }
+                                         
+                                         
+                                         
                                      }
                                  }
-                                 .offset(y: cards[0].selected ? animationAmount : 0)
+                                 .offset(y: storage.localPlayerCards[0].selected ? animationAmount : 0)
                                 
                                  
-                            CardView(card: cards[1])
+                            CardView(card: storage.localPlayerCards[1])
                                  .frame(width: cardWidth, height: cardHeight)
                                  .onTapGesture {
                                      withAnimation() {
                                          deselectCards()
-                                         cards[1].selected.toggle()
-                                         selectedCard = cards[1]
+                                         
+                                         if storage.currentPlayer == 1 {
+                                             storage.Player1Cards[1].selected.toggle()
+                                             selectedCard = storage.Player1Cards[1]
+                                         } else {
+                                             storage.Player2Cards[1].selected.toggle()
+                                             selectedCard = storage.Player2Cards[1]
+                                         }
                                      }
                                  }
-                                 .offset(y: cards[1].selected ? animationAmount : 0)
+                                 .offset(y: storage.localPlayerCards[1].selected ? animationAmount : 0)
                                 
-                            CardView(card: cards[2])
+                            CardView(card: storage.localPlayerCards[2])
                                  .frame(width: cardWidth, height: cardHeight)
                                  .onTapGesture {
                                      withAnimation() {
                                          deselectCards()
-                                         cards[2].selected.toggle()
-                                         selectedCard = cards[2]
+                                         if storage.currentPlayer == 1 {
+                                             storage.Player1Cards[2].selected.toggle()
+                                             selectedCard = storage.Player1Cards[2]
+                                         } else {
+                                             storage.Player2Cards[2].selected.toggle()
+                                             selectedCard = storage.Player2Cards[2]
+                                         }
                                      }
                                  }
-                                 .offset(y: cards[2].selected ? animationAmount : 0)
+                                 .offset(y: storage.localPlayerCards[2].selected ? animationAmount : 0)
                                  
-                            CardView(card: cards[3])
+                            CardView(card: storage.localPlayerCards[3])
                                  .frame(width: cardWidth, height: cardHeight)
                                  .onTapGesture {
                                      withAnimation() {
                                          deselectCards()
-                                         cards[3].selected.toggle()
-                                         selectedCard = cards[3]
+                                         if storage.currentPlayer == 1 {
+                                             storage.Player1Cards[3].selected.toggle()
+                                             selectedCard = storage.Player1Cards[3]
+                                         } else {
+                                             storage.Player2Cards[3].selected.toggle()
+                                             selectedCard = storage.Player2Cards[3]
+                                         }
                                      }
                                  }
-                                 .offset(y: cards[3].selected ? animationAmount : 0)
+                                 .offset(y: storage.localPlayerCards[3].selected ? animationAmount : 0)
                                  
-                            CardView(card: cards[4])
+                            CardView(card: storage.localPlayerCards[4])
                                  .frame(width: cardWidth, height: cardHeight)
                                  .onTapGesture {
                                      withAnimation() {
                                          deselectCards()
-                                         cards[4].selected.toggle()
-                                         selectedCard = cards[4]
+                                         if storage.currentPlayer == 1 {
+                                             storage.Player1Cards[4].selected.toggle()
+                                             selectedCard = storage.Player1Cards[4]
+                                         } else {
+                                             storage.Player2Cards[4].selected.toggle()
+                                             selectedCard = storage.Player2Cards[4]
+                                         }
                                      }
                                  }
-                                 .offset(y: cards[4].selected ? animationAmount : 0)
+                                 .offset(y: storage.localPlayerCards[4].selected ? animationAmount : 0)
                                  
                             
                         }
@@ -352,9 +412,9 @@ func flipCard() {
         }
         .disabled(disable ? true : false)
         .onAppear {
-            if storage.pastLocalPlayerSelection != nil {
+            if storage.localPlayerSelection != nil {
                 position = .init(width: 0, height: -250)
-                selectedCard = storage.pastLocalPlayerSelection
+                selectedCard = storage.localPlayerSelection
             }
         }
         .ignoresSafeArea()

@@ -10,6 +10,88 @@ import SwiftUI
 
 class AppStorage: ObservableObject {
     
+    
+    let highestCardNumber = 12
+    let highestAnimationNumber = 5
+    
+    @Published var Player1Cards: [Card] = []
+
+    @Published var Player2Cards: [Card] = []
+    
+    var localPlayerCards: [Card] {
+        if currentPlayer == 1 {
+            return Player1Cards
+        } else {
+            return Player2Cards
+        }
+    }
+    
+    
+    func initialCardRandomizer() {
+        
+        var tempLocalCardHold = Set<Card>()
+        var tempRemoteCardHold = Set<Card>()
+        
+        while tempLocalCardHold.count < 5 {
+            let number = Int.random(in: 1...highestCardNumber)
+            let type = Int.random(in: 1...3)
+            let color = Int.random(in: 1...3)
+            let animation = Int.random(in: 1...highestAnimationNumber)
+            
+            let tempCardHold = cardCreator(number: number, type: type, color: color, animation: animation)
+            
+            if tempLocalCardHold.contains(tempCardHold) || tempRemoteCardHold.contains(tempCardHold) {
+                //Do nothing
+            } else {
+                tempLocalCardHold.insert(tempCardHold)
+            }
+        }
+        
+      
+        
+        while tempRemoteCardHold.count < 5 {
+            let number = Int.random(in: 1...highestCardNumber)
+            let type = Int.random(in: 1...3)
+            let color = Int.random(in: 1...3)
+            let animation = Int.random(in: 1...highestAnimationNumber)
+            
+            let tempCardHold = cardCreator(number: number, type: type, color: color, animation: animation)
+            
+            if tempLocalCardHold.contains(tempCardHold) || tempRemoteCardHold.contains(tempCardHold) {
+                //Do nothing
+            } else {
+                tempRemoteCardHold.insert(tempCardHold)
+            }
+        }
+        
+        Player1Cards = Array(tempLocalCardHold)
+        Player2Cards = Array(tempRemoteCardHold)
+    }
+    
+    func addNewCardToLocalPlayerCards() {
+        
+        let number = Int.random(in: 1...highestCardNumber)
+        let type = Int.random(in: 1...3)
+        let color = Int.random(in: 1...3)
+        let animation = Int.random(in: 1...highestAnimationNumber)
+        
+        let tempCardHold = cardCreator(number: number, type: type, color: color, animation: animation)
+        
+        if Player1Cards.contains(tempCardHold) || Player2Cards.contains(tempCardHold) {
+            //Do nothing
+        } else {
+            if currentPlayer == 1 {
+                Player1Cards.append(tempCardHold)
+            } else {
+                Player2Cards.append(tempCardHold)
+            }
+            
+            
+        }
+        
+    }
+    
+    
     @Published var goToCompactView = false
     @Published var goToExpnadedView = false
     
@@ -365,6 +447,90 @@ class AppStorage: ObservableObject {
         return hold
     }
     
+
+    
+    var Player1CardsTypeConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in Player1Cards {
+            hold.append(i.typeNum)
+        }
+        
+        return hold
+    }
+    
+    var Player1CardsColorConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in Player1Cards {
+            hold.append(i.colorNum)
+        }
+        
+        return hold
+    }
+    
+    var Player1CardsNumberConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in Player1Cards {
+            hold.append(i.number)
+        }
+        
+        return hold
+    }
+    
+    var Player1CardsAnimationConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in Player1Cards {
+            hold.append(i.animation)
+        }
+        
+        return hold
+    }
+    
+    var Player2CardsTypeConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in Player2Cards {
+            hold.append(i.typeNum)
+        }
+        
+        return hold
+    }
+    
+    var Player2CardsColorConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in Player2Cards {
+            hold.append(i.colorNum)
+        }
+        
+        return hold
+    }
+    
+    var Player2CardsNumberConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in Player2Cards {
+            hold.append(i.number)
+        }
+        
+        return hold
+    }
+    
+    var Player2CardsAnimationConvertedToNum: [Int] {
+        var hold: [Int] = []
+        
+        for i in Player2Cards {
+            hold.append(i.animation)
+        }
+        
+        return hold
+    }
+    
+    
+    
     
     @Published var name: String = ""
     
@@ -428,6 +594,9 @@ class AppStorage: ObservableObject {
 }
 
 
+
+
+
 //Card logic handling
 
 func cardCreator(number: Int, type: Int, color: Int, animation: Int) -> Card {
@@ -467,5 +636,6 @@ func cardCreator(number: Int, type: Int, color: Int, animation: Int) -> Card {
     return Card(number: number, type: newType, color: newColor, animation: animation)
     
 }
+
 
 
