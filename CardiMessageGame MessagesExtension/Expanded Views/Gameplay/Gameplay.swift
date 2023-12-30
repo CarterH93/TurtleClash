@@ -162,9 +162,11 @@ func flipCard() {
                                         BackCardView()
                                              .frame(width: cardWidth / 2, height: cardHeight / 2)
                                              .rotation3DEffect(Angle(degrees: backDegree), axis: (x: 0, y: 1, z: 0))
-                                        CardView(card: Card(number: 1, type: .fire, color: .orange, animation: 1))
-                                            .frame(width: cardWidth / 2, height: cardHeight / 2)
-                                            .rotation3DEffect(Angle(degrees: frontDegree), axis: (x: 0, y: 1, z: 0))
+                                        if let card = storage.pastRemotePlayerSelection {
+                                            CardView(card: card)
+                                                .frame(width: cardWidth / 2, height: cardHeight / 2)
+                                                .rotation3DEffect(Angle(degrees: frontDegree), axis: (x: 0, y: 1, z: 0))
+                                        }
                                     }
                                     .offset(x: opponentCardPosition.width, y: opponentCardPosition.height)
                                     .scaleEffect(opponentCardSize)
@@ -207,11 +209,11 @@ func flipCard() {
                                                 
                                                 
                                                 withAnimation() {
-                                                    position = .init(width: geo.size.width * 0, height: -geo.size.height * 0.3)
+                                                    position = .init(width: 0, height: -250)
                                                     isDragging = false
                                                     disable = true
                                                 }
-                                                    
+                                                if storage.pastRemotePlayerSelection != nil {
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                                                         withAnimation() {
                                                             opponentCardPosition =  .init(width: geo.size.width * 0.05, height: geo.size.height * 0.103)
@@ -222,10 +224,19 @@ func flipCard() {
                                                             withAnimation() {
                                                                 flipCard()
                                                                 storage.selectChoice(selectedCard)
-                                                                storage.send.toggle()
+                                                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                                                    storage.send.toggle()
+                                                                })
                                                             }
                                                         })
                                                     })
+                                                } else {
+                                                    storage.selectChoice(selectedCard)
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                                        storage.send.toggle()
+                                                    })
+                                                }
+                                                   
                                                     
                                                 
                                             })
@@ -340,6 +351,12 @@ func flipCard() {
             
         }
         .disabled(disable ? true : false)
+        .onAppear {
+            if storage.pastLocalPlayerSelection != nil {
+                position = .init(width: 0, height: -250)
+                selectedCard = storage.pastLocalPlayerSelection
+            }
+        }
         .ignoresSafeArea()
         
     }
