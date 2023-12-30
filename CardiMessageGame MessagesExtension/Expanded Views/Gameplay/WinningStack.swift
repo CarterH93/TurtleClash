@@ -7,39 +7,184 @@
 
 import SwiftUI
 
+
+
 struct WinningStack: View {
-    var icon: String
-    var color1: Color?
-    var color2: Color?
-    var color3: Color?
+    
+    
+    @EnvironmentObject var storage: AppStorage
+    
+    var icon: type
+    var color1: color?
+    var color2: color?
+    var color3: color?
+    var local: Bool
+    
+    var scaleEffect: CGFloat = 2
+    
+    
+    
+
+    func sameCardTypeWithMultipleColors(color: color?) -> Bool {
+        if local {
+            if let color = color {
+                if let array = storage.localPlayerWinningCardsAnimated[icon] {
+                    if array.contains(color) {
+                        if let array = storage.localPlayerWinningCardsAnimated[icon] {
+                            if array.count > 2 {
+                                return true
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            if let color = color {
+                if let array = storage.remotePlayerWinningCardsAnimated[icon] {
+                    if array.contains(color) {
+                        if let array = storage.remotePlayerWinningCardsAnimated[icon] {
+                            if array.count > 2 {
+                                return true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return false
+    }
+    
+    
+    func winningCardPos(color: color?) -> CGSize {
+        if local {
+            
+            if let color = color {
+                if let array = storage.localPlayerWinningCardsAnimated[icon] {
+                    if array.contains(color) {
+                        
+                        if sameCardTypeWithMultipleColors(color: color) {
+                            switch icon {
+                            case .fire:
+                                return .init(width: -25, height: -150)
+                            case .water:
+                                return .init(width: -50, height: -150)
+                            case .ice:
+                                return .init(width: -75, height: -150)
+                            }
+                           
+                        } else {
+                            switch icon {
+                            case .fire:
+                                return .init(width: -70, height: -150)
+                            case .water:
+                                return .init(width: -50, height: -150)
+                            case .ice:
+                                return .init(width: -30, height: -150)
+                            }
+                        }
+                        
+                        
+                    }
+                }
+            }
+           
+            
+            
+        } else {
+            
+            if let color = color {
+                if let array = storage.remotePlayerWinningCardsAnimated[icon] {
+                    if array.contains(color) {
+                        
+                        if sameCardTypeWithMultipleColors(color: color) {
+                            
+                            switch icon {
+                            case .fire:
+                                return .init(width: 80, height: 150)
+                            case .water:
+                                return .init(width: 60, height: 150)
+                            case .ice:
+                                return .init(width: 35, height: 150)
+                            }
+                           
+                        } else {
+                            switch icon {
+                            case .fire:
+                                return .init(width: 30, height: 150)
+                            case .water:
+                                return .init(width: 55, height: 150)
+                            case .ice:
+                                return .init(width: 80, height: 150)
+                            }
+                        }
+                        
+                        
+                    }
+                }
+            }
+            
+            
+        }
+        
+        
+        
+        return CGSize.zero
+    }
+    
     
     var body: some View {
-        GeometryReader { geo in
            
-                VStack(spacing: 0) {
+                ZStack {
                     
-                    if let color = color1 {
+                    if let color = colorConverter(color3) {
                         ZStack {
                             Color(.init(color))
-                            Image(icon)
+                            Image(icon.rawValue)
                                 .resizable()
                                 .scaledToFit()
-                                .padding(geo.size.height * 0.04)
+                                .padding(3)
+                                .opacity(winningCardPos(color: color3).height != 0 ? 1 : 0)
                         }
-                        .frame(height: geo.size.height * 0.623)
+                        .frame(width: 40, height: 30)
+                        .offset(x: winningCardPos(color: color3).width + (sameCardTypeWithMultipleColors(color: color3) ? 50 : 0), y: winningCardPos(color: color3).height != 0 ? winningCardPos(color: color3).height : 20)
+                        .scaleEffect(winningCardPos(color: color3).height != 0 ? scaleEffect : 1)
                     }
                    
-                    if let color = color2 {
-                        Color(.init(color))
-                            .frame(height: geo.size.height * 0.187)
-                    }
-                    if let color = color3 {
-                        Color(.init(color))
-                            .frame(height: geo.size.height * 0.19)
+                    if let color = colorConverter(color2) {
+                        ZStack {
+                            Color(.init(color))
+                            Image(icon.rawValue)
+                                .resizable()
+                                .scaledToFit()
+                                .padding(3)
+                                .opacity(winningCardPos(color: color2).height != 0 ? 1 : 0)
+                        }
+                        .frame(width: 40, height: 30)
+                        
+                        
+                        .offset(x: winningCardPos(color: color2).width, y: winningCardPos(color: color2).height != 0 ? winningCardPos(color: color2).height : 10)
+                        .scaleEffect(winningCardPos(color: color2).height != 0 ? scaleEffect : 1)
                     }
                     
-                }
-                .clipShape(RoundedRectangle(cornerRadius: geo.size.height / 12))
+                    
+                    if let color = colorConverter(color1) {
+                        ZStack {
+                            Color(.init(color))
+                            Image(icon.rawValue)
+                                .resizable()
+                                .scaledToFit()
+                                .padding(3)
+                                
+                            
+                        }
+                        .frame(width: 40, height: 30)
+                        
+                        .offset(x: winningCardPos(color: color1).width + (sameCardTypeWithMultipleColors(color: color1) ? -50 : 0), y: winningCardPos(color: color1).height != 0 ? winningCardPos(color: color1).height : 0)
+                        .scaleEffect(winningCardPos(color: color1).height != 0 ? scaleEffect : 1)
+                    }
+                    
+                
+               
                
                 
                 
@@ -50,4 +195,8 @@ struct WinningStack: View {
         }
     }
 }
-
+/*
+#Preview {
+    WinningStack(icon: "fire", color1: .blue, color2: .green, color3: .orange)
+}
+*/

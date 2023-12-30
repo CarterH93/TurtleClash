@@ -263,13 +263,21 @@ class AppStorage: ObservableObject {
     
     
     
-    var localPlayerWinningCardsAnimated: [
+    @Published var localPlayerWinningCardsAnimated: [
         type : [color]
-    ] = [:]
+    ] = [
+        .fire:[],
+        .ice:[],
+        .water:[]
+    ]
     
-    var remotePlayerWinningCardsAnimated: [
+    @Published var remotePlayerWinningCardsAnimated: [
         type : [color]
-    ] = [:]
+    ] = [
+        .fire:[],
+        .ice:[],
+        .water:[]
+    ]
     
     
     

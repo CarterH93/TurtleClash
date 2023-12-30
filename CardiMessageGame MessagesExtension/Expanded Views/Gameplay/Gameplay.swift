@@ -10,6 +10,11 @@ import SwiftUI
 struct Gameplay: View {
     
     
+    
+    
+    @EnvironmentObject var storage: AppStorage
+    
+    
     /// The degree of rotation for the back of the card
     @State var backDegree = 0.0
     /// The degree of rotation for the front of the card
@@ -70,10 +75,32 @@ func flipCard() {
         cards = hold
     }
     
+    
+    
+    
+   
+    
+    
+    func colorReader(dict: [type : [color]], type: type, at: Int) -> color? {
+        let array = dict[type]
+        
+        
+        if let int = array?.count {
+            if (int - 1) >= at {
+                return array![at]
+            } else {
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
+    
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Image("Design")
+                Image("Desig")
                     .resizable()
                     .scaledToFill()
                     .frame(width: geo.size.width, height: geo.size.height)
@@ -82,14 +109,16 @@ func flipCard() {
                     VStack(spacing: 0) {
                         HStack {
                             VStack {
+                                Spacer()
                                 HStack {
-                                    WinningStack(icon: "fire", color1: .blue, color2: .orange, color3: .green)
-                                         .frame(width: cardWidth / 2, height: cardHeight / 2)
-                                    WinningStack(icon: "water", color1: .blue, color2: .orange, color3: .green)
-                                         .frame(width: cardWidth / 2, height: cardHeight / 2)
-                                    WinningStack(icon: "ice", color1: .green, color2: .orange, color3: .blue)
-                                         .frame(width: cardWidth / 2, height: cardHeight / 2)
+                                    WinningStack(icon: .fire, color1: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .fire, at: 0), color2: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .fire, at: 1), color3: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .fire, at: 2), local: false)
+                                         
+                                    WinningStack(icon: .water, color1: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .water, at: 0), color2: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .water, at: 1), color3: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .water, at: 2), local: false)
+                                         
+                                    WinningStack(icon: .ice, color1: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .ice, at: 0), color2: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .ice, at: 1), color3: colorReader(dict: storage.remotePlayerWinningCardsDisplay, type: .ice, at: 2), local: false)
+                                         
                                 }
+                                
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 20)
                                         .foregroundColor(.orange)
@@ -102,7 +131,8 @@ func flipCard() {
                                         .fontWeight(.bold)
                                         .foregroundColor(.black)
                                 }
-                                .padding(.top, 3)
+                                .frame(height: 35)
+                                .padding(.top, 20)
                             }
                             .frame(width: 100, height: 100)
                             .padding([.leading, .trailing])
@@ -112,9 +142,18 @@ func flipCard() {
                             VStack {
                                 HStack {
                                     Spacer()
-                                    Help()
-                                        .frame(width: 40, height: 40)
-                                        .padding(.top)
+                                    Button(action: {
+                                        withAnimation {
+                                            //Bring up help menu
+                                            
+                                        }
+                                    }, label: {
+                                        Help()
+                                            .frame(width: 40, height: 40)
+                                            .padding(.top)
+                                    })
+                                    
+                                        
                                 }
                                 .padding([.leading, .trailing])
                                 
@@ -182,6 +221,8 @@ func flipCard() {
                                                         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                                                             withAnimation() {
                                                                 flipCard()
+                                                                storage.selectChoice(selectedCard)
+                                                                storage.send.toggle()
                                                             }
                                                         })
                                                     })
@@ -198,7 +239,8 @@ func flipCard() {
                             
                             Spacer()
                             
-                            VStack {
+                            VStack(spacing: 0) {
+                                
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 20)
                                         .foregroundColor(.green)
@@ -211,19 +253,20 @@ func flipCard() {
                                         .fontWeight(.bold)
                                         .foregroundColor(.black)
                                 }
-                                .padding(.bottom, 3)
+                                .frame(height: 35)
+                                .padding(.bottom, 10)
                                
                                 HStack {
-                                    WinningStack(icon: "fire", color1: .blue, color2: .orange, color3: .green)
-                                         .frame(width: cardWidth / 2, height: cardHeight / 2)
-                                    WinningStack(icon: "water", color1: .blue, color2: .orange, color3: .green)
-                                         .frame(width: cardWidth / 2, height: cardHeight / 2)
-                                    WinningStack(icon: "ice", color1: .green, color2: .orange, color3: .blue)
-                                         .frame(width: cardWidth / 2, height: cardHeight / 2)
+                                    WinningStack(icon: .fire, color1: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .fire, at: 0), color2: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .fire, at: 1), color3: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .fire, at: 2), local: true)
+                                         
+                                    WinningStack(icon: .water, color1: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .water, at: 0), color2: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .water, at: 1), color3: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .water, at: 2), local: true)
+                                         
+                                    WinningStack(icon: .ice, color1: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .ice, at: 0), color2: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .ice, at: 1), color3: colorReader(dict: storage.localPlayerWinningCardsDisplay, type: .ice, at: 2), local: true)
+                                         
                                 }
-                                
+                                Spacer()
                             }
-                            .frame(width: 100, height: 100)
+                            .frame(width: 100, height: 80)
                             .padding(.trailing, 30)
                             
                         }
@@ -303,6 +346,3 @@ func flipCard() {
 
 }
 
-#Preview {
-    Gameplay()
-}

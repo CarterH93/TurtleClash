@@ -22,7 +22,7 @@ struct Expanded: View {
     @State private var animation = 1
    
     var body: some View {
-        
+        /*
         ZStack {
             Color.orange
                 .ignoresSafeArea()
@@ -197,9 +197,9 @@ struct Expanded: View {
                 }
         }
     }
+    */
     
-    
-  //  Gameplay()
+    Gameplay()
     
     }
 }
