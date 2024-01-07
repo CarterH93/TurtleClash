@@ -46,7 +46,7 @@ func flipCard() {
     
     
 }
-    @State var firstTime = false
+    @State var secondTime = false
     
     let cardWidth: CGFloat = 75
     
@@ -213,8 +213,11 @@ func flipCard() {
                                             })
                                             .onEnded({ value in
                                                 storage.selectChoice(selectedCardWrapped)
-                                                checkForRoundWin()
-                                                checkForWin()
+                                                if !secondTime {
+                                                    checkForRoundWin()
+                                                    checkForWin()
+                                                }
+                                                
                                                 
                                                 withAnimation() {
                                                     position = .init(width: 0, height: -250)
@@ -222,7 +225,7 @@ func flipCard() {
                                                     disable = true
                                                 }
                                                 
-                                                if storage.pastRemotePlayerSelection != nil {
+                                                if storage.pastRemotePlayerSelection != nil && !secondTime {
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                                                         withAnimation() {
                                                             opponentCardPosition =  .init(width: 18.75, height: 83.636)
@@ -246,7 +249,7 @@ func flipCard() {
                                                                 }
                                                                 
                                                                 
-                                                                
+                                                                //I believe this logic below needs to be located in the onAppear section!!!!
                                                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                                                                     withAnimation() {
                                                                         opponentCardPosition = CGSize.zero
@@ -255,8 +258,7 @@ func flipCard() {
                                                                        flipCard()
                                                                         selectedCard = nil
                                                                         
-                                                                        storage.pastRoundselectionPlayer1 = nil
-                                                                        storage.pastRoundselectionPlayer2 = nil
+                                                                        secondTime.toggle()
                                                                     }
                                                                 })
                                                                 
