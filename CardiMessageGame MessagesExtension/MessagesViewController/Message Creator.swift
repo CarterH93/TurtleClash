@@ -55,8 +55,7 @@ extension MessagesViewController {
  */
         
         
-        checkForRoundWin()
-        checkForWin()
+       
         
         //Sets current player turn
         if storage.currentPlayerTurn == 2 {

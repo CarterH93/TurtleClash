@@ -46,7 +46,7 @@ func flipCard() {
     
     
 }
-    
+    @State var firstTime = false
     
     let cardWidth: CGFloat = 75
     
@@ -152,7 +152,7 @@ func flipCard() {
                                     Button(action: {
                                         withAnimation {
                                             //Bring up help menu
-                                            
+                                            storage.send.toggle()
                                         }
                                     }, label: {
                                         Help()
@@ -198,8 +198,8 @@ func flipCard() {
                         Spacer()
                         
                         HStack {
-                            if let selectedCard = selectedCard {
-                                CardView(card: selectedCard)
+                            if let selectedCardWrapped = selectedCard {
+                                CardView(card: selectedCardWrapped)
                                     .frame(width: cardWidth * 1.3, height: cardHeight * 1.3)
                                     .padding()
                                     .offset(x: position.width, y: position.height)
@@ -212,25 +212,27 @@ func flipCard() {
                                                 }
                                             })
                                             .onEnded({ value in
-                                                
-                                                
+                                                storage.selectChoice(selectedCardWrapped)
+                                                checkForRoundWin()
+                                                checkForWin()
                                                 
                                                 withAnimation() {
                                                     position = .init(width: 0, height: -250)
                                                     isDragging = false
                                                     disable = true
                                                 }
+                                                
                                                 if storage.pastRemotePlayerSelection != nil {
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                                                         withAnimation() {
-                                                            opponentCardPosition =  .init(width: geo.size.width * 0.05, height: geo.size.height * 0.103)
+                                                            opponentCardPosition =  .init(width: 18.75, height: 83.636)
                                                             opponentCardSize = 2.58
                                                         }
                                                         
                                                         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                                                             withAnimation() {
                                                                 flipCard()
-                                                                storage.selectChoice(selectedCard)
+                                                                
                                                                 if storage.currentPlayer == 1 {
                                                                     storage.Player1Cards.removeAll { value in
                                                                         return value == selectedCard
@@ -242,15 +244,28 @@ func flipCard() {
                                                                     }
                                                                     storage.addNewCardToLocalPlayerCards()
                                                                 }
+                                                                
+                                                                
+                                                                
                                                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                                                                    storage.send.toggle()
+                                                                    withAnimation() {
+                                                                        opponentCardPosition = CGSize.zero
+                                                                        opponentCardSize = 1
+                                                                        position = CGSize.zero
+                                                                       flipCard()
+                                                                        selectedCard = nil
+                                                                        
+                                                                        storage.pastRoundselectionPlayer1 = nil
+                                                                        storage.pastRoundselectionPlayer2 = nil
+                                                                    }
                                                                 })
+                                                                
                                                             }
                                                         })
                                                     })
                                                 } else {
                                                     
-                                                    storage.selectChoice(selectedCard)
+                                                    storage.selectChoice(selectedCardWrapped)
                                                     if storage.currentPlayer == 1 {
                                                         storage.Player1Cards.removeAll { value in
                                                             return value == selectedCard
@@ -262,9 +277,7 @@ func flipCard() {
                                                         }
                                                         storage.addNewCardToLocalPlayerCards()
                                                     }
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                                                        storage.send.toggle()
-                                                    })
+                                                    
                                                 }
                                                    
                                                     
@@ -410,13 +423,62 @@ func flipCard() {
             }
             
         }
-        .disabled(disable ? true : false)
+       // .disabled(disable ? true : false)
+        
         .onAppear {
-            if storage.localPlayerSelection != nil {
-                position = .init(width: 0, height: -250)
-                selectedCard = storage.localPlayerSelection
+          
+            /*
+            checkForRoundWin()
+            checkForWin()
+            
+            if storage.pastLocalPlayerSelection != nil {
+                
+                selectedCard = storage.pastLocalPlayerSelection
+                
+                withAnimation() {
+                    position = .init(width: 0, height: -250)
+                    isDragging = false
+                    disable = true
+                }
+                if storage.pastRemotePlayerSelection != nil {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                        withAnimation() {
+                            opponentCardPosition =  .init(width: 18.75, height: 83.636)
+                            opponentCardSize = 2.58
+                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                            withAnimation() {
+                                flipCard()
+                                
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                    withAnimation() {
+                                        opponentCardPosition = CGSize.zero
+                                        opponentCardSize = 1
+                                        position = CGSize.zero
+                                       flipCard()
+                                        selectedCard = nil
+                                    }
+                                })
+                                
+                                
+                                
+                            }
+                        })
+                        
+                       
+                        
+                        
+                        
+                        
+                    })
+                }
+                
             }
+        */
         }
+         
         .ignoresSafeArea()
         
     }

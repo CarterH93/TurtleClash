@@ -16,9 +16,7 @@ extension MessagesViewController {
     
     func messageReader(_ message: MSMessage) {
         
-        
-        
-        
+      
 
         
         
@@ -382,7 +380,7 @@ extension MessagesViewController {
         
         
         
-        checkForWin()
+        
         
     }
     
