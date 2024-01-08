@@ -462,10 +462,14 @@ func flipCard() {
             
             
             
+            
+            
            
             
             if storage.pastLocalPlayerSelection == nil || storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false ? true : false {
                 //do nothing
+                checkForWin()
+                
             } else {
                 
                 
