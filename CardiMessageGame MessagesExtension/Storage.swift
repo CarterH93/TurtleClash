@@ -77,8 +77,9 @@ class AppStorage: ObservableObject {
         
         let tempCardHold = cardCreator(number: number, type: type, color: color, animation: animation)
         
-        if Player1Cards.contains(tempCardHold) || Player2Cards.contains(tempCardHold) {
-            //Do nothing
+        if Player1Cards.contains(tempCardHold) || Player2Cards.contains(tempCardHold) || player1Selection == tempCardHold || player2Selection == tempCardHold {
+            //Try all over again
+            addNewCardToLocalPlayerCards()
         } else {
             if currentPlayer == 1 {
                 Player1Cards.append(tempCardHold)
@@ -96,7 +97,13 @@ class AppStorage: ObservableObject {
     @Published var goToExpnadedView = false
     
     
-    
+    var gameover: Bool {
+        if overallGameEndingResult != 0 {
+            return true
+        } else {
+            return false
+        }
+    }
     
     @Published var messageDataExists = false
     @Published var settingsMenuActive = false

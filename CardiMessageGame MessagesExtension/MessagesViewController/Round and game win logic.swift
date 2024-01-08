@@ -75,19 +75,32 @@ extension Gameplay {
                 
                 //Stores Results
                 
-                if storage.pastRoundResult == 1 {
-                    //Player 1 won the round
+                if storage.tempPastRoundResult == 1 {
                     
-                    storage.winningSelectionsPlayer1.append(storage.player1Selection!)
-                } else if storage.pastRoundResult == 2 {
-                    //Player 2 won the round
+                    //Someone won the round
                     
-                    storage.winningSelectionsPlayer2.append(storage.player2Selection!)
-                } else {
-                    // there is a tie
+                    if storage.pastRoundResultSide == 1 {
+                        //player 1 won
+                        storage.winningSelectionsPlayer1.append(storage.player1Selection!)
+                    } else {
+                        //player 2 won
+                        storage.winningSelectionsPlayer2.append(storage.player2Selection!)
+                    }
                     
                     
-                    //Do nothing
+                    
+                } else if storage.tempPastRoundResult == 2 {
+                    //Someone lost the round
+                    
+                    if storage.pastRoundResultSide == 1 {
+                        //player 1 lost
+                        storage.winningSelectionsPlayer2.append(storage.player2Selection!)
+                    } else {
+                        //player 2 lost
+                        storage.winningSelectionsPlayer1.append(storage.player1Selection!)
+                    }
+                    
+                   
                 }
                 
                 //Stores selection data
