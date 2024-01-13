@@ -47,7 +47,6 @@ func flipCard() {
     
 }
     @State var secondTime = false
-    @State var showAnimationAfterSecondTime = false
     
     let cardWidth: CGFloat = 75
     
@@ -259,18 +258,17 @@ func flipCard() {
                                                                        flipCard()
                                                                         selectedCard = nil
                                                                         
-                                                                        secondTime.toggle()
+                                                                        secondTime = true
                                                                         disable = false
-                                                                    }
-                                                                    
-                                                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
                                                                         
-                                                                        if showAnimationAfterSecondTime {
+                                                                        checkForWin()
+                                                                        if storage.gameover {
                                                                             storage.send.toggle()
-                                                                            checkForWin()
                                                                         }
                                                                         
-                                                                    })
+                                                                    }
+                                                                    
+                                                        
                                                                     
                                                                     
                                                                     
@@ -281,7 +279,7 @@ func flipCard() {
                                                         })
                                                     })
                                                 } else {
-                                                    
+                                                    secondTime = false
                                                     storage.selectChoice(selectedCardWrapped)
                                                     if storage.currentPlayer == 1 {
                                                         storage.Player1Cards.removeAll { value in
@@ -458,6 +456,8 @@ func flipCard() {
                 disable = true
                 selectedCard = storage.localPlayerSelection
                 position = .init(width: 0, height: -250)
+                
+               
             }
             
             
@@ -466,7 +466,7 @@ func flipCard() {
             
            
             
-            if storage.pastLocalPlayerSelection == nil || storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false ? true : false {
+            if storage.pastLocalPlayerSelection == nil || storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false ? true : false || storage.localPlayerSelection != nil {
                 //do nothing
                 checkForWin()
                 
@@ -497,7 +497,10 @@ func flipCard() {
                                         position = CGSize.zero
                                        flipCard()
                                         selectedCard = nil
-                                        showAnimationAfterSecondTime = true
+                                        
+                                        
+                                        
+                                        
                                         disable = false
                                         storage.pastRoundselectionPlayer1 = nil
                                         storage.pastRoundselectionPlayer2 = nil

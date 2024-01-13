@@ -40,10 +40,26 @@ class AppStorage: ObservableObject {
             
             let tempCardHold = cardCreator(number: number, type: type, color: color, animation: animation)
             
-            if tempLocalCardHold.contains(tempCardHold) || tempRemoteCardHold.contains(tempCardHold) {
-                //Do nothing
-            } else {
+            var unique = true
+            
+            for card in tempLocalCardHold {
+                if card.number == tempCardHold.number && card.color == tempCardHold.color {
+                    unique = false
+                }
+            }
+            
+            for card in tempRemoteCardHold {
+                if card.number == tempCardHold.number && card.color == tempCardHold.color {
+                    unique = false
+                }
+            }
+            
+            
+            if unique {
                 tempLocalCardHold.insert(tempCardHold)
+                
+            } else {
+                //Do nothing
             }
         }
         
@@ -57,11 +73,28 @@ class AppStorage: ObservableObject {
             
             let tempCardHold = cardCreator(number: number, type: type, color: color, animation: animation)
             
-            if tempLocalCardHold.contains(tempCardHold) || tempRemoteCardHold.contains(tempCardHold) {
-                //Do nothing
-            } else {
-                tempRemoteCardHold.insert(tempCardHold)
+            var unique = true
+            
+            for card in tempLocalCardHold {
+                if card.number == tempCardHold.number && card.color == tempCardHold.color {
+                    unique = false
+                }
             }
+            
+            for card in tempRemoteCardHold {
+                if card.number == tempCardHold.number && card.color == tempCardHold.color {
+                    unique = false
+                }
+            }
+            
+            
+            if unique {
+                tempRemoteCardHold.insert(tempCardHold)
+                
+            } else {
+                //Do nothing
+            }
+            
         }
         
         Player1Cards = Array(tempLocalCardHold)
@@ -77,7 +110,38 @@ class AppStorage: ObservableObject {
         
         let tempCardHold = cardCreator(number: number, type: type, color: color, animation: animation)
         
-        if Player1Cards.contains(tempCardHold) || Player2Cards.contains(tempCardHold) || player1Selection == tempCardHold || player2Selection == tempCardHold {
+        var unique = true
+        
+        for card in Player1Cards {
+            if card.number == tempCardHold.number && card.color == tempCardHold.color {
+                unique = false
+            }
+        }
+        
+        for card in Player2Cards {
+            if card.number == tempCardHold.number && card.color == tempCardHold.color {
+                unique = false
+            }
+        }
+        
+        if player1Selection?.number == tempCardHold.number && player1Selection?.color == tempCardHold.color {
+            unique = false
+        }
+        
+        if player2Selection?.number == tempCardHold.number && player2Selection?.color == tempCardHold.color {
+            unique = false
+        }
+        
+        if pastRoundselectionPlayer1?.number == tempCardHold.number && pastRoundselectionPlayer1?.color == tempCardHold.color {
+            unique = false
+        }
+        
+        if pastRoundselectionPlayer2?.number == tempCardHold.number && pastRoundselectionPlayer2?.color == tempCardHold.color {
+            unique = false
+        }
+        
+        
+        if unique == false {
             //Try all over again
             addNewCardToLocalPlayerCards()
         } else {

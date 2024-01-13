@@ -17,8 +17,10 @@ extension MessagesViewController {
     func messageReader(_ message: MSMessage) {
         
       
-
-        
+        storage.player1Selection = nil
+        storage.player2Selection = nil
+        storage.pastRoundselectionPlayer1 = nil
+        storage.pastRoundselectionPlayer2 = nil
         
         
         //READS DATA
