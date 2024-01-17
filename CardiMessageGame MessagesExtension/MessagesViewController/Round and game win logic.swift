@@ -81,10 +81,16 @@ extension Gameplay {
                     
                     if storage.pastRoundResultSide == 1 {
                         //player 1 won
-                        storage.winningSelectionsPlayer1.append(storage.player1Selection!)
+                        
+                        withAnimation(.snappy.delay(4)) {
+                            storage.winningSelectionsPlayer1.append(storage.player1Selection!)
+                        }
                     } else {
                         //player 2 won
-                        storage.winningSelectionsPlayer2.append(storage.player2Selection!)
+                        withAnimation(.snappy.delay(4)) {
+                            storage.winningSelectionsPlayer2.append(storage.player2Selection!)
+                        }
+                        
                     }
                     
                     
@@ -94,10 +100,16 @@ extension Gameplay {
                     
                     if storage.pastRoundResultSide == 1 {
                         //player 1 lost
-                        storage.winningSelectionsPlayer2.append(storage.player2Selection!)
+                        withAnimation(.snappy.delay(4)) {
+                            storage.winningSelectionsPlayer2.append(storage.player2Selection!)
+                        }
+                        
                     } else {
                         //player 2 lost
-                        storage.winningSelectionsPlayer1.append(storage.player1Selection!)
+                        withAnimation(.snappy.delay(4)) {
+                            storage.winningSelectionsPlayer1.append(storage.player1Selection!)
+                        }
+                        
                     }
                     
                    
