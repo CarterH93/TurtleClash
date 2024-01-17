@@ -16,16 +16,24 @@ extension MessagesViewController {
     
     func messageReader(_ message: MSMessage) {
         
+        storage.tempMessageDataHold = message
+        
       
         storage.player1Selection = nil
         storage.player2Selection = nil
         storage.pastRoundselectionPlayer1 = nil
         storage.pastRoundselectionPlayer2 = nil
+        storage.Player1Cards = []
+        storage.Player2Cards = []
+        storage.winningSelectionsPlayer1 = []
+        storage.winningSelectionsPlayer2 = []
+       
         
         
         //READS DATA
         
-         
+        
+        
         
         if let InputNumber = message.md.integer(forKey: "pastRoundselectionPlayer1Number") {
             // do sth with Int

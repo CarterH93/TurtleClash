@@ -10,9 +10,9 @@ import UIKit
 import Combine
 
 
-extension Gameplay {
+
     
-    func checkForRoundWin() {
+func checkForRoundWin(_ storage: AppStorage) {
         
         if let localPlayerSelection = storage.localPlayerSelection {
             
@@ -131,6 +131,8 @@ extension Gameplay {
         }
     }
 
+
+extension Gameplay {
     
     func checkForWin() {
         

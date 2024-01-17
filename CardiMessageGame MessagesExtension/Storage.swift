@@ -7,8 +7,54 @@
 
 
 import SwiftUI
+import Messages
+
+func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
+}
+
+let saveMove = getDocumentsDirectory().appendingPathComponent("SavedMove")
 
 class AppStorage: ObservableObject {
+    
+    @Published var tempMessageDataHold: MSMessage? = nil
+    
+    @Published var messageHashValue: String = ""
+    
+    @Published var savedMove: [String:Card] {
+        
+        //did set for saving data to the disk
+        
+        didSet {
+            let encoder = JSONEncoder()
+            
+            if let encoded = try? encoder.encode(savedMove) {
+                
+                let str = encoded
+                let url = saveMove
+                
+                do {
+                    try str.write(to: url, options: .atomicWrite)
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
+        }
+    }
+    
+    init() {
+            if let savedItems = try? Data(contentsOf: saveMove) {
+                if let decodedItems = try? JSONDecoder().decode([String:Card].self, from: savedItems) {
+                    savedMove = decodedItems
+                    return
+                }
+            }
+        savedMove = [:]
+        }
+    
     
     
     let highestCardNumber = 12
