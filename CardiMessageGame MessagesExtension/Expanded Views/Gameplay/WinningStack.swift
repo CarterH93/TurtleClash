@@ -151,19 +151,43 @@ struct WinningStack: View {
                     }
                    
                     if let color = colorConverter(color2) {
-                        ZStack {
-                            Color(.init(color))
-                            Image(icon.rawValue)
-                                .resizable()
-                                .scaledToFit()
-                                .padding(3)
-                                .opacity(winningCardPos(color: color2).height != 0 ? 1 : 0)
+                        
+                        if let aboveColor = colorConverter(color1) {
+                            ZStack {
+                                Color(.init(color))
+                                Image(icon.rawValue)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .padding(3)
+                                    .opacity(winningCardPos(color: color2).height != 0 || winningCardPos(color: color1).height != 0 ? 1 : 0 )
+                            }
+                            .frame(width: 40, height: 30)
+                            
+                            
+                            .offset(x: winningCardPos(color: color2).width, y: winningCardPos(color: color2).height != 0 ? winningCardPos(color: color2).height : 10)
+                            .scaleEffect(winningCardPos(color: color2).height != 0 ? scaleEffect : 1)
+                            
+                            
+                        } else {
+                            
+                            if let aboveColor = colorConverter(color1) {
+                                ZStack {
+                                    Color(.init(color))
+                                    Image(icon.rawValue)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding(3)
+                                        .opacity(winningCardPos(color: color2).height != 0 ? 1 : 0 )
+                                }
+                                .frame(width: 40, height: 30)
+                                
+                                
+                                .offset(x: winningCardPos(color: color2).width, y: winningCardPos(color: color2).height != 0 ? winningCardPos(color: color2).height : 10)
+                                .scaleEffect(winningCardPos(color: color2).height != 0 ? scaleEffect : 1)
+                                
+                            }
+                            
                         }
-                        .frame(width: 40, height: 30)
-                        
-                        
-                        .offset(x: winningCardPos(color: color2).width, y: winningCardPos(color: color2).height != 0 ? winningCardPos(color: color2).height : 10)
-                        .scaleEffect(winningCardPos(color: color2).height != 0 ? scaleEffect : 1)
                     }
                     
                     

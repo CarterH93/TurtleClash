@@ -27,7 +27,8 @@ extension MessagesViewController {
         storage.Player2Cards = []
         storage.winningSelectionsPlayer1 = []
         storage.winningSelectionsPlayer2 = []
-       
+        
+        
         
         
         //READS DATA
