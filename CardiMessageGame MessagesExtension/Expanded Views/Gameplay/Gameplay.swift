@@ -13,7 +13,7 @@ struct Gameplay: View {
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State private var timeActive = 0.0
     @State private var notShowedSaveMove = true
-    @State private var notShowedPreviousRound = true
+    
     @EnvironmentObject var storage: AppStorage
     
     
@@ -211,7 +211,6 @@ func flipCard() {
                                                 withAnimation() {
                                                     position = value.translation
                                                     isDragging = true
-                                                    notShowedPreviousRound = false
                                                 }
                                             })
                                             .onEnded({ value in
@@ -229,6 +228,7 @@ func flipCard() {
                                                 }
                                                 
                                                 if storage.pastRemotePlayerSelection != nil && !secondTime {
+                                                    notShowedSaveMove = false
                                                     storage.savedMove[storage.messageHashValue] = selectedCardWrapped
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                                                         withAnimation() {
@@ -489,12 +489,7 @@ func flipCard() {
                 checkForWin()
                 
             } else {
-                
                 disable = true
-                
-                 if notShowedPreviousRound {
-                
-                notShowedPreviousRound = false
                 
                 if storage.pastRoundResult == 1 {
                     if storage.currentPlayer == 1 {
@@ -518,7 +513,6 @@ func flipCard() {
                     }
                 }
                 
-                selectedCard = storage.pastLocalPlayerSelection
                 
                 withAnimation(.snappy.delay(4)) {
                     if storage.pastRoundResult == 1 {
@@ -535,6 +529,8 @@ func flipCard() {
                         }
                     }
                 }
+                
+                selectedCard = storage.pastLocalPlayerSelection
                 
                 withAnimation() {
                     position = .init(width: 0, height: -250)
@@ -562,7 +558,6 @@ func flipCard() {
                                     
                                     
                                     
-                                    
                                     disable = false
                                     storage.pastRoundselectionPlayer1 = nil
                                     storage.pastRoundselectionPlayer2 = nil
@@ -582,7 +577,7 @@ func flipCard() {
                     
                 })
                 
-            }
+                
             }
         }
         }
@@ -689,4 +684,3 @@ func flipCard() {
     }
 
 }
-
