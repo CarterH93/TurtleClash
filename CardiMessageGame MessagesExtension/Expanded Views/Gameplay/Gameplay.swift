@@ -13,7 +13,7 @@ struct Gameplay: View {
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State private var timeActive = 0.0
     @State private var notShowedSaveMove = true
-    
+    @State private var notShowedPreviousRound = true
     @EnvironmentObject var storage: AppStorage
     
     
@@ -211,6 +211,7 @@ func flipCard() {
                                                 withAnimation() {
                                                     position = value.translation
                                                     isDragging = true
+                                                    notShowedPreviousRound = false
                                                 }
                                             })
                                             .onEnded({ value in
@@ -489,8 +490,51 @@ func flipCard() {
                 
             } else {
                 
+                disable = true
+                
+                 if notShowedPreviousRound {
+                
+                notShowedPreviousRound = false
+                
+                if storage.pastRoundResult == 1 {
+                    if storage.currentPlayer == 1 {
+                        storage.winningSelectionsPlayer1.removeAll { value in
+                            return value == storage.pastRoundselectionPlayer1
+                        }
+                    } else {
+                        storage.winningSelectionsPlayer2.removeAll { value in
+                            return value == storage.pastRoundselectionPlayer2
+                        }
+                    }
+                } else {
+                    if storage.currentPlayer == 1 {
+                        storage.winningSelectionsPlayer2.removeAll { value in
+                            return value == storage.pastRoundselectionPlayer2
+                        }
+                    } else {
+                        storage.winningSelectionsPlayer1.removeAll { value in
+                            return value == storage.pastRoundselectionPlayer1
+                        }
+                    }
+                }
                 
                 selectedCard = storage.pastLocalPlayerSelection
+                
+                withAnimation(.snappy.delay(4)) {
+                    if storage.pastRoundResult == 1 {
+                        if storage.currentPlayer == 1 {
+                            storage.winningSelectionsPlayer1.append(storage.pastRoundselectionPlayer1!)
+                        } else {
+                            storage.winningSelectionsPlayer2.append(storage.pastRoundselectionPlayer2!)
+                        }
+                    } else {
+                        if storage.currentPlayer == 1 {
+                            storage.winningSelectionsPlayer2.append(storage.pastRoundselectionPlayer2!)
+                        } else {
+                            storage.winningSelectionsPlayer1.append(storage.pastRoundselectionPlayer1!)
+                        }
+                    }
+                }
                 
                 withAnimation() {
                     position = .init(width: 0, height: -250)
@@ -518,6 +562,7 @@ func flipCard() {
                                     
                                     
                                     
+                                    
                                     disable = false
                                     storage.pastRoundselectionPlayer1 = nil
                                     storage.pastRoundselectionPlayer2 = nil
@@ -537,7 +582,7 @@ func flipCard() {
                     
                 })
                 
-                
+            }
             }
         }
         }
