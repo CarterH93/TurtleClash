@@ -152,7 +152,7 @@ struct WinningStack: View {
                    
                     if let color = colorConverter(color2) {
                         
-                        if let aboveColor = colorConverter(color1) {
+                        if colorConverter(color1) != nil {
                             ZStack {
                                 Color(.init(color))
                                 Image(icon.rawValue)
@@ -170,7 +170,7 @@ struct WinningStack: View {
                             
                         } else {
                             
-                            if let aboveColor = colorConverter(color1) {
+                            if colorConverter(color1) != nil {
                                 ZStack {
                                     Color(.init(color))
                                     Image(icon.rawValue)
