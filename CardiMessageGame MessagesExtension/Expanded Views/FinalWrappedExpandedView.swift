@@ -19,9 +19,7 @@ struct FinalWrappedExpanded: View {
                 
                 
                 if storage.settingsMenuActive == true {
-                        Color.black.ignoresSafeArea()
-                        
-                    
+                        Settings()
                         .frame(width: geo.size.width, height: geo.size.width)
                         .frame(width: geo.size.width, height: geo.size.height)
                     
