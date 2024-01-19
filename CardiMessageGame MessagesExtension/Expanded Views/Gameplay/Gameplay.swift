@@ -543,71 +543,7 @@ func flipCard() {
                     }
                     
                     
-                    withAnimation(.snappy.delay(4)) {
-                        if storage.pastRoundResult == 1 {
-                            if storage.currentPlayer == 1 {
-                                storage.winningSelectionsPlayer1.append(storage.pastRoundselectionPlayer1!)
-                            } else {
-                                storage.winningSelectionsPlayer2.append(storage.pastRoundselectionPlayer2!)
-                            }
-                        } else {
-                            if storage.currentPlayer == 1 {
-                                storage.winningSelectionsPlayer2.append(storage.pastRoundselectionPlayer2!)
-                            } else {
-                                storage.winningSelectionsPlayer1.append(storage.pastRoundselectionPlayer1!)
-                            }
-                        }
-                    }
-                    
-                    selectedCard = storage.pastLocalPlayerSelection
-                    
-                    withAnimation() {
-                        position = .init(width: 0, height: geo.size.height * localCardOffsety)
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                        withAnimation() {
-                            offsetValueY = yPositionLocalPlayerCard - yPositionOpponentPlayerCard
-                            offsetValueX = geo.size.width * opponentCardOffsetx
-                            opponentCardSize = 2.58
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                            withAnimation() {
-                                flipCard()
-                                
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                                    withAnimation() {
-                                        offsetValueX = 0
-                                        offsetValueY = 0
-                                        opponentCardSize = 1
-                                        position = CGSize.zero
-                                        flipCard()
-                                        selectedCard = nil
-                                        
-                                        
-                                        
-                                        
-                                        disable = false
-                                        storage.pastRoundselectionPlayer1 = nil
-                                        storage.pastRoundselectionPlayer2 = nil
-                                        checkForWin()
-                                    }
-                                })
-                                
-                                
-                                
-                            }
-                        })
-                        
-                        
-                        
-                        
-                        
-                        
-                    })
-                    
+                   
                     
                 }
             }
@@ -707,6 +643,84 @@ func flipCard() {
                         
                         
                         
+                    } else {
+                        
+                      
+                        
+                        if storage.pastLocalPlayerSelection == nil || storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false ? true : false || storage.localPlayerSelection != nil {
+                            //do nothing
+                          
+                            
+                        } else {
+                            
+                            //Run code here
+                            withAnimation(.snappy.delay(4)) {
+                                if storage.pastRoundResult == 1 {
+                                    if storage.currentPlayer == 1 {
+                                        storage.winningSelectionsPlayer1.append(storage.pastRoundselectionPlayer1!)
+                                    } else {
+                                        storage.winningSelectionsPlayer2.append(storage.pastRoundselectionPlayer2!)
+                                    }
+                                } else {
+                                    if storage.currentPlayer == 1 {
+                                        storage.winningSelectionsPlayer2.append(storage.pastRoundselectionPlayer2!)
+                                    } else {
+                                        storage.winningSelectionsPlayer1.append(storage.pastRoundselectionPlayer1!)
+                                    }
+                                }
+                            }
+                            
+                            selectedCard = storage.pastLocalPlayerSelection
+                            
+                            withAnimation() {
+                                position = .init(width: 0, height: geo.size.height * localCardOffsety)
+                            }
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                withAnimation() {
+                                    offsetValueY = yPositionLocalPlayerCard - yPositionOpponentPlayerCard
+                                    offsetValueX = geo.size.width * opponentCardOffsetx
+                                    opponentCardSize = 2.58
+                                }
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                    withAnimation() {
+                                        flipCard()
+                                        
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                            withAnimation() {
+                                                offsetValueX = 0
+                                                offsetValueY = 0
+                                                opponentCardSize = 1
+                                                position = CGSize.zero
+                                                flipCard()
+                                                selectedCard = nil
+                                                
+                                                
+                                                
+                                                
+                                                disable = false
+                                                storage.pastRoundselectionPlayer1 = nil
+                                                storage.pastRoundselectionPlayer2 = nil
+                                                checkForWin()
+                                            }
+                                        })
+                                        
+                                        
+                                        
+                                    }
+                                })
+                                
+                                
+                                
+                                
+                                
+                                
+                            })
+                            
+                            
+                        }
                     }
                 }
                 
