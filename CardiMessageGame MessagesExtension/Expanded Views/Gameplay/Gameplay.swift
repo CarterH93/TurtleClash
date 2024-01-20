@@ -125,7 +125,7 @@ func flipCard() {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Image("Desig")
+                Image("Design")
                     .resizable()
                     .scaledToFill()
                     .frame(width: geo.size.width, height: geo.size.height)
@@ -304,9 +304,9 @@ func flipCard() {
                                                                         position = CGSize.zero
                                                                        flipCard()
                                                                         selectedCard = nil
-                                                                        
+                                                                        storage.animationActive = true
                                                                         storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
-                                                                            
+                                                                            storage.animationActive = false
                                                                             secondTime = true
                                                                             disable = false
                                                                             
@@ -366,9 +366,12 @@ func flipCard() {
                                 )
                                     .ignoresSafeArea(.all)
                             } else {
-                                EmptyCard()
-                                    .frame(width: cardWidth * 1.3, height: cardHeight * 1.3)
-                                    .padding()
+                                
+                                    EmptyCard()
+                                        .frame(width: cardWidth * 1.3, height: cardHeight * 1.3)
+                                        .padding()
+                                        .opacity(storage.animationActive ? 0 : 1)
+                                
                             }
                             
                             Spacer()
@@ -627,9 +630,9 @@ func flipCard() {
                                             position = CGSize.zero
                                             flipCard()
                                             selectedCard = nil
-                                            
+                                            storage.animationActive = true
                                             storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
-                                                
+                                                storage.animationActive = false
                                                 secondTime = true
                                                 disable = false
                                                 
@@ -715,10 +718,10 @@ func flipCard() {
                                                 position = CGSize.zero
                                                 flipCard()
                                                 selectedCard = nil
-                                                
+                                                storage.animationActive = true
                                                 
                                                 storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
-                                                
+                                                    storage.animationActive = false
                                                 disable = false
                                                 storage.pastRoundselectionPlayer1 = nil
                                                 storage.pastRoundselectionPlayer2 = nil

@@ -17,7 +17,7 @@ extension MessagesViewController {
     func messageReader(_ message: MSMessage) {
         
         storage.tempMessageDataHold = message
-        
+        storage.animationActive = false
         storage.helpMenuVisable = false
         storage.player1Selection = nil
         storage.player2Selection = nil

@@ -22,6 +22,8 @@ class AppStorage: ObservableObject {
     
     let battleAnimationLength = 5.0
     
+    @Published var animationActive = false
+    
     //Code for scheduling background tasks
     @Published var workItems: [DispatchWorkItem] = []
     
