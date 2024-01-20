@@ -14,10 +14,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "09FE1546-5CF3-40A4-80B3-1AC8D726A285 - 78b63aff9b4b94ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "310"
+                  endingLineNumber = "310"
+                  offsetFromSymbolStart = "5340">
+               </Location>
+               <Location
+                  uuid = "09FE1546-5CF3-40A4-80B3-1AC8D726A285 - 78b63aff9b4b9663"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "323"
+                  endingLineNumber = "323"
+                  offsetFromSymbolStart = "5828">
+               </Location>
+               <Location
+                  uuid = "09FE1546-5CF3-40A4-80B3-1AC8D726A285 - f57b5f9d8d591401"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "323"
+                  endingLineNumber = "323"
+                  offsetFromSymbolStart = "5844">
+               </Location>
+               <Location
+                  uuid = "09FE1546-5CF3-40A4-80B3-1AC8D726A285 - f57b5f9d8d591401"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "323"
+                  endingLineNumber = "323"
+                  offsetFromSymbolStart = "5940">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,10 +92,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A288FB71-DD35-41D0-A399-C7A5204E7CBB - 78b63aff9b4b98e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "280"
+                  endingLineNumber = "280"
+                  offsetFromSymbolStart = "4984">
+               </Location>
+               <Location
+                  uuid = "A288FB71-DD35-41D0-A399-C7A5204E7CBB - 78b63aff9b4b9a43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "291"
+                  endingLineNumber = "291"
+                  offsetFromSymbolStart = "5476">
+               </Location>
+               <Location
+                  uuid = "A288FB71-DD35-41D0-A399-C7A5204E7CBB - f57b5f9d8d591821"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "291"
+                  endingLineNumber = "291"
+                  offsetFromSymbolStart = "5492">
+               </Location>
+               <Location
+                  uuid = "A288FB71-DD35-41D0-A399-C7A5204E7CBB - f57b5f9d8d591821"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "291"
+                  endingLineNumber = "291"
+                  offsetFromSymbolStart = "5576">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,10 +170,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D3C60AF9-CA4C-4BBE-A711-F9A5FA6CAEE8 - 78b63aff9b4ba700"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "792">
+               </Location>
+               <Location
+                  uuid = "D3C60AF9-CA4C-4BBE-A711-F9A5FA6CAEE8 - 78b63aff9b4ba7e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "D3C60AF9-CA4C-4BBE-A711-F9A5FA6CAEE8 - f57b5f9d8d592581"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "1324">
+               </Location>
+               <Location
+                  uuid = "D3C60AF9-CA4C-4BBE-A711-F9A5FA6CAEE8 - f57b5f9d8d592581"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "1336">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,10 +248,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "83650DF2-EEB5-4E83-BA3E-881934E32069 - 78b63aff9b4ba69b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "1556">
+               </Location>
+               <Location
+                  uuid = "83650DF2-EEB5-4E83-BA3E-881934E32069 - 78b63aff9b4ba117"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "2068">
+               </Location>
+               <Location
+                  uuid = "83650DF2-EEB5-4E83-BA3E-881934E32069 - f57b5f9d8d592375"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "2084">
+               </Location>
+               <Location
+                  uuid = "83650DF2-EEB5-4E83-BA3E-881934E32069 - f57b5f9d8d592375"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "2108">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,10 +326,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4A96B351-2F5F-4280-9794-A1617EC371DB - 78b63aff9b4ba04d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "2320">
+               </Location>
+               <Location
+                  uuid = "4A96B351-2F5F-4280-9794-A1617EC371DB - 78b63aff9b4ba0ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "218"
+                  endingLineNumber = "218"
+                  offsetFromSymbolStart = "2828">
+               </Location>
+               <Location
+                  uuid = "4A96B351-2F5F-4280-9794-A1617EC371DB - f57b5f9d8d592288"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "218"
+                  endingLineNumber = "218"
+                  offsetFromSymbolStart = "2844">
+               </Location>
+               <Location
+                  uuid = "4A96B351-2F5F-4280-9794-A1617EC371DB - f57b5f9d8d592288"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "218"
+                  endingLineNumber = "218"
+                  offsetFromSymbolStart = "2880">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,10 +404,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B505D2FF-6F6F-4D13-A75B-CA9803D11332 - 78b63aff9b4ba383"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "227"
+                  endingLineNumber = "227"
+                  offsetFromSymbolStart = "3068">
+               </Location>
+               <Location
+                  uuid = "B505D2FF-6F6F-4D13-A75B-CA9803D11332 - 78b63aff9b4ba2f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "3572">
+               </Location>
+               <Location
+                  uuid = "B505D2FF-6F6F-4D13-A75B-CA9803D11332 - f57b5f9d8d59209b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "3588">
+               </Location>
+               <Location
+                  uuid = "B505D2FF-6F6F-4D13-A75B-CA9803D11332 - f57b5f9d8d59209b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "3636">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,10 +482,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3FD50797-B3E7-427A-B030-F865E591BFD2 - 78b63aff9b4b9d75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "3832">
+               </Location>
+               <Location
+                  uuid = "3FD50797-B3E7-427A-B030-F865E591BFD2 - 78b63aff9b4b9c4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "4332">
+               </Location>
+               <Location
+                  uuid = "3FD50797-B3E7-427A-B030-F865E591BFD2 - f57b5f9d8d591e2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "4348">
+               </Location>
+               <Location
+                  uuid = "3FD50797-B3E7-427A-B030-F865E591BFD2 - f57b5f9d8d591e2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "4408">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,10 +560,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7AC5F2F-2471-426C-A4C1-B4761EF6DDC6 - 78b63aff9b4b9c2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "247"
+                  endingLineNumber = "247"
+                  offsetFromSymbolStart = "4596">
+               </Location>
+               <Location
+                  uuid = "A7AC5F2F-2471-426C-A4C1-B4761EF6DDC6 - 78b63aff9b4b9fc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "5092">
+               </Location>
+               <Location
+                  uuid = "A7AC5F2F-2471-426C-A4C1-B4761EF6DDC6 - f57b5f9d8d591da2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "5108">
+               </Location>
+               <Location
+                  uuid = "A7AC5F2F-2471-426C-A4C1-B4761EF6DDC6 - f57b5f9d8d591da2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "5180">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,10 +638,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3018C028-D7A6-4D1E-933E-098EA3C91893 - 78b63aff9b4b902c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "5696">
+               </Location>
+               <Location
+                  uuid = "3018C028-D7A6-4D1E-933E-098EA3C91893 - 78b63aff9b4b9203"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "355"
+                  endingLineNumber = "355"
+                  offsetFromSymbolStart = "6180">
+               </Location>
+               <Location
+                  uuid = "3018C028-D7A6-4D1E-933E-098EA3C91893 - f57b5f9d8d591061"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "355"
+                  endingLineNumber = "355"
+                  offsetFromSymbolStart = "6196">
+               </Location>
+               <Location
+                  uuid = "3018C028-D7A6-4D1E-933E-098EA3C91893 - f57b5f9d8d591061"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "355"
+                  endingLineNumber = "355"
+                  offsetFromSymbolStart = "6304">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,10 +716,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "371"
-            endingLineNumber = "371"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "49CA8AFF-47E9-4E0B-B06C-038A32785A1D - 78b63aff9b4b8c33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "371"
+                  endingLineNumber = "371"
+                  offsetFromSymbolStart = "6052">
+               </Location>
+               <Location
+                  uuid = "49CA8AFF-47E9-4E0B-B06C-038A32785A1D - 78b63aff9b4b8efc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "388"
+                  endingLineNumber = "388"
+                  offsetFromSymbolStart = "6532">
+               </Location>
+               <Location
+                  uuid = "49CA8AFF-47E9-4E0B-B06C-038A32785A1D - f57b5f9d8d590c9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "388"
+                  endingLineNumber = "388"
+                  offsetFromSymbolStart = "6548">
+               </Location>
+               <Location
+                  uuid = "49CA8AFF-47E9-4E0B-B06C-038A32785A1D - f57b5f9d8d590c9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "388"
+                  endingLineNumber = "388"
+                  offsetFromSymbolStart = "6668">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -174,10 +794,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "421"
+            endingLineNumber = "421"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "05EADFB5-778F-4814-8970-E1B512104461 - 78b63aff9b4b8832"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "402"
+                  endingLineNumber = "402"
+                  offsetFromSymbolStart = "6408">
+               </Location>
+               <Location
+                  uuid = "05EADFB5-778F-4814-8970-E1B512104461 - 78b63aff9b4b8abd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "421"
+                  endingLineNumber = "421"
+                  offsetFromSymbolStart = "6884">
+               </Location>
+               <Location
+                  uuid = "05EADFB5-778F-4814-8970-E1B512104461 - f57b5f9d8d5908df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "421"
+                  endingLineNumber = "421"
+                  offsetFromSymbolStart = "6900">
+               </Location>
+               <Location
+                  uuid = "05EADFB5-778F-4814-8970-E1B512104461 - f57b5f9d8d5908df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "421"
+                  endingLineNumber = "421"
+                  offsetFromSymbolStart = "7032">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -190,10 +872,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "433"
-            endingLineNumber = "433"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "454"
+            endingLineNumber = "454"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "71225EC0-AA60-48F4-8953-036E24ABCE17 - 78b63aff9b4b8431"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "433"
+                  endingLineNumber = "433"
+                  offsetFromSymbolStart = "6764">
+               </Location>
+               <Location
+                  uuid = "71225EC0-AA60-48F4-8953-036E24ABCE17 - 78b63aff9b4b817e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "454"
+                  endingLineNumber = "454"
+                  offsetFromSymbolStart = "7236">
+               </Location>
+               <Location
+                  uuid = "71225EC0-AA60-48F4-8953-036E24ABCE17 - f57b5f9d8d59031c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "454"
+                  endingLineNumber = "454"
+                  offsetFromSymbolStart = "7252">
+               </Location>
+               <Location
+                  uuid = "71225EC0-AA60-48F4-8953-036E24ABCE17 - f57b5f9d8d59031c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "454"
+                  endingLineNumber = "454"
+                  offsetFromSymbolStart = "7396">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -206,10 +950,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "467"
-            endingLineNumber = "467"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "490"
+            endingLineNumber = "490"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0492C2B-6D6D-4B8F-85E4-55F0F4C79D61 - 78b63aff9b4b8093"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "467"
+                  endingLineNumber = "467"
+                  offsetFromSymbolStart = "7120">
+               </Location>
+               <Location
+                  uuid = "B0492C2B-6D6D-4B8F-85E4-55F0F4C79D61 - 78b63aff9b4bfd9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "490"
+                  endingLineNumber = "490"
+                  offsetFromSymbolStart = "7588">
+               </Location>
+               <Location
+                  uuid = "B0492C2B-6D6D-4B8F-85E4-55F0F4C79D61 - f57b5f9d8d597ff8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "490"
+                  endingLineNumber = "490"
+                  offsetFromSymbolStart = "7604">
+               </Location>
+               <Location
+                  uuid = "B0492C2B-6D6D-4B8F-85E4-55F0F4C79D61 - f57b5f9d8d597ff8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "490"
+                  endingLineNumber = "490"
+                  offsetFromSymbolStart = "7760">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,10 +1028,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "497"
-            endingLineNumber = "497"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "522"
+            endingLineNumber = "522"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D83CAC3-8C3B-4D6C-B51B-EE1E9F983F3E - 78b63aff9b4bfcf1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "497"
+                  endingLineNumber = "497"
+                  offsetFromSymbolStart = "7476">
+               </Location>
+               <Location
+                  uuid = "3D83CAC3-8C3B-4D6C-B51B-EE1E9F983F3E - 78b63aff9b4bf9ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "522"
+                  endingLineNumber = "522"
+                  offsetFromSymbolStart = "7940">
+               </Location>
+               <Location
+                  uuid = "3D83CAC3-8C3B-4D6C-B51B-EE1E9F983F3E - f57b5f9d8d597bd8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "522"
+                  endingLineNumber = "522"
+                  offsetFromSymbolStart = "7956">
+               </Location>
+               <Location
+                  uuid = "3D83CAC3-8C3B-4D6C-B51B-EE1E9F983F3E - f57b5f9d8d597bd8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "522"
+                  endingLineNumber = "522"
+                  offsetFromSymbolStart = "8124">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -238,10 +1106,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "527"
-            endingLineNumber = "527"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "554"
+            endingLineNumber = "554"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5B98FE1A-02D9-47B0-A397-5C525D542334 - 78b63aff9b4bf8d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "527"
+                  endingLineNumber = "527"
+                  offsetFromSymbolStart = "7832">
+               </Location>
+               <Location
+                  uuid = "5B98FE1A-02D9-47B0-A397-5C525D542334 - 78b63aff9b4bf45a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "554"
+                  endingLineNumber = "554"
+                  offsetFromSymbolStart = "8292">
+               </Location>
+               <Location
+                  uuid = "5B98FE1A-02D9-47B0-A397-5C525D542334 - f57b5f9d8d597638"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "554"
+                  endingLineNumber = "554"
+                  offsetFromSymbolStart = "8308">
+               </Location>
+               <Location
+                  uuid = "5B98FE1A-02D9-47B0-A397-5C525D542334 - f57b5f9d8d597638"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "554"
+                  endingLineNumber = "554"
+                  offsetFromSymbolStart = "8488">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -254,10 +1184,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "558"
-            endingLineNumber = "558"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "587"
+            endingLineNumber = "587"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B6B17E7D-253D-4F21-967D-EF68160FE24A - 78b63aff9b4bf4d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "558"
+                  endingLineNumber = "558"
+                  offsetFromSymbolStart = "8188">
+               </Location>
+               <Location
+                  uuid = "B6B17E7D-253D-4F21-967D-EF68160FE24A - 78b63aff9b4bf01b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "587"
+                  endingLineNumber = "587"
+                  offsetFromSymbolStart = "8644">
+               </Location>
+               <Location
+                  uuid = "B6B17E7D-253D-4F21-967D-EF68160FE24A - f57b5f9d8d597279"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "587"
+                  endingLineNumber = "587"
+                  offsetFromSymbolStart = "8660">
+               </Location>
+               <Location
+                  uuid = "B6B17E7D-253D-4F21-967D-EF68160FE24A - f57b5f9d8d597279"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "587"
+                  endingLineNumber = "587"
+                  offsetFromSymbolStart = "8852">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -270,10 +1262,72 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "589"
-            endingLineNumber = "589"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "620"
+            endingLineNumber = "620"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1053EF97-AE8D-41EA-84CD-5D64F25F41A8 - 78b63aff9b4bf0d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "589"
+                  endingLineNumber = "589"
+                  offsetFromSymbolStart = "8544">
+               </Location>
+               <Location
+                  uuid = "1053EF97-AE8D-41EA-84CD-5D64F25F41A8 - 78b63aff9b4becd4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "620"
+                  endingLineNumber = "620"
+                  offsetFromSymbolStart = "8996">
+               </Location>
+               <Location
+                  uuid = "1053EF97-AE8D-41EA-84CD-5D64F25F41A8 - f57b5f9d8d596eb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "620"
+                  endingLineNumber = "620"
+                  offsetFromSymbolStart = "9012">
+               </Location>
+               <Location
+                  uuid = "1053EF97-AE8D-41EA-84CD-5D64F25F41A8 - f57b5f9d8d596eb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "620"
+                  endingLineNumber = "620"
+                  offsetFromSymbolStart = "9216">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -286,24 +1340,197 @@
             filePath = "CardiMessageGame MessagesExtension/MessagesViewController/Round and game win logic.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "620"
-            endingLineNumber = "620"
-            landmarkName = "checkForWin()"
+            startingLineNumber = "653"
+            endingLineNumber = "653"
+            landmarkName = "checkForWin(delay:length:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9C5495C4-20DF-4D52-8500-2E280155A7C9 - 78b63aff9b4becd4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "620"
+                  endingLineNumber = "620"
+                  offsetFromSymbolStart = "8900">
+               </Location>
+               <Location
+                  uuid = "9C5495C4-20DF-4D52-8500-2E280155A7C9 - 78b63aff9b4be895"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin() -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "653"
+                  endingLineNumber = "653"
+                  offsetFromSymbolStart = "9348">
+               </Location>
+               <Location
+                  uuid = "9C5495C4-20DF-4D52-8500-2E280155A7C9 - f57b5f9d8d596af7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "653"
+                  endingLineNumber = "653"
+                  offsetFromSymbolStart = "9364">
+               </Location>
+               <Location
+                  uuid = "9C5495C4-20DF-4D52-8500-2E280155A7C9 - f57b5f9d8d596af7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardiMessageGame_MessagesExtension.Gameplay.checkForWin(Swift.Double) -&gt; ()"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/MessagesViewController/Round%20and%20game%20win%20logic.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "653"
+                  endingLineNumber = "653"
+                  offsetFromSymbolStart = "9580">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D5066AA0-A6E1-4EB3-8001-AF0066D45676"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardiMessageGame MessagesExtension/Expanded Views/Gameplay/Gameplay.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "669"
+            endingLineNumber = "669"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D5066AA0-A6E1-4EB3-8001-AF0066D45676 - b964fa8518f8f967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Foundation.Date) -&gt; () in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in CardiMessageGame_MessagesExtension.Gameplay.body.getter : some"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/Expanded%20Views/Gameplay/Gameplay.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "665"
+                  endingLineNumber = "665"
+                  offsetFromSymbolStart = "2308">
+               </Location>
+               <Location
+                  uuid = "D5066AA0-A6E1-4EB3-8001-AF0066D45676 - b964fa8518f8f921"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Foundation.Date) -&gt; () in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in CardiMessageGame_MessagesExtension.Gameplay.body.getter : some"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/Expanded%20Views/Gameplay/Gameplay.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "667"
+                  endingLineNumber = "667"
+                  offsetFromSymbolStart = "2308">
+               </Location>
+               <Location
+                  uuid = "D5066AA0-A6E1-4EB3-8001-AF0066D45676 - b964fa8518f8f8e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Foundation.Date) -&gt; () in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in CardiMessageGame_MessagesExtension.Gameplay.body.getter : some"
+                  moduleName = "CardiMessageGame MessagesExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carterhawkins/Documents/Swift/Apps/CardiMessageGame/CardiMessageGame%20MessagesExtension/Expanded%20Views/Gameplay/Gameplay.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "669"
+                  endingLineNumber = "669"
+                  offsetFromSymbolStart = "2308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E255F97-3EC5-4301-B89F-ED3211A2CD9D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CardiMessageGame MessagesExtension/Expanded Views/Gameplay/Gameplay.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "665"
-            endingLineNumber = "665"
+            startingLineNumber = "532"
+            endingLineNumber = "532"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC2C107B-26CC-409D-A9F0-B6855F7A6F39"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardiMessageGame MessagesExtension/Expanded Views/Gameplay/Gameplay.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2B0BCD8-0ACE-49C4-A5C5-97E8DE905A4F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardiMessageGame MessagesExtension/Expanded Views/Gameplay/Gameplay.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "637"
+            endingLineNumber = "637"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59495778-648A-42CA-AB4D-2055CEBC69CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardiMessageGame MessagesExtension/Expanded Views/Gameplay/Gameplay.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "726"
+            endingLineNumber = "726"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>

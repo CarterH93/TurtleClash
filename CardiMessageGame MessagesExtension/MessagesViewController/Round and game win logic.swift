@@ -10,6 +10,8 @@ import UIKit
 import Combine
 
 
+
+
 struct roundWinCard: Hashable {
     var type: type
     var color: color
@@ -172,7 +174,7 @@ extension Gameplay {
     
     
     
-    func checkForWin() {
+    func checkForWin(_ GameOverScreenDelay: Double) {
         
        
         
@@ -182,33 +184,36 @@ extension Gameplay {
         
         if storage.localPlayerWinningCardsDisplay[.fire]?.count == 3 {
             //WIN
-            if storage.currentPlayer == 1 {
-                storage.overallGameEndingResult = 1
-            } else {
-                storage.overallGameEndingResult = 2
+            withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                if storage.currentPlayer == 1 {
+                    storage.overallGameEndingResult = 1
+                } else {
+                    storage.overallGameEndingResult = 2
+                }
             }
-            
             storage.localPlayerWinningCardsAnimated[.fire] = storage.localPlayerWinningCardsDisplay[.fire]
             return
             
         } else if storage.localPlayerWinningCardsDisplay[.water]?.count == 3 {
             //WIN
-            if storage.currentPlayer == 1 {
-                storage.overallGameEndingResult = 1
-            } else {
-                storage.overallGameEndingResult = 2
+            withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                if storage.currentPlayer == 1 {
+                    storage.overallGameEndingResult = 1
+                } else {
+                    storage.overallGameEndingResult = 2
+                }
             }
-            
             storage.localPlayerWinningCardsAnimated[.water] = storage.localPlayerWinningCardsDisplay[.water]
             return
         } else if storage.localPlayerWinningCardsDisplay[.ice]?.count == 3 {
             //WIN
-            if storage.currentPlayer == 1 {
-                storage.overallGameEndingResult = 1
-            } else {
-                storage.overallGameEndingResult = 2
+            withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                if storage.currentPlayer == 1 {
+                    storage.overallGameEndingResult = 1
+                } else {
+                    storage.overallGameEndingResult = 2
+                }
             }
-            
             storage.localPlayerWinningCardsAnimated[.ice] = storage.localPlayerWinningCardsDisplay[.ice]
             return
         }
@@ -217,30 +222,34 @@ extension Gameplay {
         
         if storage.remotePlayerWinningCardsDisplay[.fire]?.count == 3 {
             //WIN
-            if storage.currentPlayer == 2 {
-                storage.overallGameEndingResult = 1
-            } else {
-                storage.overallGameEndingResult = 2
+            withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                if storage.currentPlayer == 2 {
+                    storage.overallGameEndingResult = 1
+                } else {
+                    storage.overallGameEndingResult = 2
+                }
             }
-            
             storage.remotePlayerWinningCardsAnimated[.fire] = storage.remotePlayerWinningCardsDisplay[.fire]
             return
         } else if storage.remotePlayerWinningCardsDisplay[.water]?.count == 3 {
             //WIN
-            if storage.currentPlayer == 2 {
-                storage.overallGameEndingResult = 1
-            } else {
-                storage.overallGameEndingResult = 2
+            withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                if storage.currentPlayer == 2 {
+                    storage.overallGameEndingResult = 1
+                } else {
+                    storage.overallGameEndingResult = 2
+                }
             }
-            
             storage.remotePlayerWinningCardsAnimated[.water] = storage.remotePlayerWinningCardsDisplay[.water]
             return
         } else if storage.remotePlayerWinningCardsDisplay[.ice]?.count == 3 {
             //WIN
-            if storage.currentPlayer == 2 {
-                storage.overallGameEndingResult = 1
-            } else {
-                storage.overallGameEndingResult = 2
+            withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                if storage.currentPlayer == 2 {
+                    storage.overallGameEndingResult = 1
+                } else {
+                    storage.overallGameEndingResult = 2
+                }
             }
             
             storage.remotePlayerWinningCardsAnimated[.ice] = storage.remotePlayerWinningCardsDisplay[.ice]
@@ -270,11 +279,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for local player
-                                        if storage.currentPlayer == 1 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 1 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.localPlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -300,11 +311,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for local player
-                                        if storage.currentPlayer == 1 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 1 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.localPlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -330,11 +343,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for local player
-                                        if storage.currentPlayer == 1 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 1 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.localPlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -361,11 +376,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for local player
-                                        if storage.currentPlayer == 1 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 1 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.localPlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -392,11 +409,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for local player
-                                        if storage.currentPlayer == 1 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 1 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.localPlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -423,11 +442,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for local player
-                                        if storage.currentPlayer == 1 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 1 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.localPlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -457,11 +478,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for remote player
-                                        if storage.currentPlayer == 2 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 2 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.remotePlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -487,11 +510,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for remote player
-                                        if storage.currentPlayer == 2 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 2 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.remotePlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -517,11 +542,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for remote player
-                                        if storage.currentPlayer == 2 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 2 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.remotePlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -548,11 +575,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for remote player
-                                        if storage.currentPlayer == 2 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 2 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.remotePlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -579,11 +608,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for remote player
-                                        if storage.currentPlayer == 2 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 2 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.remotePlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return
@@ -610,11 +641,13 @@ extension Gameplay {
                     //WIN
                     
                     //Logic below for remote player
-                                        if storage.currentPlayer == 2 {
-                                            storage.overallGameEndingResult = 1
-                                        } else {
-                                            storage.overallGameEndingResult = 2
-                                        }
+                    withAnimation(.snappy(duration: 0).delay(GameOverScreenDelay)) {
+                        if storage.currentPlayer == 2 {
+                            storage.overallGameEndingResult = 1
+                        } else {
+                            storage.overallGameEndingResult = 2
+                        }
+                    }
                     
                     storage.remotePlayerWinningCardsAnimated = tempWinningAnimatedCards
                     return

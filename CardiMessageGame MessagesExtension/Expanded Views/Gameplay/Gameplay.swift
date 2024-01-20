@@ -310,10 +310,11 @@ func flipCard() {
                                                                             secondTime = true
                                                                             disable = false
                                                                             
-                                                                            
-                                                                            checkForWin()
+                                                                            withAnimation {
+                                                                                checkForWin(2)
+                                                                            }
                                                                             if storage.gameover {
-                                                                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                                                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                                                                                     
                                                                                     
                                                                                     storage.send.toggle()
@@ -527,7 +528,9 @@ func flipCard() {
                 
                 if storage.pastLocalPlayerSelection == nil || storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false ? true : false || storage.localPlayerSelection != nil {
                     //do nothing
-                    checkForWin()
+                    
+                        checkForWin(0)
+                    
                     
                 } else {
                     disable = true
@@ -630,8 +633,9 @@ func flipCard() {
                                                 secondTime = true
                                                 disable = false
                                                 
-                                                
-                                                checkForWin()
+                                                withAnimation {
+                                                    checkForWin(2)
+                                                }
                                                 if storage.gameover {
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                                                         
@@ -718,7 +722,10 @@ func flipCard() {
                                                 disable = false
                                                 storage.pastRoundselectionPlayer1 = nil
                                                 storage.pastRoundselectionPlayer2 = nil
-                                                checkForWin()
+                                                     withAnimation {
+                                                         checkForWin(2)
+                                                     }
+                                                     
                                             })
                                             }
                                         })
