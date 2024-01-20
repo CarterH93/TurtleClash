@@ -268,7 +268,7 @@ func flipCard() {
                                                 if storage.pastRemotePlayerSelection != nil && !secondTime {
                                                     notShowedSaveMove = false
                                                     storage.savedMove[storage.messageHashValue] = selectedCardWrapped
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                                    storage.scheduleWorkItem(withDelay: 1) {
                                                         withAnimation() {
                                                             
                                                            
@@ -278,7 +278,7 @@ func flipCard() {
                                                             opponentCardSize = 2.58
                                                         }
                                                         
-                                                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                                        storage.scheduleWorkItem(withDelay: 2) {
                                                             withAnimation() {
                                                                 flipCard()
                                                                 
@@ -296,7 +296,7 @@ func flipCard() {
                                                                 
                                                                 
                                                                 
-                                                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                                                storage.scheduleWorkItem(withDelay: 2) {
                                                                     withAnimation() {
                                                                         offsetValueX = 0
                                                                         offsetValueY = 0
@@ -305,7 +305,7 @@ func flipCard() {
                                                                        flipCard()
                                                                         selectedCard = nil
                                                                         
-                                                                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(storage.battleAnimationLength), execute: {
+                                                                        storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
                                                                             
                                                                             secondTime = true
                                                                             disable = false
@@ -314,15 +314,15 @@ func flipCard() {
                                                                                 checkForWin(2)
                                                                             }
                                                                             if storage.gameover {
-                                                                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                                                                storage.scheduleWorkItem(withDelay: 2) {
                                                                                     
                                                                                     
                                                                                     storage.send.toggle()
                                                                                     
                                                                                     
-                                                                                })
+                                                                                }
                                                                             }
-                                                                        })
+                                                                        }
                                                                     }
                                                                     
                                                         
@@ -330,11 +330,11 @@ func flipCard() {
                                                                     
                                                                     
                                                                     
-                                                                })
+                                                                }
                                                                 
                                                             }
-                                                        })
-                                                    })
+                                                        }
+                                                    }
                                                 } else {
                                                     secondTime = false
                                                     storage.selectChoice(selectedCardWrapped)
@@ -350,13 +350,13 @@ func flipCard() {
                                                         storage.addNewCardToLocalPlayerCards()
                                                     }
                                                     
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                                    storage.scheduleWorkItem(withDelay: 2) {
                                                         
                                                         
                                                             storage.send.toggle()
                                                         
                                                         
-                                                    })
+                                                    }
                                                     
                                                 }
                                                    
@@ -590,14 +590,14 @@ func flipCard() {
                         
                         
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                        storage.scheduleWorkItem(withDelay: 1) {
                             withAnimation() {
                                 offsetValueY = yPositionLocalPlayerCard - yPositionOpponentPlayerCard
                                 offsetValueX = geo.size.width * opponentCardOffsetx
                                 opponentCardSize = 2.58
                             }
                             
-                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                            storage.scheduleWorkItem(withDelay: 2) {
                                 withAnimation() {
                                     flipCard()
                                     
@@ -619,7 +619,7 @@ func flipCard() {
                                     
                                     
                                     
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                    storage.scheduleWorkItem(withDelay: 2) {
                                         withAnimation() {
                                             offsetValueX = 0
                                             offsetValueY = 0
@@ -628,7 +628,7 @@ func flipCard() {
                                             flipCard()
                                             selectedCard = nil
                                             
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(storage.battleAnimationLength), execute: {
+                                            storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
                                                 
                                                 secondTime = true
                                                 disable = false
@@ -637,15 +637,15 @@ func flipCard() {
                                                     checkForWin(2)
                                                 }
                                                 if storage.gameover {
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                                    storage.scheduleWorkItem(withDelay: 2) {
                                                         
                                                         
                                                         storage.send.toggle()
                                                         
                                                         
-                                                    })
+                                                    }
                                                 }
-                                            })
+                                            }
                                             
                                         }
                                         
@@ -654,11 +654,11 @@ func flipCard() {
                                         
                                         
                                         
-                                    })
+                                    }
                                     
                                 }
-                            })
-                        })
+                            }
+                        }
                         
                         
                         
@@ -695,19 +695,19 @@ func flipCard() {
                                 position = .init(width: 0, height: geo.size.height * localCardOffsety)
                             }
                             
-                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                            storage.scheduleWorkItem(withDelay: 1) {
                                 withAnimation() {
                                     offsetValueY = yPositionLocalPlayerCard - yPositionOpponentPlayerCard
                                     offsetValueX = geo.size.width * opponentCardOffsetx
                                     opponentCardSize = 2.58
                                 }
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                storage.scheduleWorkItem(withDelay: 2) {
                                     withAnimation() {
                                         flipCard()
                                         
                                         
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                        storage.scheduleWorkItem(withDelay: 2) {
                                             withAnimation() {
                                                 offsetValueX = 0
                                                 offsetValueY = 0
@@ -717,7 +717,7 @@ func flipCard() {
                                                 selectedCard = nil
                                                 
                                                 
-                                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(storage.battleAnimationLength), execute: {
+                                                storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
                                                 
                                                 disable = false
                                                 storage.pastRoundselectionPlayer1 = nil
@@ -726,21 +726,21 @@ func flipCard() {
                                                          checkForWin(2)
                                                      }
                                                      
-                                            })
                                             }
-                                        })
+                                            }
+                                        }
                                         
                                         
                                         
                                     }
-                                })
+                                }
                                 
                                 
                                 
                                 
                                 
                                 
-                            })
+                            }
                             
                             
                         }

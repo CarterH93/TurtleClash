@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "323"
             endingLineNumber = "323"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -94,7 +94,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "291"
             endingLineNumber = "291"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -172,7 +172,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "195"
             endingLineNumber = "195"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -250,7 +250,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "207"
             endingLineNumber = "207"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -328,7 +328,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "218"
             endingLineNumber = "218"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -406,7 +406,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "233"
             endingLineNumber = "233"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -484,7 +484,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "244"
             endingLineNumber = "244"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -562,7 +562,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "256"
             endingLineNumber = "256"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -640,7 +640,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "355"
             endingLineNumber = "355"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -718,7 +718,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "388"
             endingLineNumber = "388"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -796,7 +796,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "421"
             endingLineNumber = "421"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -874,7 +874,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "454"
             endingLineNumber = "454"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -952,7 +952,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "490"
             endingLineNumber = "490"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1030,7 +1030,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "522"
             endingLineNumber = "522"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1108,7 +1108,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "554"
             endingLineNumber = "554"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1186,7 +1186,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "587"
             endingLineNumber = "587"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1264,7 +1264,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "620"
             endingLineNumber = "620"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1342,7 +1342,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "653"
             endingLineNumber = "653"
-            landmarkName = "checkForWin(delay:length:)"
+            landmarkName = "checkForWin(_:)"
             landmarkType = "7">
             <Locations>
                <Location

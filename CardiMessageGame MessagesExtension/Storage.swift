@@ -18,8 +18,27 @@ let saveMove = getDocumentsDirectory().appendingPathComponent("SavedMove")
 
 class AppStorage: ObservableObject {
     
-    let battleAnimationLength = 5
+    let battleAnimationLength = 5.0
     
+    //Code for scheduling background tasks
+    @Published var workItems: [DispatchWorkItem] = []
+    
+    // Function to schedule a work item with a delay and add it to the array
+    func scheduleWorkItem(withDelay delay: TimeInterval, codeToExecute: @escaping () -> Void) {
+        let workItem = DispatchWorkItem {
+            codeToExecute()
+        }
+        workItems.append(workItem)
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: workItem)
+    }
+
+    // Function to cancel all the scheduled work items
+    func cancelAllWorkItems() {
+        for workItem in workItems {
+            workItem.cancel()
+        }
+        workItems.removeAll()
+    }
     
     @Published var tempMessageDataHold: MSMessage? = nil
     

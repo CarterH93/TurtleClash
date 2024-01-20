@@ -368,6 +368,7 @@ class MessagesViewController: MSMessagesAppViewController {
         }
         
         if presentationStyle == .expanded && storage.messageDataExists == true {
+            storage.cancelAllWorkItems()
             if let tempMessageDataHold = storage.tempMessageDataHold {
                 messageReader(tempMessageDataHold)
             }
