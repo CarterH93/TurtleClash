@@ -18,7 +18,7 @@ extension MessagesViewController {
         
         storage.tempMessageDataHold = message
         
-      
+        storage.helpMenuVisable = false
         storage.player1Selection = nil
         storage.player2Selection = nil
         storage.pastRoundselectionPlayer1 = nil
