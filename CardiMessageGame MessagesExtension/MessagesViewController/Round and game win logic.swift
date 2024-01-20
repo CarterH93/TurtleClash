@@ -149,7 +149,7 @@ extension Gameplay {
             }
             
             storage.localPlayerWinningCardsAnimated[.fire] = storage.localPlayerWinningCardsDisplay[.fire]
-            
+            return
             
         } else if storage.localPlayerWinningCardsDisplay[.water]?.count == 3 {
             //WIN
@@ -160,7 +160,7 @@ extension Gameplay {
             }
             
             storage.localPlayerWinningCardsAnimated[.water] = storage.localPlayerWinningCardsDisplay[.water]
-            
+            return
         } else if storage.localPlayerWinningCardsDisplay[.ice]?.count == 3 {
             //WIN
             if storage.currentPlayer == 1 {
@@ -170,7 +170,7 @@ extension Gameplay {
             }
             
             storage.localPlayerWinningCardsAnimated[.ice] = storage.localPlayerWinningCardsDisplay[.ice]
-            
+            return
         }
         
         //checking remote player
@@ -184,7 +184,7 @@ extension Gameplay {
             }
             
             storage.remotePlayerWinningCardsAnimated[.fire] = storage.remotePlayerWinningCardsDisplay[.fire]
-            
+            return
         } else if storage.remotePlayerWinningCardsDisplay[.water]?.count == 3 {
             //WIN
             if storage.currentPlayer == 2 {
@@ -194,7 +194,7 @@ extension Gameplay {
             }
             
             storage.remotePlayerWinningCardsAnimated[.water] = storage.remotePlayerWinningCardsDisplay[.water]
-            
+            return
         } else if storage.remotePlayerWinningCardsDisplay[.ice]?.count == 3 {
             //WIN
             if storage.currentPlayer == 2 {
@@ -204,7 +204,7 @@ extension Gameplay {
             }
             
             storage.remotePlayerWinningCardsAnimated[.ice] = storage.remotePlayerWinningCardsDisplay[.ice]
-            
+            return
             
         }
         
