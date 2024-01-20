@@ -16,9 +16,9 @@ struct WrappedExpanded: View {
         ZStack {
             
             Expanded()
-                .disabled(storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false ? true : false)
-                //.blur( radius: storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false ? 2 : 0)
-                //.brightness(storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false ? -0.5 : 0)
+                .disabled(storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false || storage.gameover ? true : false)
+                .blur( radius: storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false || storage.gameover ? 2 : 0)
+                //.brightness(storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false || storage.gameover ? -0.5 : 0)
             
             
             if storage.participantsInConversasion.count > storage.maxPlayers {
@@ -37,9 +37,29 @@ struct WrappedExpanded: View {
                 }
                 .frame(width: 300, height: 200)
               
+            } else if storage.gameover {
+                VStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(.green)
+                        VStack {
+                            Text("Game Over!")
+                            if storage.didLocalPlayerWinOverall == 1 {
+                                Text("You won")
+                            } else {
+                                Text("You lost")
+                            }
+                            Button("Settings") {
+                                storage.settingsMenuActive = true
+                            }
+                            
+                        }
+                        
+                    }
+                    .frame(width: 300, height: 200)
+                }
             } else if storage.localPlayerCurrentTurnTrue == false {
                 VStack {
-                    Spacer()
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundColor(.green)
