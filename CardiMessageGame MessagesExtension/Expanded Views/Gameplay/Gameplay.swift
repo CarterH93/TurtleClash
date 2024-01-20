@@ -244,7 +244,7 @@ func flipCard() {
                                             .onEnded({ value in
                                                 storage.selectChoice(selectedCardWrapped)
                                                 if !secondTime {
-                                                    checkForRoundWin(storage)
+                                                    checkForRoundWin()
                                                     
                                                 }
                                                 
@@ -558,7 +558,7 @@ func flipCard() {
                         
                       
                             storage.selectChoice(savedMoveCard)
-                            checkForRoundWin(storage)
+                            checkForRoundWin()
                         
                         print("RANSAVEDCARD!!!!!!!!!!!!")
                         selectedCard = savedMoveCard

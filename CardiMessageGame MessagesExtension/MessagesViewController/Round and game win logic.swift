@@ -12,127 +12,132 @@ import Combine
 
 
     
-func checkForRoundWin(_ storage: AppStorage) {
-        
-        if let localPlayerSelection = storage.localPlayerSelection {
-            
-            
-            
-            if let remotePlayerSelection = storage.remotePlayerSelection {
-                
-                
-                
-                //Set Current Round Result to display for user
-                if localPlayerSelection.typeNum == 1 && remotePlayerSelection.typeNum == 1 {
-                    
-                    //Note it is impossible for a card to have both the same type and number.
-                    if localPlayerSelection.number > remotePlayerSelection.number {
-                        storage.tempPastRoundResult = 1
-                        storage.pastRoundResultSide = storage.currentPlayer
-                    } else {
-                        storage.tempPastRoundResult = 2
-                        storage.pastRoundResultSide = storage.currentPlayer
-                    }
-                    
-                } else if localPlayerSelection.typeNum == 1 && remotePlayerSelection.typeNum == 2 {
-                    storage.tempPastRoundResult = 2
-                    storage.pastRoundResultSide = storage.currentPlayer
-                } else if localPlayerSelection.typeNum == 1 && remotePlayerSelection.typeNum == 3 {
-                    storage.tempPastRoundResult = 1
-                    storage.pastRoundResultSide = storage.currentPlayer
-                } else if localPlayerSelection.typeNum == 2 && remotePlayerSelection.typeNum == 1 {
-                    storage.tempPastRoundResult = 1
-                    storage.pastRoundResultSide = storage.currentPlayer
-                } else if localPlayerSelection.typeNum == 2 && remotePlayerSelection.typeNum == 2 {
-                    //Note it is impossible for a card to have both the same type and number.
-                    if localPlayerSelection.number > remotePlayerSelection.number {
-                        storage.tempPastRoundResult = 1
-                        storage.pastRoundResultSide = storage.currentPlayer
-                    } else {
-                        storage.tempPastRoundResult = 2
-                        storage.pastRoundResultSide = storage.currentPlayer
-                    }
-                } else if localPlayerSelection.typeNum == 2 && remotePlayerSelection.typeNum == 3 {
-                    storage.tempPastRoundResult = 2
-                    storage.pastRoundResultSide = storage.currentPlayer
-                } else if localPlayerSelection.typeNum == 3 && remotePlayerSelection.typeNum == 1 {
-                    storage.tempPastRoundResult = 2
-                    storage.pastRoundResultSide = storage.currentPlayer
-                } else if localPlayerSelection.typeNum == 3 && remotePlayerSelection.typeNum == 2 {
-                    storage.tempPastRoundResult = 1
-                    storage.pastRoundResultSide = storage.currentPlayer
-                } else if localPlayerSelection.typeNum == 3 && remotePlayerSelection.typeNum == 3 {
-                    //Note it is impossible for a card to have both the same type and number.
-                    if localPlayerSelection.number > remotePlayerSelection.number {
-                        storage.tempPastRoundResult = 1
-                        storage.pastRoundResultSide = storage.currentPlayer
-                    } else {
-                        storage.tempPastRoundResult = 2
-                        storage.pastRoundResultSide = storage.currentPlayer
-                    }
-                }
-                
-                
-                //Stores Results
-                
-                if storage.tempPastRoundResult == 1 {
-                    
-                    //Someone won the round
-                    
-                    if storage.pastRoundResultSide == 1 {
-                        //player 1 won
-                        
-                        withAnimation(.snappy.delay(4)) {
-                            storage.winningSelectionsPlayer1.append(storage.player1Selection!)
-                        }
-                    } else {
-                        //player 2 won
-                        withAnimation(.snappy.delay(4)) {
-                            storage.winningSelectionsPlayer2.append(storage.player2Selection!)
-                        }
-                        
-                    }
-                    
-                    
-                    
-                } else if storage.tempPastRoundResult == 2 {
-                    //Someone lost the round
-                    
-                    if storage.pastRoundResultSide == 1 {
-                        //player 1 lost
-                        withAnimation(.snappy.delay(4)) {
-                            storage.winningSelectionsPlayer2.append(storage.player2Selection!)
-                        }
-                        
-                    } else {
-                        //player 2 lost
-                        withAnimation(.snappy.delay(4)) {
-                            storage.winningSelectionsPlayer1.append(storage.player1Selection!)
-                        }
-                        
-                    }
-                    
-                   
-                }
-                
-                //Stores selection data
-                storage.pastRoundselectionPlayer1 = storage.player1Selection
-                storage.pastRoundselectionPlayer2 = storage.player2Selection
-                
-                //Clear current Data
-                
-                storage.player1Selection = nil
-                storage.player2Selection = nil
-                
-                
-                
-            }
-            
-        }
-    }
+
 
 
 extension Gameplay {
+    
+    
+    func checkForRoundWin() {
+            
+            if let localPlayerSelection = storage.localPlayerSelection {
+                
+                
+                
+                if let remotePlayerSelection = storage.remotePlayerSelection {
+                    
+                    
+                    
+                    //Set Current Round Result to display for user
+                    if localPlayerSelection.typeNum == 1 && remotePlayerSelection.typeNum == 1 {
+                        
+                        //Note it is impossible for a card to have both the same type and number.
+                        if localPlayerSelection.number > remotePlayerSelection.number {
+                            storage.tempPastRoundResult = 1
+                            storage.pastRoundResultSide = storage.currentPlayer
+                        } else {
+                            storage.tempPastRoundResult = 2
+                            storage.pastRoundResultSide = storage.currentPlayer
+                        }
+                        
+                    } else if localPlayerSelection.typeNum == 1 && remotePlayerSelection.typeNum == 2 {
+                        storage.tempPastRoundResult = 2
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else if localPlayerSelection.typeNum == 1 && remotePlayerSelection.typeNum == 3 {
+                        storage.tempPastRoundResult = 1
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else if localPlayerSelection.typeNum == 2 && remotePlayerSelection.typeNum == 1 {
+                        storage.tempPastRoundResult = 1
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else if localPlayerSelection.typeNum == 2 && remotePlayerSelection.typeNum == 2 {
+                        //Note it is impossible for a card to have both the same type and number.
+                        if localPlayerSelection.number > remotePlayerSelection.number {
+                            storage.tempPastRoundResult = 1
+                            storage.pastRoundResultSide = storage.currentPlayer
+                        } else {
+                            storage.tempPastRoundResult = 2
+                            storage.pastRoundResultSide = storage.currentPlayer
+                        }
+                    } else if localPlayerSelection.typeNum == 2 && remotePlayerSelection.typeNum == 3 {
+                        storage.tempPastRoundResult = 2
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else if localPlayerSelection.typeNum == 3 && remotePlayerSelection.typeNum == 1 {
+                        storage.tempPastRoundResult = 2
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else if localPlayerSelection.typeNum == 3 && remotePlayerSelection.typeNum == 2 {
+                        storage.tempPastRoundResult = 1
+                        storage.pastRoundResultSide = storage.currentPlayer
+                    } else if localPlayerSelection.typeNum == 3 && remotePlayerSelection.typeNum == 3 {
+                        //Note it is impossible for a card to have both the same type and number.
+                        if localPlayerSelection.number > remotePlayerSelection.number {
+                            storage.tempPastRoundResult = 1
+                            storage.pastRoundResultSide = storage.currentPlayer
+                        } else {
+                            storage.tempPastRoundResult = 2
+                            storage.pastRoundResultSide = storage.currentPlayer
+                        }
+                    }
+                    
+                    
+                    //Stores Results
+                    
+                    if storage.tempPastRoundResult == 1 {
+                        
+                        //Someone won the round
+                        
+                        if storage.pastRoundResultSide == 1 {
+                            //player 1 won
+                            
+                            withAnimation(.snappy.delay(4)) {
+                                storage.winningSelectionsPlayer1.append(storage.player1Selection!)
+                            }
+                        } else {
+                            //player 2 won
+                            withAnimation(.snappy.delay(4)) {
+                                storage.winningSelectionsPlayer2.append(storage.player2Selection!)
+                            }
+                            
+                        }
+                        
+                        
+                        
+                    } else if storage.tempPastRoundResult == 2 {
+                        //Someone lost the round
+                        
+                        if storage.pastRoundResultSide == 1 {
+                            //player 1 lost
+                            withAnimation(.snappy.delay(4)) {
+                                storage.winningSelectionsPlayer2.append(storage.player2Selection!)
+                            }
+                            
+                        } else {
+                            //player 2 lost
+                            withAnimation(.snappy.delay(4)) {
+                                storage.winningSelectionsPlayer1.append(storage.player1Selection!)
+                            }
+                            
+                        }
+                        
+                       
+                    }
+                    
+                    //Stores selection data
+                    storage.pastRoundselectionPlayer1 = storage.player1Selection
+                    storage.pastRoundselectionPlayer2 = storage.player2Selection
+                    
+                    //Clear current Data
+                    
+                    storage.player1Selection = nil
+                    storage.player2Selection = nil
+                    
+                    
+                    
+                }
+                
+            }
+        }
+    
+    
     
     func checkForWin() {
         
