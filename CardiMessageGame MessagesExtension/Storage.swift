@@ -18,6 +18,9 @@ let saveMove = getDocumentsDirectory().appendingPathComponent("SavedMove")
 
 class AppStorage: ObservableObject {
     
+    let battleAnimationLength = 5
+    
+    
     @Published var tempMessageDataHold: MSMessage? = nil
     
     @Published var messageHashValue: String = ""

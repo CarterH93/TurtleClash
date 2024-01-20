@@ -305,21 +305,23 @@ func flipCard() {
                                                                        flipCard()
                                                                         selectedCard = nil
                                                                         
-                                                                        secondTime = true
-                                                                        disable = false
-                                                                        
-                                                                        
-                                                                        checkForWin()
-                                                                        if storage.gameover {
-                                                                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
-                                                                                
-                                                                                storage.savedMove[storage.messageHashValue] = nil
+                                                                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(storage.battleAnimationLength), execute: {
+                                                                            
+                                                                            secondTime = true
+                                                                            disable = false
+                                                                            
+                                                                            
+                                                                            checkForWin()
+                                                                            if storage.gameover {
+                                                                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                                                                                    
+                                                                                    
                                                                                     storage.send.toggle()
-                                                                                
-                                                                                
-                                                                            })
-                                                                        }
-                                                                        
+                                                                                    
+                                                                                    
+                                                                                })
+                                                                            }
+                                                                        })
                                                                     }
                                                                     
                                                         
@@ -349,7 +351,7 @@ func flipCard() {
                                                     
                                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
                                                         
-                                                        storage.savedMove[storage.messageHashValue] = nil
+                                                        
                                                             storage.send.toggle()
                                                         
                                                         
@@ -623,20 +625,23 @@ func flipCard() {
                                             flipCard()
                                             selectedCard = nil
                                             
-                                            secondTime = true
-                                            disable = false
-                                            
-                                            
-                                            checkForWin()
-                                            if storage.gameover {
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
-                                                    
-                                                    storage.savedMove[storage.messageHashValue] = nil
-                                                    storage.send.toggle()
-                                                    
-                                                    
-                                                })
-                                            }
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(storage.battleAnimationLength), execute: {
+                                                
+                                                secondTime = true
+                                                disable = false
+                                                
+                                                
+                                                checkForWin()
+                                                if storage.gameover {
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                                        
+                                                        
+                                                        storage.send.toggle()
+                                                        
+                                                        
+                                                    })
+                                                }
+                                            })
                                             
                                         }
                                         
@@ -708,12 +713,13 @@ func flipCard() {
                                                 selectedCard = nil
                                                 
                                                 
-                                                
+                                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(storage.battleAnimationLength), execute: {
                                                 
                                                 disable = false
                                                 storage.pastRoundselectionPlayer1 = nil
                                                 storage.pastRoundselectionPlayer2 = nil
                                                 checkForWin()
+                                            })
                                             }
                                         })
                                         
@@ -737,7 +743,7 @@ func flipCard() {
                         }
             
         }
-        .disabled(disable || storage.gameover ? true : false)
+        .disabled(disable)
         
         
          

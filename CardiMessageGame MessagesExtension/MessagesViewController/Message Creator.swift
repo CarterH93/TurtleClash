@@ -136,7 +136,7 @@ extension MessagesViewController {
         
         message.md.set(values: Array(storage.participantsInConversasion), forKey: "participantsInConversasion")
         
-        
+        storage.savedMove[storage.messageHashValue] = nil
         // 7: Can replace insert with send inorder to force send message
         conversation.send(message) { error in
             if let error = error {

@@ -347,9 +347,6 @@ class MessagesViewController: MSMessagesAppViewController {
     
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         
-        if let tempMessageDataHold = storage.tempMessageDataHold {
-            messageReader(tempMessageDataHold)
-        }
         
         
 
@@ -371,6 +368,10 @@ class MessagesViewController: MSMessagesAppViewController {
         }
         
         if presentationStyle == .expanded && storage.messageDataExists == true {
+            if let tempMessageDataHold = storage.tempMessageDataHold {
+                messageReader(tempMessageDataHold)
+            }
+            
             
             print("ShowingDebug - showing game - \(storage.messageDataExists.description)")
             
