@@ -16,7 +16,7 @@ struct WrappedExpanded: View {
         ZStack {
             
             Expanded()
-                .disabled(storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false || storage.gameover ? true : false)
+                .disabled(storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false || storage.gameover || storage.helpMenuVisable ? true : false)
                 .blur( radius: storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false || storage.gameover ? 2 : 0)
                 //.brightness(storage.participantsInConversasion.count > storage.maxPlayers || storage.localPlayerCurrentTurnTrue == false || storage.gameover ? -0.5 : 0)
             
@@ -77,6 +77,23 @@ struct WrappedExpanded: View {
                 }
                 
                 
+            } else if storage.helpMenuVisable {
+                VStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(.gray)
+                        VStack {
+                            Text("Help Menu")
+                            Text("Show directions")
+                            Button("Exit") {
+                                storage.helpMenuVisable = false
+                            }
+                            
+                        }
+                        
+                    }
+                    .frame(width: 300, height: 200)
+                }
             }
         }
     }

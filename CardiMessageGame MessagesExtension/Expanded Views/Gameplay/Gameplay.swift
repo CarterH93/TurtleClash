@@ -170,7 +170,7 @@ func flipCard() {
                                     Button(action: {
                                         withAnimation {
                                             //Bring up help menu
-                                            
+                                            storage.helpMenuVisable = true
                                             //testing purposes
                                            // storage.winningSelectionsPlayer1 = [Card(number: 1, type: .fire, color: .orange, animation: 1),Card(number: 1, type: .fire, color: .blue, animation: 1), Card(number: 1, type: .water, color: .orange, animation: 1), Card(number: 1, type: .water, color: .green, animation: 1),  Card(number: 1, type: .ice, color: .orange, animation: 1), Card(number: 1, type: .ice, color: .blue, animation: 1)]
                                         }

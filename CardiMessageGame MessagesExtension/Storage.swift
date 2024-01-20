@@ -18,6 +18,8 @@ let saveMove = getDocumentsDirectory().appendingPathComponent("SavedMove")
 
 class AppStorage: ObservableObject {
     
+    @Published var helpMenuVisable = false
+    
     let battleAnimationLength = 5.0
     
     //Code for scheduling background tasks
