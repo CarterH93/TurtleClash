@@ -9,6 +9,14 @@ import SwiftUI
 
 struct Gameplay: View {
     
+    @State var tempWinningAnimatedCards: [
+        type : [color]
+    ] = [
+        .fire:[],
+        .ice:[],
+        .water:[]
+    ]
+    
     @State private var xPositionOpponentPlayerCard:CGFloat = 0
     @State private var yPositionOpponentPlayerCard:CGFloat = 0
     @State private var xPositionLocalPlayerCard:CGFloat = 0
@@ -163,6 +171,8 @@ func flipCard() {
                                         withAnimation {
                                             //Bring up help menu
                                             
+                                            //testing purposes
+                                           // storage.winningSelectionsPlayer1 = [Card(number: 1, type: .fire, color: .orange, animation: 1),Card(number: 1, type: .fire, color: .blue, animation: 1), Card(number: 1, type: .water, color: .orange, animation: 1), Card(number: 1, type: .water, color: .green, animation: 1),  Card(number: 1, type: .ice, color: .orange, animation: 1), Card(number: 1, type: .ice, color: .blue, animation: 1)]
                                         }
                                     }, label: {
                                         Help()

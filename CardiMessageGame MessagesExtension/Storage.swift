@@ -680,6 +680,7 @@ class AppStorage: ObservableObject {
     @Published var pastRoundResultSide: Int = 0
         
     @Published var overallGameEndingResult: Int = 0
+    //number indicates which player won
     
     var didLocalPlayerWinOverall: Int {
         if overallGameEndingResult == 1 {
