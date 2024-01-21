@@ -9,8 +9,8 @@ import SwiftUI
 import SpriteKit
 import AVKit
 
-let characterAnimation = Bundle.main.url(forResource: "idle", withExtension: "mov")
-let backgroundAnimation = Bundle.main.url(forResource: "background", withExtension: "mov")
+let characterAnimation = Bundle.main.url(forResource: "idle-1", withExtension: "mov")
+let backgroundAnimation = Bundle.main.url(forResource: "background-1", withExtension: "mov")
 struct Animations: View {
     
     var geo: GeometryProxy
@@ -28,7 +28,7 @@ struct Animations: View {
     
         
         let video = SKVideoNode(avPlayer: videoPlayer)
-        video.size = CGSize(width: geo.size.height * 1.21626297578, height: geo.size.height)
+        video.size = CGSize(width: geo.size.height * 0.82219061166, height: geo.size.height)
         scene!.addChild(video)
         videoPlayer.play()
         
@@ -38,9 +38,10 @@ struct Animations: View {
                     self.videoPlayer.seek(to: .zero)
                     self.videoPlayer.play()
                 }
+         
         
         let video2 = SKVideoNode(avPlayer: videoPlayer2)
-        video2.size = CGSize(width: geo.size.height * 1.21626297578, height: geo.size.height)
+        video2.size = CGSize(width: geo.size.height * 0.82219061166, height: geo.size.height)
         //Ability to mirror video
         //video2.xScale = -1.0
         scene!.addChild(video2)
@@ -53,7 +54,7 @@ struct Animations: View {
                     self.videoPlayer2.play()
                 }
         
-        scene!.size = CGSize(width: geo.size.height * 1.21626297578, height: geo.size.height)
+        scene!.size = CGSize(width: geo.size.height * 0.82219061166, height: geo.size.height)
     
         return scene!
     }
