@@ -32,6 +32,13 @@
 		BC8305842B378DF3008CCAC7 /* MSMessage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8305832B378DF3008CCAC7 /* MSMessage+Extensions.swift */; };
 		BC8305862B378E01008CCAC7 /* MSMessageDataDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8305852B378E01008CCAC7 /* MSMessageDataDSL.swift */; };
 		BCAA8D972B3D1D530058E729 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA8D962B3D1D530058E729 /* Gameplay.swift */; };
+		BCE381CB2B5D9E4D005A00FF /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE381CA2B5D9E4D005A00FF /* Animations.swift */; };
+		BCE381CD2B5D9E79005A00FF /* backgroundScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BCE381CC2B5D9E79005A00FF /* backgroundScene.sks */; };
+		BCE381D42B5D9EA8005A00FF /* fire1.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCE381CF2B5D9EA7005A00FF /* fire1.mov */; };
+		BCE381D52B5D9EA8005A00FF /* idle.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCE381D02B5D9EA8005A00FF /* idle.mov */; };
+		BCE381D62B5D9EA8005A00FF /* water1.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCE381D12B5D9EA8005A00FF /* water1.mov */; };
+		BCE381D72B5D9EA8005A00FF /* background.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCE381D22B5D9EA8005A00FF /* background.mov */; };
+		BCE381D82B5D9EA8005A00FF /* ice1.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCE381D32B5D9EA8005A00FF /* ice1.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,13 @@
 		BC8305832B378DF3008CCAC7 /* MSMessage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSMessage+Extensions.swift"; sourceTree = "<group>"; };
 		BC8305852B378E01008CCAC7 /* MSMessageDataDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSMessageDataDSL.swift; sourceTree = "<group>"; };
 		BCAA8D962B3D1D530058E729 /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
+		BCE381CA2B5D9E4D005A00FF /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		BCE381CC2B5D9E79005A00FF /* backgroundScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = backgroundScene.sks; sourceTree = "<group>"; };
+		BCE381CF2B5D9EA7005A00FF /* fire1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fire1.mov; sourceTree = "<group>"; };
+		BCE381D02B5D9EA8005A00FF /* idle.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = idle.mov; sourceTree = "<group>"; };
+		BCE381D12B5D9EA8005A00FF /* water1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = water1.mov; sourceTree = "<group>"; };
+		BCE381D22B5D9EA8005A00FF /* background.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = background.mov; sourceTree = "<group>"; };
+		BCE381D32B5D9EA8005A00FF /* ice1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ice1.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +128,7 @@
 		BC5CA4ED2B37985100D0D100 /* Expanded Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCD7FC652B5C6ACF0090D9A5 /* Animations */,
 				BCAA8D982B3D1D590058E729 /* Gameplay */,
 				BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */,
 				BC5CA4EB2B37984100D0D100 /* Wrapped Expanded.swift */,
@@ -205,6 +220,28 @@
 			path = Gameplay;
 			sourceTree = "<group>";
 		};
+		BCD7FC652B5C6ACF0090D9A5 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				BCE381CC2B5D9E79005A00FF /* backgroundScene.sks */,
+				BCE381CA2B5D9E4D005A00FF /* Animations.swift */,
+				BCE381CE2B5D9E97005A00FF /* Assets */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		BCE381CE2B5D9E97005A00FF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BCE381D22B5D9EA8005A00FF /* background.mov */,
+				BCE381CF2B5D9EA7005A00FF /* fire1.mov */,
+				BCE381D32B5D9EA8005A00FF /* ice1.mov */,
+				BCE381D02B5D9EA8005A00FF /* idle.mov */,
+				BCE381D12B5D9EA8005A00FF /* water1.mov */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,8 +329,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE381D72B5D9EA8005A00FF /* background.mov in Resources */,
+				BCE381D42B5D9EA8005A00FF /* fire1.mov in Resources */,
+				BCE381D82B5D9EA8005A00FF /* ice1.mov in Resources */,
+				BCE381D52B5D9EA8005A00FF /* idle.mov in Resources */,
 				BC8305782B378DC0008CCAC7 /* Assets.xcassets in Resources */,
 				BC8305762B378DC0008CCAC7 /* MainInterface.storyboard in Resources */,
+				BCE381D62B5D9EA8005A00FF /* water1.mov in Resources */,
+				BCE381CD2B5D9E79005A00FF /* backgroundScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +367,7 @@
 				BC090F5C2B3D1DDB00ABFC14 /* Help.swift in Sources */,
 				BC090F602B3D1DF500ABFC14 /* EmptyCard.swift in Sources */,
 				BC3F4E9F2B37A4C1004D9FBA /* Card.swift in Sources */,
+				BCE381CB2B5D9E4D005A00FF /* Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

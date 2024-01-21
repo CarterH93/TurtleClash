@@ -125,10 +125,9 @@ func flipCard() {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Image("Design")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geo.size.width, height: geo.size.height)
+                Animations(geo: geo)
+                    
+                
                 
                 ZStack {
                     VStack(spacing: 0) {
