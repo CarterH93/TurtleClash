@@ -17,6 +17,8 @@ struct Gameplay: View {
         .water:[]
     ]
     
+    let timeWaitAfterWin: Double = 4
+    
     @State private var xPositionOpponentPlayerCard:CGFloat = 0
     @State private var yPositionOpponentPlayerCard:CGFloat = 0
     @State private var xPositionLocalPlayerCard:CGFloat = 0
@@ -317,7 +319,7 @@ func flipCard() {
                                                                                 checkForWin(2)
                                                                             }
                                                                             if storage.gameover {
-                                                                                storage.scheduleWorkItem(withDelay: 2) {
+                                                                                storage.scheduleWorkItem(withDelay: timeWaitAfterWin) {
                                                                                     
                                                                                     
                                                                                     storage.send.toggle()
@@ -644,10 +646,10 @@ func flipCard() {
                                                 disable = false
                                                 
                                                 withAnimation {
-                                                    checkForWin(2)
+                                                    checkForWin(timeWaitAfterWin)
                                                 }
                                                 if storage.gameover {
-                                                    storage.scheduleWorkItem(withDelay: 2) {
+                                                    storage.scheduleWorkItem(withDelay: timeWaitAfterWin) {
                                                         
                                                         
                                                         storage.send.toggle()
@@ -737,7 +739,7 @@ func flipCard() {
                                                 storage.pastRoundselectionPlayer1 = nil
                                                 storage.pastRoundselectionPlayer2 = nil
                                                      withAnimation {
-                                                         checkForWin(2)
+                                                         checkForWin(timeWaitAfterWin)
                                                      }
                                                      
                                             }
