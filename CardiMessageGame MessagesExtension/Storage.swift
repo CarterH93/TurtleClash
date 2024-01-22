@@ -43,6 +43,14 @@ class AppStorage: ObservableObject {
         }
         workItems.removeAll()
     }
+    @Published var createdObservers: [NSObjectProtocol] = [] {
+        didSet {
+            if createdObservers.count > 1 {
+                NotificationCenter.default.removeObserver(createdObservers[0])
+                createdObservers.removeFirst()
+            }
+        }
+    }
     
     @Published var tempMessageDataHold: MSMessage? = nil
     
@@ -84,7 +92,7 @@ class AppStorage: ObservableObject {
     
     
     let highestCardNumber = 12
-    let highestAnimationNumber = 5
+    let highestAnimationNumber = 1
     
     @Published var Player1Cards: [Card] = []
 

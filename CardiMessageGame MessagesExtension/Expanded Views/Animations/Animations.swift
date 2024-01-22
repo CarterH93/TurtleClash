@@ -30,12 +30,12 @@ struct PlayerViewController: UIViewControllerRepresentable {
         controller.showsPlaybackControls = false
         controller.updatesNowPlayingInfoCenter = false
         if storage.animationActive == false {
-            storage.scheduleWorkItem(withDelay: idleAnimationLength) {
-                
-                controller.player?.seek(to: .zero)
-                controller.player?.play()
-                
-            }
+          let object =  NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: controller.player?.currentItem, queue: nil)
+                    { notification in
+                        controller.player?.seek(to: .zero)
+                        controller.player?.play()
+                    }
+            storage.createdObservers.append(object)
         }
         
         return controller
@@ -56,7 +56,12 @@ struct Animations: View {
 
     var animationURL: URL {
         if storage.animationActive {
-            return Bundle.main.url(forResource: "fire1local", withExtension: "mov")!
+            if storage.pastRoundResult == 1 {
+                return Bundle.main.url(forResource: "\(storage.pastLocalPlayerSelection!.type.rawValue)\(storage.pastLocalPlayerSelection!.animation)local", withExtension: "mov")!
+            } else {
+                return Bundle.main.url(forResource: "\(storage.pastRemotePlayerSelection!.type.rawValue)\(storage.pastRemotePlayerSelection!.animation)remote", withExtension: "mov")!
+            }
+           
         } else {
             return Bundle.main.url(forResource: "idle", withExtension: "mov")!
         }
