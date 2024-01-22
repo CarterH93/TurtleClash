@@ -112,7 +112,11 @@ class MessagesViewController: MSMessagesAppViewController {
         
         
         print("NEWBSDOAIFJKLM thing")
-        
+        for child in children {
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+        }
         let controller = UIHostingController(rootView: FinalWrappedExpanded().environmentObject(storage))
         
         self.addChild(controller)
@@ -185,7 +189,11 @@ class MessagesViewController: MSMessagesAppViewController {
         
         if presentationStyle == .expanded && conversation.selectedMessage != nil {
             
-            
+            for child in children {
+                child.willMove(toParent: nil)
+                child.view.removeFromSuperview()
+                child.removeFromParent()
+            }
             let controller = UIHostingController(rootView: FinalWrappedExpanded().environmentObject(storage))
             
             self.addChild(controller)
@@ -213,6 +221,11 @@ class MessagesViewController: MSMessagesAppViewController {
             
             controller.view.translatesAutoresizingMaskIntoConstraints = false
         } else {
+            for child in children {
+                child.willMove(toParent: nil)
+                child.view.removeFromSuperview()
+                child.removeFromParent()
+            }
             let controller = UIHostingController(rootView: WrappedCompact().environmentObject(storage))
             
             self.addChild(controller)
@@ -361,11 +374,7 @@ class MessagesViewController: MSMessagesAppViewController {
         // Use this method to finalize any behaviors associated with the change in presentation style.
         
         
-        for child in children {
-            child.willMove(toParent: nil)
-            child.view.removeFromSuperview()
-            child.removeFromParent()
-        }
+        
         
         if presentationStyle == .expanded && storage.messageDataExists == true {
             storage.cancelAllWorkItems()
@@ -375,6 +384,12 @@ class MessagesViewController: MSMessagesAppViewController {
             
             
             print("ShowingDebug - showing game - \(storage.messageDataExists.description)")
+            
+            for child in children {
+                child.willMove(toParent: nil)
+                child.view.removeFromSuperview()
+                child.removeFromParent()
+            }
             
             let controller = UIHostingController(rootView: FinalWrappedExpanded().environmentObject(storage))
             
@@ -402,6 +417,11 @@ class MessagesViewController: MSMessagesAppViewController {
             
             controller.view.translatesAutoresizingMaskIntoConstraints = false
         } else {
+            for child in children {
+                child.willMove(toParent: nil)
+                child.view.removeFromSuperview()
+                child.removeFromParent()
+            }
             
             print("ShowingDebug - showing compact - \(storage.messageDataExists.description)")
             let controller = UIHostingController(rootView: WrappedCompact().environmentObject(storage))
