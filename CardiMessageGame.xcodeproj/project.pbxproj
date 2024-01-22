@@ -23,7 +23,13 @@
 		BC5CA4EF2B37986900D0D100 /* Compact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4EE2B37986900D0D100 /* Compact.swift */; };
 		BC5CA4F12B37987300D0D100 /* WrappedCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4F02B37987300D0D100 /* WrappedCompact.swift */; };
 		BC5CA4F42B37989000D0D100 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4F32B37989000D0D100 /* Storage.swift */; };
-		BC66F3442B5E0A0E00B91D84 /* Animation.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F3432B5E0A0E00B91D84 /* Animation.mov */; };
+		BC66F34C2B5ED56400B91D84 /* ice1local.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F3452B5ED56400B91D84 /* ice1local.mov */; };
+		BC66F34D2B5ED56400B91D84 /* water1remote.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F3462B5ED56400B91D84 /* water1remote.mov */; };
+		BC66F34E2B5ED56400B91D84 /* idle.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F3472B5ED56400B91D84 /* idle.mov */; };
+		BC66F34F2B5ED56400B91D84 /* ice1remote.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F3482B5ED56400B91D84 /* ice1remote.mov */; };
+		BC66F3502B5ED56400B91D84 /* fire1remote.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F3492B5ED56400B91D84 /* fire1remote.mov */; };
+		BC66F3512B5ED56400B91D84 /* fire1local.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F34A2B5ED56400B91D84 /* fire1local.mov */; };
+		BC66F3522B5ED56400B91D84 /* water1local.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F34B2B5ED56400B91D84 /* water1local.mov */; };
 		BC8305652B378DBF008CCAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8305642B378DBF008CCAC7 /* Assets.xcassets */; };
 		BC83056B2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BC83056A2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BC8305702B378DBF008CCAC7 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC83056F2B378DBF008CCAC7 /* Messages.framework */; };
@@ -77,7 +83,13 @@
 		BC5CA4EE2B37986900D0D100 /* Compact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compact.swift; sourceTree = "<group>"; };
 		BC5CA4F02B37987300D0D100 /* WrappedCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedCompact.swift; sourceTree = "<group>"; };
 		BC5CA4F32B37989000D0D100 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		BC66F3432B5E0A0E00B91D84 /* Animation.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Animation.mov; sourceTree = "<group>"; };
+		BC66F3452B5ED56400B91D84 /* ice1local.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ice1local.mov; sourceTree = "<group>"; };
+		BC66F3462B5ED56400B91D84 /* water1remote.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = water1remote.mov; sourceTree = "<group>"; };
+		BC66F3472B5ED56400B91D84 /* idle.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = idle.mov; sourceTree = "<group>"; };
+		BC66F3482B5ED56400B91D84 /* ice1remote.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ice1remote.mov; sourceTree = "<group>"; };
+		BC66F3492B5ED56400B91D84 /* fire1remote.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fire1remote.mov; sourceTree = "<group>"; };
+		BC66F34A2B5ED56400B91D84 /* fire1local.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = fire1local.mov; sourceTree = "<group>"; };
+		BC66F34B2B5ED56400B91D84 /* water1local.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = water1local.mov; sourceTree = "<group>"; };
 		BC8305612B378DBE008CCAC7 /* CardiMessageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardiMessageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8305642B378DBF008CCAC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC83056A2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CardiMessageGame MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,7 +234,13 @@
 		BCE381CE2B5D9E97005A00FF /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				BC66F3432B5E0A0E00B91D84 /* Animation.mov */,
+				BC66F34A2B5ED56400B91D84 /* fire1local.mov */,
+				BC66F3492B5ED56400B91D84 /* fire1remote.mov */,
+				BC66F3452B5ED56400B91D84 /* ice1local.mov */,
+				BC66F3482B5ED56400B91D84 /* ice1remote.mov */,
+				BC66F3472B5ED56400B91D84 /* idle.mov */,
+				BC66F34B2B5ED56400B91D84 /* water1local.mov */,
+				BC66F3462B5ED56400B91D84 /* water1remote.mov */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -314,9 +332,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC66F3512B5ED56400B91D84 /* fire1local.mov in Resources */,
+				BC66F34D2B5ED56400B91D84 /* water1remote.mov in Resources */,
+				BC66F3522B5ED56400B91D84 /* water1local.mov in Resources */,
+				BC66F34E2B5ED56400B91D84 /* idle.mov in Resources */,
 				BC8305782B378DC0008CCAC7 /* Assets.xcassets in Resources */,
+				BC66F34C2B5ED56400B91D84 /* ice1local.mov in Resources */,
+				BC66F34F2B5ED56400B91D84 /* ice1remote.mov in Resources */,
 				BC8305762B378DC0008CCAC7 /* MainInterface.storyboard in Resources */,
-				BC66F3442B5E0A0E00B91D84 /* Animation.mov in Resources */,
+				BC66F3502B5ED56400B91D84 /* fire1remote.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

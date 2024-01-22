@@ -11,10 +11,17 @@ import AVKit
 
 
 struct PlayerViewController: UIViewControllerRepresentable {
-    var videoURL: URL?
+    
+    var storage: AppStorage
+    
+    var animationURL: URL {
+        
+        
+        return Bundle.main.url(forResource: "idle", withExtension: "mov")!
+    }
 
     private var player: AVPlayer {
-        return AVPlayer(url: videoURL!)
+        return AVPlayer(url: animationURL)
     }
 
     func makeUIViewController(context: Context) -> AVPlayerViewController {
@@ -42,7 +49,7 @@ struct PlayerViewController: UIViewControllerRepresentable {
 
 
 
-let characterAnimation = Bundle.main.url(forResource: "Animation", withExtension: "mov")
+
 
 struct Animations: View {
     
@@ -50,7 +57,7 @@ struct Animations: View {
 
     var body: some View {
         
-        PlayerViewController(videoURL: characterAnimation)
+        PlayerViewController(storage: storage)
             .disabled(true)
             .ignoresSafeArea()
     }
