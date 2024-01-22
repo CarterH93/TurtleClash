@@ -12,13 +12,10 @@ import AVKit
 
 struct PlayerViewController: UIViewControllerRepresentable {
     
-    var storage: AppStorage
+    @EnvironmentObject var storage: AppStorage
+    var animationURL: URL
     
-    var animationURL: URL {
-        
-        
-        return Bundle.main.url(forResource: "idle", withExtension: "mov")!
-    }
+    let idleAnimationLength: Double = 4
 
     private var player: AVPlayer {
         return AVPlayer(url: animationURL)
@@ -32,12 +29,14 @@ struct PlayerViewController: UIViewControllerRepresentable {
         controller.videoGravity = .resizeAspectFill
         controller.showsPlaybackControls = false
         controller.updatesNowPlayingInfoCenter = false
-        
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: controller.player?.currentItem, queue: nil)
-                { notification in
-                    controller.player?.seek(to: .zero)
-                    controller.player?.play()
-                }
+        if storage.animationActive == false {
+            storage.scheduleWorkItem(withDelay: idleAnimationLength) {
+                
+                controller.player?.seek(to: .zero)
+                controller.player?.play()
+                
+            }
+        }
         
         return controller
     }
@@ -55,10 +54,28 @@ struct Animations: View {
     
     @EnvironmentObject var storage: AppStorage
 
-    var body: some View {
+    var animationURL: URL {
+        if storage.animationActive {
+            return Bundle.main.url(forResource: "fire1local", withExtension: "mov")!
+        } else {
+            return Bundle.main.url(forResource: "idle", withExtension: "mov")!
+        }
         
-        PlayerViewController(storage: storage)
-            .disabled(true)
-            .ignoresSafeArea()
+        
+    }
+    
+    var body: some View {
+        ZStack {
+            if storage.animationActive {
+                PlayerViewController(animationURL: animationURL)
+                    .disabled(true)
+                    .ignoresSafeArea()
+            } else {
+                PlayerViewController(animationURL: animationURL)
+                    .disabled(true)
+                    .ignoresSafeArea()
+            }
+        }
+        
     }
 }

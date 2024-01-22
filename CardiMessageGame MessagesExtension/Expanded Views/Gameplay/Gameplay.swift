@@ -303,9 +303,13 @@ func flipCard() {
                                                                         position = CGSize.zero
                                                                        flipCard()
                                                                         selectedCard = nil
-                                                                        storage.animationActive = true
+                                                                        withAnimation {
+                                                                            storage.animationActive = true
+                                                                        }
                                                                         storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
-                                                                            storage.animationActive = false
+                                                                            withAnimation {
+                                                                                storage.animationActive = false
+                                                                            }
                                                                             secondTime = true
                                                                             disable = false
                                                                             
@@ -629,9 +633,13 @@ func flipCard() {
                                             position = CGSize.zero
                                             flipCard()
                                             selectedCard = nil
-                                            storage.animationActive = true
+                                            withAnimation {
+                                                storage.animationActive = true
+                                            }
                                             storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
-                                                storage.animationActive = false
+                                                withAnimation {
+                                                    storage.animationActive = false
+                                                }
                                                 secondTime = true
                                                 disable = false
                                                 
@@ -717,10 +725,14 @@ func flipCard() {
                                                 position = CGSize.zero
                                                 flipCard()
                                                 selectedCard = nil
-                                                storage.animationActive = true
+                                                withAnimation {
+                                                    storage.animationActive = true
+                                                }
                                                 
                                                 storage.scheduleWorkItem(withDelay: storage.battleAnimationLength) {
-                                                    storage.animationActive = false
+                                                    withAnimation {
+                                                        storage.animationActive = false
+                                                    }
                                                 disable = false
                                                 storage.pastRoundselectionPlayer1 = nil
                                                 storage.pastRoundselectionPlayer2 = nil

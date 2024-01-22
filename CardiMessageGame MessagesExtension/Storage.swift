@@ -20,7 +20,7 @@ class AppStorage: ObservableObject {
     
     @Published var helpMenuVisable = false
     
-    let battleAnimationLength = 5.0
+    let battleAnimationLength: Double = 10
     
     @Published var animationActive = false
     
