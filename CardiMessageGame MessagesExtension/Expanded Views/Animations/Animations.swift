@@ -9,26 +9,32 @@ import SwiftUI
 import SpriteKit
 import AVKit
 
-let characterAnimation = Bundle.main.url(forResource: "idle-1", withExtension: "mov")
-let backgroundAnimation = Bundle.main.url(forResource: "background-1", withExtension: "mov")
+let characterAnimation = Bundle.main.url(forResource: "fire1-1", withExtension: "mov")
+
 struct Animations: View {
     
     var geo: GeometryProxy
 
-   var videoPlayer = AVPlayer(url: backgroundAnimation!)
+   
+   
+    
     
    
-    var videoPlayer2 = AVPlayer(url: characterAnimation!)
+    var videoPlayer = AVPlayer(url: characterAnimation!)
     func scene(_ geo: GeometryProxy) -> SKScene {
         // Load the SKScene from 'backgroundScene.sks'
        let scene = SKScene(fileNamed: "backgroundScene")
             
       
         
-    
-        
+        var background = SKSpriteNode(imageNamed: "background")
+        background.size = CGSize(width: geo.size.height * 0.82219061166, height: geo.size.height)
+        scene!.addChild(background)
+       
         let video = SKVideoNode(avPlayer: videoPlayer)
         video.size = CGSize(width: geo.size.height * 0.82219061166, height: geo.size.height)
+        //Ability to mirror video
+        //video2.xScale = -1.0
         scene!.addChild(video)
         videoPlayer.play()
         
@@ -37,21 +43,6 @@ struct Animations: View {
                 { notification in
                     self.videoPlayer.seek(to: .zero)
                     self.videoPlayer.play()
-                }
-         
-        
-        let video2 = SKVideoNode(avPlayer: videoPlayer2)
-        video2.size = CGSize(width: geo.size.height * 0.82219061166, height: geo.size.height)
-        //Ability to mirror video
-        //video2.xScale = -1.0
-        scene!.addChild(video2)
-        videoPlayer2.play()
-        
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
-                                                       object: videoPlayer2.currentItem, queue: nil)
-                { notification in
-                    self.videoPlayer2.seek(to: .zero)
-                    self.videoPlayer2.play()
                 }
         
         scene!.size = CGSize(width: geo.size.height * 0.82219061166, height: geo.size.height)
@@ -64,6 +55,7 @@ struct Animations: View {
         
             SpriteView(scene: scene(geo))
             .ignoresSafeArea()
+        
         
     }
 }
