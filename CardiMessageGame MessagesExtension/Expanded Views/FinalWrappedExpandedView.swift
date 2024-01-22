@@ -13,7 +13,11 @@ struct FinalWrappedExpanded: View {
     var body: some View {
         GeometryReader { geo in
             if storage.settingsMenuActive == false {
-                WrappedExpanded()
+                ZStack {
+                    Animations()
+                        .ignoresSafeArea()
+                    WrappedExpanded()
+                }
             }
             if geo.size.height > geo.size.width {
                 

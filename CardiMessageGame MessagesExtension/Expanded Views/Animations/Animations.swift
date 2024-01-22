@@ -13,10 +13,11 @@ let characterAnimation = Bundle.main.url(forResource: "idle-1", withExtension: "
 
 struct Animations: View {
     
+    @EnvironmentObject var storage: AppStorage
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
-    @State private var timeActive = 0.0
+    
     @State private var lastHeight: Double? = nil
-    @State private var hideAnimation = false
+   
     
     
 
@@ -62,23 +63,23 @@ struct Animations: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: geo.size.width, height: geo.size.height)
-                if !hideAnimation {
+                if !storage.hideAnimation {
                     SpriteView(scene: scene(geo))
                         .ignoresSafeArea()
                 }
             }
             .onReceive(timer) { _ in
-                timeActive += 0.1
+                storage.animationTimeActive += 0.1
                  
-                
+                if storage.animationTimeActive > 1 {
                 if lastHeight != nil {
                     if geo.size.height != lastHeight {
-                        timeActive = 0.0
-                        hideAnimation = true
+                        storage.animationTimeActive = 0.0
+                        storage.hideAnimation = true
                     } else {
-                        if timeActive > 0.5 {
-                            timeActive = 0.0
-                            hideAnimation = false
+                        
+                            storage.animationTimeActive = 0.0
+                            storage.hideAnimation = false
                             videoPlayer.play()
                         }
                     }
