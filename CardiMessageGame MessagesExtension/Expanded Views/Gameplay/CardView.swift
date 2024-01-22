@@ -17,7 +17,7 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: geo.size.height / 12)
                     .foregroundColor(card.convertColorToRealColor)
                     
-                Image("cardimage\(card.animation)")
+                Image("\(card.type.rawValue)\(card.animation)")
                     .resizable()
                     .scaledToFit()
                     .padding(geo.size.height * 0.02)
