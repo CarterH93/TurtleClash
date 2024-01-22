@@ -1949,7 +1949,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "59495778-648A-42CA-AB4D-2055CEBC69CF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CardiMessageGame MessagesExtension/Expanded Views/Gameplay/Gameplay.swift"

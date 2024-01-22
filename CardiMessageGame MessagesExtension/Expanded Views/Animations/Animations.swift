@@ -9,7 +9,7 @@ import SwiftUI
 import SpriteKit
 import AVKit
 
-let characterAnimation = Bundle.main.url(forResource: "fire1-1", withExtension: "mov")
+let characterAnimation = Bundle.main.url(forResource: "idle-1", withExtension: "mov")
 
 struct Animations: View {
     
@@ -58,7 +58,10 @@ struct Animations: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geo.size.width, height: geo.size.height)
                 if !hideAnimation {
                     SpriteView(scene: scene(geo))
                         .ignoresSafeArea()
