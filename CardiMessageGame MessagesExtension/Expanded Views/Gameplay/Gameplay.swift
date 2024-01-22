@@ -26,7 +26,8 @@ struct Gameplay: View {
     @State private var offsetValueX = 0.0
     @State private var offsetValueY = 0.0
     
-    let opponentCardOffsetx = 0.28
+    let opponentCardOffsetx = -0.28
+    let localCardOffsetx = 0.33
     let localCardOffsety = -0.22
     
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
@@ -261,7 +262,7 @@ func flipCard() {
                                                 
                                                 
                                                 withAnimation() {
-                                                    position = .init(width: 0, height: geo.size.height * localCardOffsety)
+                                                    position = .init(width: geo.size.height * localCardOffsetx, height: geo.size.height * localCardOffsety)
                                                     isDragging = false
                                                     disable = true
                                                 }
@@ -523,7 +524,7 @@ func flipCard() {
                 if storage.localPlayerSelection != nil {
                     disable = true
                     selectedCard = storage.localPlayerSelection
-                    position = .init(width: 0, height: geo.size.height * localCardOffsety)
+                    position = .init(width: geo.size.height * localCardOffsetx, height: geo.size.height * localCardOffsety)
                     
                     
                 }
@@ -591,7 +592,7 @@ func flipCard() {
                         
                         
                         withAnimation() {
-                            position = .init(width: 0, height: geo.size.height * localCardOffsety)
+                            position = .init(width: geo.size.height * localCardOffsetx, height: geo.size.height * localCardOffsety)
                             isDragging = false
                             disable = true
                         }
@@ -704,7 +705,7 @@ func flipCard() {
                             selectedCard = storage.pastLocalPlayerSelection
                             
                             withAnimation() {
-                                position = .init(width: 0, height: geo.size.height * localCardOffsety)
+                                position = .init(width: geo.size.height * localCardOffsetx, height: geo.size.height * localCardOffsety)
                             }
                             
                             storage.scheduleWorkItem(withDelay: 1) {
