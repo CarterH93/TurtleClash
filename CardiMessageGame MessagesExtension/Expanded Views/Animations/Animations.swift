@@ -13,7 +13,12 @@ let characterAnimation = Bundle.main.url(forResource: "fire1-1", withExtension: 
 
 struct Animations: View {
     
-    var geo: GeometryProxy
+    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    @State private var timeActive = 0.0
+    @State private var lastHeight: Double? = nil
+    @State private var hideAnimation = false
+    
+    
 
    
    
@@ -27,7 +32,7 @@ struct Animations: View {
             
       
         
-        var background = SKSpriteNode(imageNamed: "background")
+        let background = SKSpriteNode(imageNamed: "background")
         background.size = CGSize(width: geo.size.height * 0.82219061166, height: geo.size.height)
         scene!.addChild(background)
        
@@ -51,11 +56,34 @@ struct Animations: View {
     }
 
     var body: some View {
-       
-        
-            SpriteView(scene: scene(geo))
-            .ignoresSafeArea()
-        
-        
+        GeometryReader { geo in
+            ZStack {
+                
+                if !hideAnimation {
+                    SpriteView(scene: scene(geo))
+                        .ignoresSafeArea()
+                }
+            }
+            .onReceive(timer) { _ in
+                timeActive += 0.1
+                 
+                
+                if lastHeight != nil {
+                    if geo.size.height != lastHeight {
+                        timeActive = 0.0
+                        hideAnimation = true
+                    } else {
+                        if timeActive > 0.5 {
+                            timeActive = 0.0
+                            hideAnimation = false
+                            videoPlayer.play()
+                        }
+                    }
+                }
+                
+                
+                lastHeight = geo.size.height
+            }
+        }
     }
 }

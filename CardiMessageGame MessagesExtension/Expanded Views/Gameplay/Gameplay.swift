@@ -125,7 +125,7 @@ func flipCard() {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Animations(geo: geo)
+                Animations()
                     
                 
                 
