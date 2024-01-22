@@ -112,13 +112,6 @@ class MessagesViewController: MSMessagesAppViewController {
         
         
         print("NEWBSDOAIFJKLM thing")
-        storage.animationTimeActive = 0.0
-        storage.hideAnimation = true
-        for child in children {
-            child.willMove(toParent: nil)
-            child.view.removeFromSuperview()
-            child.removeFromParent()
-        }
         
         let controller = UIHostingController(rootView: FinalWrappedExpanded().environmentObject(storage))
         
@@ -192,13 +185,7 @@ class MessagesViewController: MSMessagesAppViewController {
         
         if presentationStyle == .expanded && conversation.selectedMessage != nil {
             
-            storage.animationTimeActive = 0.0
-            storage.hideAnimation = true
-            for child in children {
-                child.willMove(toParent: nil)
-                child.view.removeFromSuperview()
-                child.removeFromParent()
-            }
+            
             let controller = UIHostingController(rootView: FinalWrappedExpanded().environmentObject(storage))
             
             self.addChild(controller)
@@ -226,11 +213,6 @@ class MessagesViewController: MSMessagesAppViewController {
             
             controller.view.translatesAutoresizingMaskIntoConstraints = false
         } else {
-            for child in children {
-                child.willMove(toParent: nil)
-                child.view.removeFromSuperview()
-                child.removeFromParent()
-            }
             let controller = UIHostingController(rootView: WrappedCompact().environmentObject(storage))
             
             self.addChild(controller)
@@ -393,13 +375,7 @@ class MessagesViewController: MSMessagesAppViewController {
             
             
             print("ShowingDebug - showing game - \(storage.messageDataExists.description)")
-            storage.animationTimeActive = 0.0
-            storage.hideAnimation = true
-            for child in children {
-                child.willMove(toParent: nil)
-                child.view.removeFromSuperview()
-                child.removeFromParent()
-            }
+            
             let controller = UIHostingController(rootView: FinalWrappedExpanded().environmentObject(storage))
             
             self.addChild(controller)
@@ -426,17 +402,8 @@ class MessagesViewController: MSMessagesAppViewController {
             
             controller.view.translatesAutoresizingMaskIntoConstraints = false
         } else {
-            for child in children {
-                child.willMove(toParent: nil)
-                child.view.removeFromSuperview()
-                child.removeFromParent()
-            }
+            
             print("ShowingDebug - showing compact - \(storage.messageDataExists.description)")
-            for child in children {
-                child.willMove(toParent: nil)
-                child.view.removeFromSuperview()
-                child.removeFromParent()
-            }
             let controller = UIHostingController(rootView: WrappedCompact().environmentObject(storage))
             
             self.addChild(controller)
@@ -532,6 +499,5 @@ class MessagesViewController: MSMessagesAppViewController {
     
 
 }
-
 
 

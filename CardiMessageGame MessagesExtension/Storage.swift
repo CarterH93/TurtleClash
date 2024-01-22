@@ -21,9 +21,9 @@ class AppStorage: ObservableObject {
     @Published var helpMenuVisable = false
     
     let battleAnimationLength = 5.0
-    @Published var animationTimeActive = 0.0
+    
     @Published var animationActive = false
-    @Published var hideAnimation = true
+    
     //Code for scheduling background tasks
     @Published var workItems: [DispatchWorkItem] = []
     
@@ -780,6 +780,4 @@ func cardCreator(number: Int, type: Int, color: Int, animation: Int) -> Card {
     return Card(number: number, type: newType, color: newColor, animation: animation)
     
 }
-
-
 

@@ -23,6 +23,7 @@
 		BC5CA4EF2B37986900D0D100 /* Compact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4EE2B37986900D0D100 /* Compact.swift */; };
 		BC5CA4F12B37987300D0D100 /* WrappedCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4F02B37987300D0D100 /* WrappedCompact.swift */; };
 		BC5CA4F42B37989000D0D100 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4F32B37989000D0D100 /* Storage.swift */; };
+		BC66F3442B5E0A0E00B91D84 /* Animation.mov in Resources */ = {isa = PBXBuildFile; fileRef = BC66F3432B5E0A0E00B91D84 /* Animation.mov */; };
 		BC8305652B378DBF008CCAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8305642B378DBF008CCAC7 /* Assets.xcassets */; };
 		BC83056B2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BC83056A2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BC8305702B378DBF008CCAC7 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC83056F2B378DBF008CCAC7 /* Messages.framework */; };
@@ -32,12 +33,7 @@
 		BC8305842B378DF3008CCAC7 /* MSMessage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8305832B378DF3008CCAC7 /* MSMessage+Extensions.swift */; };
 		BC8305862B378E01008CCAC7 /* MSMessageDataDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8305852B378E01008CCAC7 /* MSMessageDataDSL.swift */; };
 		BCAA8D972B3D1D530058E729 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA8D962B3D1D530058E729 /* Gameplay.swift */; };
-		BCDA80DF2B5DD3A0002FC979 /* idle-1.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCDA80DE2B5DD3A0002FC979 /* idle-1.mov */; };
-		BCDA80E32B5DE55D002FC979 /* fire1-1.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCDA80E22B5DE55D002FC979 /* fire1-1.mov */; };
 		BCE381CB2B5D9E4D005A00FF /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE381CA2B5D9E4D005A00FF /* Animations.swift */; };
-		BCE381CD2B5D9E79005A00FF /* backgroundScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BCE381CC2B5D9E79005A00FF /* backgroundScene.sks */; };
-		BCE381D62B5D9EA8005A00FF /* water1.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCE381D12B5D9EA8005A00FF /* water1.mov */; };
-		BCE381D82B5D9EA8005A00FF /* ice1.mov in Resources */ = {isa = PBXBuildFile; fileRef = BCE381D32B5D9EA8005A00FF /* ice1.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +77,7 @@
 		BC5CA4EE2B37986900D0D100 /* Compact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compact.swift; sourceTree = "<group>"; };
 		BC5CA4F02B37987300D0D100 /* WrappedCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedCompact.swift; sourceTree = "<group>"; };
 		BC5CA4F32B37989000D0D100 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		BC66F3432B5E0A0E00B91D84 /* Animation.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Animation.mov; sourceTree = "<group>"; };
 		BC8305612B378DBE008CCAC7 /* CardiMessageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardiMessageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8305642B378DBF008CCAC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC83056A2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CardiMessageGame MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,12 +89,7 @@
 		BC8305832B378DF3008CCAC7 /* MSMessage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSMessage+Extensions.swift"; sourceTree = "<group>"; };
 		BC8305852B378E01008CCAC7 /* MSMessageDataDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSMessageDataDSL.swift; sourceTree = "<group>"; };
 		BCAA8D962B3D1D530058E729 /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
-		BCDA80DE2B5DD3A0002FC979 /* idle-1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "idle-1.mov"; sourceTree = "<group>"; };
-		BCDA80E22B5DE55D002FC979 /* fire1-1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "fire1-1.mov"; sourceTree = "<group>"; };
 		BCE381CA2B5D9E4D005A00FF /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
-		BCE381CC2B5D9E79005A00FF /* backgroundScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = backgroundScene.sks; sourceTree = "<group>"; };
-		BCE381D12B5D9EA8005A00FF /* water1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = water1.mov; sourceTree = "<group>"; };
-		BCE381D32B5D9EA8005A00FF /* ice1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ice1.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +213,6 @@
 		BCD7FC652B5C6ACF0090D9A5 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				BCE381CC2B5D9E79005A00FF /* backgroundScene.sks */,
 				BCE381CA2B5D9E4D005A00FF /* Animations.swift */,
 				BCE381CE2B5D9E97005A00FF /* Assets */,
 			);
@@ -231,10 +222,7 @@
 		BCE381CE2B5D9E97005A00FF /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				BCE381D32B5D9EA8005A00FF /* ice1.mov */,
-				BCDA80E22B5DE55D002FC979 /* fire1-1.mov */,
-				BCDA80DE2B5DD3A0002FC979 /* idle-1.mov */,
-				BCE381D12B5D9EA8005A00FF /* water1.mov */,
+				BC66F3432B5E0A0E00B91D84 /* Animation.mov */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -326,13 +314,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCDA80DF2B5DD3A0002FC979 /* idle-1.mov in Resources */,
-				BCE381D82B5D9EA8005A00FF /* ice1.mov in Resources */,
 				BC8305782B378DC0008CCAC7 /* Assets.xcassets in Resources */,
 				BC8305762B378DC0008CCAC7 /* MainInterface.storyboard in Resources */,
-				BCE381D62B5D9EA8005A00FF /* water1.mov in Resources */,
-				BCDA80E32B5DE55D002FC979 /* fire1-1.mov in Resources */,
-				BCE381CD2B5D9E79005A00FF /* backgroundScene.sks in Resources */,
+				BC66F3442B5E0A0E00B91D84 /* Animation.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
