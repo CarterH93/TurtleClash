@@ -78,22 +78,7 @@ struct WrappedExpanded: View {
                 
                 
             } else if storage.helpMenuVisable {
-                VStack {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(.gray)
-                        VStack {
-                            Text("Help Menu")
-                            Text("Show directions")
-                            Button("Exit") {
-                                storage.helpMenuVisable = false
-                            }
-                            
-                        }
-                        
-                    }
-                    .frame(width: 300, height: 200)
-                }
+                HelpMenu()
             }
         }
     }
