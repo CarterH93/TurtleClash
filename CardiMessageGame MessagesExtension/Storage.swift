@@ -15,8 +15,57 @@ func getDocumentsDirectory() -> URL {
 }
 
 let saveMove = getDocumentsDirectory().appendingPathComponent("SavedMove")
-
+let savePlayBackgroundMusic = getDocumentsDirectory().appendingPathComponent("savePlayBackgroundMusic")
+let savePlaySoundEffects = getDocumentsDirectory().appendingPathComponent("savePlaySoundEffects")
 class AppStorage: ObservableObject {
+    
+    @Published var playBackgroundMusic: Bool {
+        
+        //did set for saving data to the disk
+        
+        didSet {
+            let encoder = JSONEncoder()
+            
+            if let encoded = try? encoder.encode(playBackgroundMusic) {
+                
+                let str = encoded
+                let url = savePlayBackgroundMusic
+                
+                do {
+                    try str.write(to: url, options: .atomicWrite)
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
+        }
+    }
+    
+    @Published var playSoundEffects: Bool {
+        
+        //did set for saving data to the disk
+        
+        didSet {
+            let encoder = JSONEncoder()
+            
+            if let encoded = try? encoder.encode(playSoundEffects) {
+                
+                let str = encoded
+                let url = savePlaySoundEffects
+                
+                do {
+                    try str.write(to: url, options: .atomicWrite)
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
+        }
+    }
+    
+    
     
     @Published var helpMenuVisable = false
     
@@ -83,10 +132,38 @@ class AppStorage: ObservableObject {
             if let savedItems = try? Data(contentsOf: saveMove) {
                 if let decodedItems = try? JSONDecoder().decode([String:Card].self, from: savedItems) {
                     savedMove = decodedItems
-                    return
+                    
+                } else {
+                    savedMove = [:]
                 }
+            } else {
+                savedMove = [:]
             }
-        savedMove = [:]
+        
+        
+        if let savedItems = try? Data(contentsOf: savePlayBackgroundMusic) {
+            if let decodedItems = try? JSONDecoder().decode(Bool.self, from: savedItems) {
+                playBackgroundMusic = decodedItems
+                
+            } else {
+                playBackgroundMusic = true
+            }
+        } else {
+            playBackgroundMusic = true
+        }
+        
+        if let savedItems = try? Data(contentsOf: savePlaySoundEffects) {
+            if let decodedItems = try? JSONDecoder().decode(Bool.self, from: savedItems) {
+                playSoundEffects = decodedItems
+                
+            } else {
+                playSoundEffects = true
+            }
+        } else {
+            playSoundEffects = true
+        }
+    
+        
         }
     
     
