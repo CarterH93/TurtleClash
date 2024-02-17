@@ -20,8 +20,7 @@ struct FinalWrappedExpanded: View {
                 
                 if storage.settingsMenuActive == true {
                         Settings()
-                        .frame(width: geo.size.width, height: geo.size.width)
-                        .frame(width: geo.size.width, height: geo.size.height)
+                        
                     
                     
                 }
