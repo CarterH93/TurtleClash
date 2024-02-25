@@ -58,19 +58,18 @@ struct Settings: View {
                         storage.goToCompactView = true
                     } label: {
                         ZStack {
-                            Circle()
-                                .foregroundColor(.white)
                             Image(systemName: "xmark.circle")
                                 .resizable()
                                 .scaledToFit()
                                 .padding(5)
-                                .foregroundColor(.black)
+                                
                                 
                             
                         }
                         .frame(width: 50, height: 50)
                         .padding(10)
                     }
+                    .buttonStyle(.plain)
                     
                     
                 }
