@@ -49,6 +49,11 @@ struct Settings: View {
                 }
                 .padding([.top, .trailing, .leading])
                 
+                
+                Text("Game Created by Carter Hawkins")
+                    .font(.title3)
+                    .padding()
+                
             }
             VStack {
                 HStack {

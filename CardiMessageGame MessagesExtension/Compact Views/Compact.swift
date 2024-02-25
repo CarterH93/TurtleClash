@@ -13,21 +13,25 @@ struct Compact: View {
     @EnvironmentObject var storage: AppStorage
    
     var body: some View {
-        NavigationView {
+
             ZStack {
                 
-                    Color.orange
+                
                         
                 
                 
                 
                 VStack(spacing: 20) {
-                    Text("Imessage Game")
-                        .font(.largeTitle)
+                    Text("Turtle Clash")
+                        .font(.largeTitle.bold())
                     
+                    Image("France")
+                        .resizable()
+                        .scaledToFit()
+                        .padding([.leading,.trailing], 40)
+                        .padding([.bottom,.top])
                     
-                    
-                    Button("Send Game") {
+                    Button("New Game") {
                         storage.newGame.toggle()
                     }
                     .font(.title)
@@ -37,23 +41,40 @@ struct Compact: View {
                     .cornerRadius(10)
                     
                 }
+                .padding()
+                .padding(.bottom)
                 
-                
+                VStack {
+                    HStack {
+                        Spacer()
+                        
+                        Button {
+                            storage.settingsMenuActive = true
+                            storage.goToExpnadedView = true
+                        } label: {
+                            ZStack {
+                                Image(systemName: "gear")
+                                    .resizable()
+                                    .scaledToFit()
+                                    
+                                    
+                                    
+                                
+                            }
+                            .frame(width: 40)
+                            .padding(30)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                    Spacer()
+                }
                 
                 
                 
             }
             .ignoresSafeArea()
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Settings") {
-                        storage.settingsMenuActive = true
-                        storage.goToExpnadedView = true
-                    }
-                }
-            }
-        }
-        .navigationViewStyle(.stack)
+           
+        
         
         .onAppear {
             storage.settingsMenuActive = false
