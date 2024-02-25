@@ -24,53 +24,62 @@ struct WrappedExpanded: View {
             if storage.participantsInConversasion.count > storage.maxPlayers {
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(.green)
+                        .strokeBorder(.white, lineWidth: 8)
+                        .background(RoundedRectangle(cornerRadius: 20).fill(.green))
                     VStack {
                         Text("Game Full")
+                            .padding(.bottom)
                         Text("Max of Two Players Only!")
-                        Button("Settings") {
-                            storage.settingsMenuActive = true
-                        }
                         
-                    }
+                        
+                    }.foregroundColor(.white)
+                        .font(.title3)
                     
                 }
                 .frame(width: 300, height: 200)
               
             } else if storage.gameover {
                 VStack {
+                    Spacer()
+                    Spacer()
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(.green)
+                            .strokeBorder(.white, lineWidth: 8)
+                            .background(RoundedRectangle(cornerRadius: 20).fill(storage.didLocalPlayerWinOverall == 1 ? .green : .red))
+                            
+                        
                         VStack {
-                            Text("Game Over!")
                             if storage.didLocalPlayerWinOverall == 1 {
-                                Text("You won")
+                                Text("You won!!")
+                                    .font(.largeTitle.bold())
+                                    .foregroundColor(.black)
                             } else {
                                 Text("You lost")
+                                    .font(.largeTitle.bold())
+                                    .foregroundColor(.white)
                             }
-                            Button("Settings") {
-                                storage.settingsMenuActive = true
-                            }
+                            
                             
                         }
                         
                     }
-                    .frame(width: 300, height: 200)
+                    .frame(width: 200, height: 100)
+                    Spacer()
                 }
             } else if storage.localPlayerCurrentTurnTrue == false {
                 VStack {
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(.green)
+                            .strokeBorder(.white, lineWidth: 8)
+                            .background(RoundedRectangle(cornerRadius: 20).fill(.green))
                         VStack {
                             Text("It is not your turn")
+                                .padding(.bottom)
                             Text("Please wait for other player")
-                            Button("Settings") {
-                                storage.settingsMenuActive = true
-                            }
                             
-                        }
+                            
+                        }.foregroundColor(.white)
+                            .font(.title3)
                         
                     }
                     .frame(width: 300, height: 200)
