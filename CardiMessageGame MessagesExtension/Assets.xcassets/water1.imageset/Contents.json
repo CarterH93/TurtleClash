@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "cardimage.png",
+      "filename" : "water1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "cardimage@2x.png",
+      "filename" : "water1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "cardimage@3x.png",
+      "filename" : "water1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
