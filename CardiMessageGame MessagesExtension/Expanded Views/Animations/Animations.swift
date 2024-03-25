@@ -57,9 +57,9 @@ struct Animations: View {
     var animationURL: URL {
         if storage.animationActive {
             if storage.pastRoundResult == 1 {
-                return Bundle.main.url(forResource: "\(storage.pastLocalPlayerSelection!.type.rawValue)\(storage.pastLocalPlayerSelection!.animation)local", withExtension: "mov")!
+                return Bundle.main.url(forResource: "\(storage.pastLocalPlayerSelection!.type.rawValue)\(storage.pastLocalPlayerSelection!.animation)local", withExtension: "mov") ?? Bundle.main.url(forResource: "idle", withExtension: "mov")!
             } else {
-                return Bundle.main.url(forResource: "\(storage.pastRemotePlayerSelection!.type.rawValue)\(storage.pastRemotePlayerSelection!.animation)remote", withExtension: "mov")!
+                return Bundle.main.url(forResource: "\(storage.pastRemotePlayerSelection!.type.rawValue)\(storage.pastRemotePlayerSelection!.animation)remote", withExtension: "mov") ?? Bundle.main.url(forResource: "idle", withExtension: "mov")!
             }
            
         } else {
