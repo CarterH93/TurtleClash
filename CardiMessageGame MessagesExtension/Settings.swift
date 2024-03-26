@@ -49,6 +49,14 @@ struct Settings: View {
                 }
                 .padding([.top, .trailing, .leading])
                 
+                Link(destination: URL(string: "https://www.carterapps.net")!) {
+                    Image(systemName: "person.text.rectangle")
+                        .font(.largeTitle)
+                    Text("Credits")
+                        .foregroundStyle(.primary)
+                }
+                .padding([.top, .trailing, .leading])
+                
                 
                 Text("Game Created by Carter Hawkins")
                     .font(.title3)

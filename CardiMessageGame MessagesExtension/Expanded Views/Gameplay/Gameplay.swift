@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import AVFoundation
 struct Gameplay: View {
     
     @State var tempWinningAnimatedCards: [
@@ -25,6 +25,8 @@ struct Gameplay: View {
     @State private var yPositionLocalPlayerCard:CGFloat = 0
     @State private var offsetValueX = 0.0
     @State private var offsetValueY = 0.0
+    
+    @State private var music: AVAudioPlayer?
     
     let opponentCardOffsetx = -0.28
     let localCardOffsetx = 0.58
@@ -575,6 +577,12 @@ func flipCard() {
             .onReceive(timer) { _ in
                 timeActive += 0.1
                 
+                if storage.playBackgroundMusic == false {
+                    music?.stop()
+                } else if storage.playBackgroundMusic == true {
+                    music?.play()
+                }
+                
                 if timeActive > 1 && notShowedSaveMove {
                     notShowedSaveMove = false
                     
@@ -766,6 +774,30 @@ func flipCard() {
                 
                         }
             
+        }
+        .onAppear {
+            if storage.playBackgroundMusic {
+                do {
+                    let path = Bundle.main.path(forResource: "backgroundMusic", ofType: "mp3")
+                    if let path = path {
+                        let url = URL(fileURLWithPath: path)
+                        music = try AVAudioPlayer(contentsOf: url)
+                        try AVAudioSession.sharedInstance().setCategory(
+                            AVAudioSession.Category.playback,
+                            options: AVAudioSession.CategoryOptions.duckOthers
+                        )
+                        music?.setVolume(0.5, fadeDuration: 0)
+                        music?.numberOfLoops =  -1
+                    } else {
+                        
+                    }
+                } catch {
+                    // couldn't load file :(
+                }
+            }
+        }
+        .onDisappear {
+            music?.stop()
         }
         .disabled(disable)
         
