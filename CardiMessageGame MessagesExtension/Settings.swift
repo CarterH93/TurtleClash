@@ -33,7 +33,7 @@ struct Settings: View {
                     .font(.headline)
                     .padding()
                 
-                Link(destination: URL(string: "https://www.carterapps.net")!) {
+                Link(destination: URL(string: "https://www.carterapps.net/apps/turtleclash")!) {
                     Image(systemName: "link.circle.fill")
                         .font(.largeTitle)
                     Text("Website")
@@ -41,7 +41,7 @@ struct Settings: View {
                 }
                 .padding([.top, .trailing, .leading])
                 
-                Link(destination: URL(string: "https://www.carterapps.net")!) {
+                Link(destination: URL(string: "https://www.carterapps.net/apps/turtleclash/privacypolicy")!) {
                     Image(systemName: "info.circle.fill")
                         .font(.largeTitle)
                     Text("Privacy Policy")
@@ -49,7 +49,7 @@ struct Settings: View {
                 }
                 .padding([.top, .trailing, .leading])
                 
-                Link(destination: URL(string: "https://www.carterapps.net")!) {
+                Link(destination: URL(string: "https://www.carterapps.net/apps/turtleclash/credits")!) {
                     Image(systemName: "person.text.rectangle")
                         .font(.largeTitle)
                     Text("Credits")

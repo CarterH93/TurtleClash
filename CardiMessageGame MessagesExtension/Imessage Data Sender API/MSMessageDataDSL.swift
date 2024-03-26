@@ -137,7 +137,7 @@ public struct MSMessageDataDSL {
       var urlComponents = URLComponents()
       urlComponents.scheme = "https"
         //Change URL to webpage of the game
-      urlComponents.host = "carterapps.net"
+      urlComponents.host = "carterapps.net/apps/turtleclash"
       urlComponents.path = "/"
       urlComponents.queryItems = [URLQueryItem(name: "data", value: jsonText)]
 
