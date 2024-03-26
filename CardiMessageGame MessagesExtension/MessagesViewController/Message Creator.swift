@@ -34,8 +34,8 @@ extension MessagesViewController {
         
         //Just sending normal image
                 let layout = MSMessageTemplateLayout()
-                layout.caption = storage.name
-                layout.image = UIImage(named: "France")
+        layout.caption = storage.gameover ? "Game Over" : "Next Turn"
+                layout.image = UIImage(named: storage.gameover ? "gameOver" : "nextTurn")
                 message.layout = layout
         
 /*

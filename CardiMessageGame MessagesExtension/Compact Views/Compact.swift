@@ -25,7 +25,7 @@ struct Compact: View {
                     Text("Turtle Clash")
                         .font(.largeTitle.bold())
                     
-                    Image("France")
+                    Image("title")
                         .resizable()
                         .scaledToFit()
                         .padding([.leading,.trailing], 40)

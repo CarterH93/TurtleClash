@@ -480,7 +480,7 @@ class MessagesViewController: MSMessagesAppViewController {
         //Just sending normal image
                 let layout = MSMessageTemplateLayout()
                 layout.caption = "New Game"
-                layout.image = UIImage(named: "France")
+                layout.image = UIImage(named: "newGame")
                 message.layout = layout
         
 
