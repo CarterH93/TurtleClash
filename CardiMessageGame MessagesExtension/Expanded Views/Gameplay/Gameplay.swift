@@ -782,10 +782,6 @@ func flipCard() {
                     if let path = path {
                         let url = URL(fileURLWithPath: path)
                         music = try AVAudioPlayer(contentsOf: url)
-                        try AVAudioSession.sharedInstance().setCategory(
-                            AVAudioSession.Category.playback,
-                            options: AVAudioSession.CategoryOptions.duckOthers
-                        )
                         music?.setVolume(0.5, fadeDuration: 0)
                         music?.numberOfLoops =  -1
                     } else {
