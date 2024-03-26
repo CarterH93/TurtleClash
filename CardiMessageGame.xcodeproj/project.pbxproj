@@ -23,6 +23,7 @@
 		BC0A1F692B38C6D700CA7AB8 /* Message Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */; };
 		BC0A1F6C2B39F93A00CA7AB8 /* Round and game win logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A1F6B2B39F93A00CA7AB8 /* Round and game win logic.swift */; };
 		BC3F4E9F2B37A4C1004D9FBA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3F4E9E2B37A4C1004D9FBA /* Card.swift */; };
+		BC50077A2BB361DD00F1AAAF /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC5007792BB361DD00F1AAAF /* backgroundMusic.mp3 */; };
 		BC5CA4E62B37981500D0D100 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E52B37981500D0D100 /* Settings.swift */; };
 		BC5CA4E82B37982900D0D100 /* FinalWrappedExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */; };
 		BC5CA4EA2B37983200D0D100 /* Expanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4E92B37983200D0D100 /* Expanded.swift */; };
@@ -84,6 +85,7 @@
 		BC0A1F682B38C6D700CA7AB8 /* Message Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Creator.swift"; sourceTree = "<group>"; };
 		BC0A1F6B2B39F93A00CA7AB8 /* Round and game win logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round and game win logic.swift"; sourceTree = "<group>"; };
 		BC3F4E9E2B37A4C1004D9FBA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BC5007792BB361DD00F1AAAF /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		BC5CA4E52B37981500D0D100 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		BC5CA4E72B37982900D0D100 /* FinalWrappedExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalWrappedExpandedView.swift; sourceTree = "<group>"; };
 		BC5CA4E92B37983200D0D100 /* Expanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expanded.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		BCAA8D982B3D1D590058E729 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
+				BC5007792BB361DD00F1AAAF /* backgroundMusic.mp3 */,
 				BCAA8D962B3D1D530058E729 /* Gameplay.swift */,
 				BC090F592B3D1DD100ABFC14 /* WinningStack.swift */,
 				BC090F5B2B3D1DDB00ABFC14 /* Help.swift */,
@@ -343,6 +346,7 @@
 				BC07A0BB2B97B1660081A556 /* ice1local.mov in Resources */,
 				BC07A0BE2B97B1660081A556 /* idle.mov in Resources */,
 				BC07A0BF2B97B1660081A556 /* water1local.mov in Resources */,
+				BC50077A2BB361DD00F1AAAF /* backgroundMusic.mp3 in Resources */,
 				BC8305762B378DC0008CCAC7 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,7 +535,7 @@
 				INFOPLIST_FILE = "CardiMessageGame MessagesExtension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CardiMessageGame;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +562,7 @@
 				INFOPLIST_FILE = "CardiMessageGame MessagesExtension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CardiMessageGame;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

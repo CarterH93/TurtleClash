@@ -26,6 +26,7 @@ struct PlayerViewController: UIViewControllerRepresentable {
         controller.modalPresentationStyle = .fullScreen
         controller.player = player
         controller.player?.play()
+        controller.player?.isMuted = storage.playSoundEffects == true ? false : true
         controller.videoGravity = .resizeAspectFill
         controller.showsPlaybackControls = false
         controller.updatesNowPlayingInfoCenter = false
