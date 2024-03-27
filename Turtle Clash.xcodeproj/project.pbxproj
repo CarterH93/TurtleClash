@@ -532,8 +532,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K5ZKPZ2Y2S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CardiMessageGame MessagesExtension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = CardiMessageGame;
+				INFOPLIST_FILE = "Turtle Clash MessagesExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turtle Clash";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -559,8 +559,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K5ZKPZ2Y2S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CardiMessageGame MessagesExtension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = CardiMessageGame;
+				INFOPLIST_FILE = "Turtle Clash MessagesExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Turtle Clash";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
