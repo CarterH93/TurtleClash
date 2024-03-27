@@ -18,7 +18,7 @@ struct EmptyCard: View {
                     .opacity(0)
                     
                     
-                Text("Please select a Card")
+                Text("Please Select a Card")
                     .font(.system(size: geo.size.height * 0.05, weight: .bold))
                     .padding(geo.size.height * 0.02)
                     .foregroundColor(.white.opacity(0.5))
