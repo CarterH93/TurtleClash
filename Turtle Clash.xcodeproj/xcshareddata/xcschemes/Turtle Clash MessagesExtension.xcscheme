@@ -17,9 +17,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC8305692B378DBF008CCAC7"
-               BuildableName = "CardiMessageGame MessagesExtension.appex"
-               BlueprintName = "CardiMessageGame MessagesExtension"
-               ReferencedContainer = "container:CardiMessageGame.xcodeproj">
+               BuildableName = "Turtle Clash MessagesExtension.appex"
+               BlueprintName = "Turtle Clash MessagesExtension"
+               ReferencedContainer = "container:Turtle Clash.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,9 +31,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC8305602B378DBE008CCAC7"
-               BuildableName = "CardiMessageGame.app"
-               BlueprintName = "CardiMessageGame"
-               ReferencedContainer = "container:CardiMessageGame.xcodeproj">
+               BuildableName = "Turtle Clash.app"
+               BlueprintName = "Turtle Clash"
+               ReferencedContainer = "container:Turtle Clash.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,18 +63,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC8305692B378DBF008CCAC7"
-            BuildableName = "CardiMessageGame MessagesExtension.appex"
-            BlueprintName = "CardiMessageGame MessagesExtension"
-            ReferencedContainer = "container:CardiMessageGame.xcodeproj">
+            BuildableName = "Turtle Clash MessagesExtension.appex"
+            BlueprintName = "Turtle Clash MessagesExtension"
+            ReferencedContainer = "container:Turtle Clash.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC8305602B378DBE008CCAC7"
-            BuildableName = "CardiMessageGame.app"
-            BlueprintName = "CardiMessageGame"
-            ReferencedContainer = "container:CardiMessageGame.xcodeproj">
+            BuildableName = "Turtle Clash.app"
+            BlueprintName = "Turtle Clash"
+            ReferencedContainer = "container:Turtle Clash.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -91,9 +91,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC8305602B378DBE008CCAC7"
-            BuildableName = "CardiMessageGame.app"
-            BlueprintName = "CardiMessageGame"
-            ReferencedContainer = "container:CardiMessageGame.xcodeproj">
+            BuildableName = "Turtle Clash.app"
+            BlueprintName = "Turtle Clash"
+            ReferencedContainer = "container:Turtle Clash.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -32,7 +32,7 @@
 		BC5CA4F12B37987300D0D100 /* WrappedCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4F02B37987300D0D100 /* WrappedCompact.swift */; };
 		BC5CA4F42B37989000D0D100 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5CA4F32B37989000D0D100 /* Storage.swift */; };
 		BC8305652B378DBF008CCAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8305642B378DBF008CCAC7 /* Assets.xcassets */; };
-		BC83056B2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BC83056A2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BC83056B2B378DBF008CCAC7 /* Turtle Clash MessagesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BC83056A2B378DBF008CCAC7 /* Turtle Clash MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BC8305702B378DBF008CCAC7 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC83056F2B378DBF008CCAC7 /* Messages.framework */; };
 		BC8305732B378DC0008CCAC7 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8305722B378DC0008CCAC7 /* MessagesViewController.swift */; };
 		BC8305762B378DC0008CCAC7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8305742B378DC0008CCAC7 /* MainInterface.storyboard */; };
@@ -61,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BC83056B2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex in Embed Foundation Extensions */,
+				BC83056B2B378DBF008CCAC7 /* Turtle Clash MessagesExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,9 +93,9 @@
 		BC5CA4EE2B37986900D0D100 /* Compact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compact.swift; sourceTree = "<group>"; };
 		BC5CA4F02B37987300D0D100 /* WrappedCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedCompact.swift; sourceTree = "<group>"; };
 		BC5CA4F32B37989000D0D100 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		BC8305612B378DBE008CCAC7 /* CardiMessageGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardiMessageGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC8305612B378DBE008CCAC7 /* Turtle Clash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turtle Clash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8305642B378DBF008CCAC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BC83056A2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CardiMessageGame MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC83056A2B378DBF008CCAC7 /* Turtle Clash MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Turtle Clash MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC83056F2B378DBF008CCAC7 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		BC8305722B378DC0008CCAC7 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		BC8305752B378DC0008CCAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 		BC83055A2B378DBE008CCAC7 = {
 			isa = PBXGroup;
 			children = (
-				BC8305632B378DBE008CCAC7 /* CardiMessageGame */,
-				BC8305712B378DBF008CCAC7 /* CardiMessageGame MessagesExtension */,
+				BC8305632B378DBE008CCAC7 /* Turtle Clash */,
+				BC8305712B378DBF008CCAC7 /* Turtle Clash MessagesExtension */,
 				BC83056E2B378DBF008CCAC7 /* Frameworks */,
 				BC8305622B378DBE008CCAC7 /* Products */,
 			);
@@ -166,18 +166,18 @@
 		BC8305622B378DBE008CCAC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC8305612B378DBE008CCAC7 /* CardiMessageGame.app */,
-				BC83056A2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex */,
+				BC8305612B378DBE008CCAC7 /* Turtle Clash.app */,
+				BC83056A2B378DBF008CCAC7 /* Turtle Clash MessagesExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC8305632B378DBE008CCAC7 /* CardiMessageGame */ = {
+		BC8305632B378DBE008CCAC7 /* Turtle Clash */ = {
 			isa = PBXGroup;
 			children = (
 				BC8305642B378DBF008CCAC7 /* Assets.xcassets */,
 			);
-			path = CardiMessageGame;
+			path = "Turtle Clash";
 			sourceTree = "<group>";
 		};
 		BC83056E2B378DBF008CCAC7 /* Frameworks */ = {
@@ -188,7 +188,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BC8305712B378DBF008CCAC7 /* CardiMessageGame MessagesExtension */ = {
+		BC8305712B378DBF008CCAC7 /* Turtle Clash MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
 				BC5CA4F32B37989000D0D100 /* Storage.swift */,
@@ -202,7 +202,7 @@
 				BC8305792B378DC0008CCAC7 /* Info.plist */,
 				BC8305872B378E08008CCAC7 /* Imessage Data Sender API */,
 			);
-			path = "CardiMessageGame MessagesExtension";
+			path = "Turtle Clash MessagesExtension";
 			sourceTree = "<group>";
 		};
 		BC8305872B378E08008CCAC7 /* Imessage Data Sender API */ = {
@@ -254,9 +254,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC8305602B378DBE008CCAC7 /* CardiMessageGame */ = {
+		BC8305602B378DBE008CCAC7 /* Turtle Clash */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC8305802B378DC0008CCAC7 /* Build configuration list for PBXNativeTarget "CardiMessageGame" */;
+			buildConfigurationList = BC8305802B378DC0008CCAC7 /* Build configuration list for PBXNativeTarget "Turtle Clash" */;
 			buildPhases = (
 				BC83055F2B378DBE008CCAC7 /* Resources */,
 				BC83057F2B378DC0008CCAC7 /* Embed Foundation Extensions */,
@@ -266,14 +266,14 @@
 			dependencies = (
 				BC83056D2B378DBF008CCAC7 /* PBXTargetDependency */,
 			);
-			name = CardiMessageGame;
+			name = "Turtle Clash";
 			productName = CardiMessageGame;
-			productReference = BC8305612B378DBE008CCAC7 /* CardiMessageGame.app */;
+			productReference = BC8305612B378DBE008CCAC7 /* Turtle Clash.app */;
 			productType = "com.apple.product-type.application.messages";
 		};
-		BC8305692B378DBF008CCAC7 /* CardiMessageGame MessagesExtension */ = {
+		BC8305692B378DBF008CCAC7 /* Turtle Clash MessagesExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC83057C2B378DC0008CCAC7 /* Build configuration list for PBXNativeTarget "CardiMessageGame MessagesExtension" */;
+			buildConfigurationList = BC83057C2B378DC0008CCAC7 /* Build configuration list for PBXNativeTarget "Turtle Clash MessagesExtension" */;
 			buildPhases = (
 				BC8305662B378DBF008CCAC7 /* Sources */,
 				BC8305672B378DBF008CCAC7 /* Frameworks */,
@@ -283,9 +283,9 @@
 			);
 			dependencies = (
 			);
-			name = "CardiMessageGame MessagesExtension";
+			name = "Turtle Clash MessagesExtension";
 			productName = "CardiMessageGame MessagesExtension";
-			productReference = BC83056A2B378DBF008CCAC7 /* CardiMessageGame MessagesExtension.appex */;
+			productReference = BC83056A2B378DBF008CCAC7 /* Turtle Clash MessagesExtension.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
 		};
 /* End PBXNativeTarget section */
@@ -306,7 +306,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BC83055E2B378DBE008CCAC7 /* Build configuration list for PBXProject "CardiMessageGame" */;
+			buildConfigurationList = BC83055E2B378DBE008CCAC7 /* Build configuration list for PBXProject "Turtle Clash" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -319,8 +319,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC8305602B378DBE008CCAC7 /* CardiMessageGame */,
-				BC8305692B378DBF008CCAC7 /* CardiMessageGame MessagesExtension */,
+				BC8305602B378DBE008CCAC7 /* Turtle Clash */,
+				BC8305692B378DBF008CCAC7 /* Turtle Clash MessagesExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -388,7 +388,7 @@
 /* Begin PBXTargetDependency section */
 		BC83056D2B378DBF008CCAC7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BC8305692B378DBF008CCAC7 /* CardiMessageGame MessagesExtension */;
+			target = BC8305692B378DBF008CCAC7 /* Turtle Clash MessagesExtension */;
 			targetProxy = BC83056C2B378DBF008CCAC7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -625,7 +625,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC83055E2B378DBE008CCAC7 /* Build configuration list for PBXProject "CardiMessageGame" */ = {
+		BC83055E2B378DBE008CCAC7 /* Build configuration list for PBXProject "Turtle Clash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC83057A2B378DC0008CCAC7 /* Debug */,
@@ -634,7 +634,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC83057C2B378DC0008CCAC7 /* Build configuration list for PBXNativeTarget "CardiMessageGame MessagesExtension" */ = {
+		BC83057C2B378DC0008CCAC7 /* Build configuration list for PBXNativeTarget "Turtle Clash MessagesExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC83057D2B378DC0008CCAC7 /* Debug */,
@@ -643,7 +643,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC8305802B378DC0008CCAC7 /* Build configuration list for PBXNativeTarget "CardiMessageGame" */ = {
+		BC8305802B378DC0008CCAC7 /* Build configuration list for PBXNativeTarget "Turtle Clash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC8305812B378DC0008CCAC7 /* Debug */,
