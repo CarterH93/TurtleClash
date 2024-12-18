@@ -105,6 +105,7 @@
 		BC8305852B378E01008CCAC7 /* MSMessageDataDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSMessageDataDSL.swift; sourceTree = "<group>"; };
 		BCAA8D962B3D1D530058E729 /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		BCACA09F2B65F43D0031BB98 /* HelpMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMenu.swift; sourceTree = "<group>"; };
+		BCD8AEB32D1361A9002D98AA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BCE381CA2B5D9E4D005A00FF /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +157,7 @@
 		BC83055A2B378DBE008CCAC7 = {
 			isa = PBXGroup;
 			children = (
+				BCD8AEB32D1361A9002D98AA /* README.md */,
 				BC8305632B378DBE008CCAC7 /* Turtle Clash */,
 				BC8305712B378DBF008CCAC7 /* Turtle Clash MessagesExtension */,
 				BC83056E2B378DBF008CCAC7 /* Frameworks */,
